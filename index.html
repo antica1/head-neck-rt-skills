@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>头颈放疗靶区 AI 分析系统</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; padding:0; max-width:100vw; overflow-x:hidden; }
+.header { background:linear-gradient(135deg,#1a1a2e,#16213e); color:#fff; padding:28px 20px 20px; text-align:center; }
+.header h1 { font-size:22px; margin-bottom:6px; }
+.header p { font-size:14px; opacity:0.8; }
+.card { background:#fff; margin:12px 16px; border-radius:12px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+.card h2 { font-size:17px; color:#16213e; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #e94560; display:inline-block; }
+.card p, .card li { font-size:15px; color:#444; }
+.card ul { padding-left:20px; }
+.card li { margin:6px 0; }
+.step { background:#e8f0fe; border-radius:8px; padding:12px 16px; margin:10px 0; }
+.step .num { display:inline-block; width:24px;height:24px; background:#e94560; color:#fff; border-radius:50%; text-align:center; line-height:24px; font-size:13px; font-weight:bold; margin-right:8px; }
+code { background:#f0f0f0; padding:2px 6px; border-radius:4px; font-size:13px; word-break:break-all; }
+.cmd { background:#1a1a2e; color:#0f0; padding:14px; border-radius:8px; font-size:11px; overflow-x:auto; white-space:pre-wrap; word-break:break-all; margin:10px 0; }
+.btn { display:block; background:#e94560; color:#fff; text-align:center; padding:14px; border-radius:10px; font-size:16px; font-weight:bold; text-decoration:none; margin:16px; }
+.btn-secondary { background:#16213e; }
+.footer { text-align:center; padding:20px; font-size:12px; color:#999; }
+table { width:100%; border-collapse:collapse; font-size:13px; margin:10px 0; }
+td, th { border:1px solid #ddd; padding:8px 6px; text-align:left; }
+th { background:#f5f7fa; font-weight:bold; }
+td:first-child, th:first-child { width:45%; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🎯 头颈放疗靶区 AI 分析系统</h1>
+  <p>8 个 Skill | AJCC 第 9 版 | 开源免费</p>
+</div>
+
+<div class="card">
+  <h2>✨ 能帮你做什么？</h2>
+  <ul>
+    <li>📋 <b>AJCC 第 9 版自动分期 + 验证</b>——病史分期有矛盾？AI 指出并给出正确分期</li>
+    <li>🎯 <b>靶区规划方案</b>——CTV 层级、剂量、豁免区、加量区，每行附理由</li>
+    <li>📝 <b>可粘贴进病历的摘要</b>——住院医生直接复制进首次病程录</li>
+    <li>🔬 <b>完整推理链条</b>——为什么 T2 不是 T3？为什么降级？为什么加量？</li>
+    <li>⚠️ <b>手术不易切净区自动标记</b>——茎乳孔、颅底、翼腭窝……病理阴性也要考虑加量</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>🚀 三步开始使用</h2>
+  
+  <div class="step"><span class="num">1</span><b>下载 Hermes 桌面版</b><br>👉 <a href="https://hermes-agent.nousresearch.com">hermes-agent.nousresearch.com</a><br>Windows / Mac 均可，免费</div>
+  
+  <div class="step"><span class="num">2</span><b>配置 AI 模型</b><br>注册 DeepSeek（platform.deepseek.com，手机号免费注册）→ 填入 Hermes 设置</div>
+  
+  <div class="step"><span class="num">3</span><b>安装 8 个 Skill</b>（在 Hermes 输入框粘贴）</div>
+  <div class="cmd">hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets</div>
+</div>
+
+<div class="card">
+  <h2>📂 8 个 Skill 一览</h2>
+  <table>
+    <tr><th>Skill</th><th>覆盖内容</th></tr>
+    <tr><td>口腔口咽癌术后</td><td>舌/口底/牙龈/颊/硬腭/RMT/扁桃体/舌根</td></tr>
+    <tr><td>腺样囊性癌 (ACC)</td><td>面神经径路、颅底孔道追踪</td></tr>
+    <tr><td>喉癌/下咽癌</td><td>软骨侵犯、Stoma、RP/Ⅵ区、失败模式</td></tr>
+    <tr><td>鼻咽癌 (NPC)</td><td>GTV 0mm逐级5mm、岩尖+卵圆孔双侧</td></tr>
+    <tr><td>眼眶肿瘤</td><td>间室放疗、眼前庭共管、VIII/IX过站</td></tr>
+    <tr><td>原发不明转移癌</td><td>选择性黏膜、EBV/HPV分层、颈清后逆流</td></tr>
+    <tr><td>DVH 计划审核</td><td>双轨制、QUANTEC四维批判、降级PORT-OAR</td></tr>
+    <tr><td>再程放疗</td><td>Quad-Shot+IO、累积BED、SER增敏</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>💻 全部开源</h2>
+  <p>GitHub: <a href="https://github.com/antica1/head-neck-rt-skills">github.com/antica1/head-neck-rt-skills</a></p>
+  <p style="margin-top:8px;font-size:13px;color:#888;">上海交通大学医学院附属第九人民医院 · 口腔颌面头颈肿瘤科放疗组</p>
+</div>
+
+<div class="footer">扫码即用 · 免费开源 · 同行互助</div>
+
+</body>
+</html>
