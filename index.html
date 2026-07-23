@@ -9,7 +9,7 @@
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; padding:0; max-width:100vw; overflow-x:hidden; }
 .header { background:linear-gradient(135deg,#1a1a2e,#16213e); color:#fff; padding:28px 20px 20px; text-align:center; }
 .header h1 { font-size:22px; margin-bottom:6px; }
-.header p { font-size:14px; opacity:0.8; }
+.header p { font-size:14px; opacity:0.8; line-height:1.6; }
 .card { background:#fff; margin:12px 16px; border-radius:12px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
 .card h2 { font-size:17px; color:#16213e; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #e94560; display:inline-block; }
 .card p, .card li { font-size:15px; color:#444; }
@@ -18,6 +18,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .step { background:#e8f0fe; border-radius:8px; padding:12px 16px; margin:10px 0; }
 .step .num { display:inline-block; width:24px;height:24px; background:#e94560; color:#fff; border-radius:50%; text-align:center; line-height:24px; font-size:13px; font-weight:bold; margin-right:8px; }
 .new-badge { background:#e94560; color:#fff; font-size:11px; padding:2px 6px; border-radius:4px; margin-left:4px; }
+.iron-badge { background:#16213e; color:#fff; font-size:11px; padding:2px 6px; border-radius:4px; margin-left:4px; }
 code { background:#f0f0f0; padding:2px 6px; border-radius:4px; font-size:13px; word-break:break-all; }
 .cmd { background:#1a1a2e; color:#0f0; padding:14px; border-radius:8px; font-size:11px; overflow-x:auto; white-space:pre-wrap; word-break:break-all; margin:10px 0; }
 .btn { display:block; background:#e94560; color:#fff; text-align:center; padding:14px; border-radius:10px; font-size:16px; font-weight:bold; text-decoration:none; margin:16px; }
@@ -26,24 +27,25 @@ code { background:#f0f0f0; padding:2px 6px; border-radius:4px; font-size:13px; w
 table { width:100%; border-collapse:collapse; font-size:13px; margin:10px 0; }
 td, th { border:1px solid #ddd; padding:8px 6px; text-align:left; }
 th { background:#f5f7fa; font-weight:bold; }
-td:first-child, th:first-child { width:45%; }
+.highlight-box { background:#fff3e0; border-left:4px solid #e94560; padding:12px 16px; border-radius:4px; margin:10px 0; }
 </style>
 </head>
 <body>
 
 <div class="header">
   <h1>🎯 头颈放疗靶区 AI 分析系统</h1>
-  <p>12 个 Skill | v3.0+ 全新模块化 | AJCC 第 9 版 | 开源免费</p>
+  <p>12 个专科 Skill · AJCC 第 9 版 · Lancet 2025/IG-2024<br>🔴 铁律清单 · 🔗 自动联动 · 📋 前置核查 · 🏥 九院经验编码</p>
 </div>
 
 <div class="card">
   <h2>✨ 能帮你做什么？</h2>
   <ul>
     <li>📋 <b>AJCC 第 9 版自动分期 + 验证</b>——病史分期有矛盾？AI 指出并给出正确分期</li>
-    <li>🎯 <b>靶区规划方案</b>——CTV 层级、剂量、豁免区、加量区，每行附理由</li>
+    <li>🎯 <b>完整靶区规划方案</b>——CTV 逐层定义、剂量、豁免区、加量区，每行附理由</li>
+    <li>🔴 <b>铁律清单——模型不遗漏</b>——每个 Skill 开头列出 8-14 条不可违反的硬规则（口底铁律、间室放疗、逆流规则……）</li>
+    <li>🔗 <b>多 Skill 自动联动</b>——说"眼眶 ACC"，自动同时加载眼眶和 ACC 两个 Skill</li>
     <li>📝 <b>可粘贴进病历的摘要</b>——住院医生直接复制进首次病程录</li>
-    <li>🔬 <b>完整推理链条</b>——为什么 T2 不是 T3？为什么降级？为什么加量？</li>
-    <li>⚠️ <b>手术不易切净区自动标记</b>——茎乳孔、颅底、翼腭窝……病理阴性也要考虑加量</li>
+    <li>⚠️ <b>手术不易切净区自动标记</b>——茎乳孔、颅底、翼腭窝……病理阴性也考虑加量</li>
   </ul>
 </div>
 
@@ -55,26 +57,55 @@ td:first-child, th:first-child { width:45%; }
   <div class="step"><span class="num">2</span><b>配置 AI 模型</b><br>注册 DeepSeek（platform.deepseek.com，手机号免费注册）→ 填入 Hermes 设置</div>
   
   <div class="step"><span class="num">3</span><b>安装 12 个 Skill</b>（在 Hermes 输入框粘贴）</div>
-  <div class="cmd">hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation</div>
+  <div class="cmd">hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review reirradiation-plan-recommend port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive</div>
 </div>
 
 <div class="card">
   <h2>📂 12 个 Skill 一览</h2>
+  
+  <h3 style="font-size:15px;margin:14px 0 6px">🆕 口腔口咽 — 全新模块化</h3>
   <table>
-    <tr><th>Skill</th><th>覆盖内容</th><th></th></tr>
-    <tr><td>口腔癌术后 PORT</td><td>舌/口底/牙龈/颊/硬腭/RMT/唇——IX/VIII + 口底铁律 + 皮瓣</td><td><span class="new-badge">v3.0</span></td></tr>
-    <tr><td>口咽癌术后 PORT</td><td>扁桃体/舌根/软腭/咽侧壁——TORS + RP + 双侧颈</td><td><span class="new-badge">v3.0</span></td></tr>
-    <tr><td>口咽癌根治性 RT</td><td>非手术——GTV 勾画 + SIB (70/63/56) + 诱导化疗后 + HPV+ 分层</td><td><span class="new-badge">新建</span></td></tr>
-    <tr><td>化免降级（共享）</td><td>pCR/MPR——术后 PORT 降级 + 根治性 RT 降级 + SBRT 增强</td><td><span class="new-badge">v2.0</span></td></tr>
-    <tr><td>喉/下咽术后 PORT</td><td>全喉/部分喉——Stoma + 咽重建 + VI区 + RP + 软骨全层</td><td><span class="new-badge">v2.0</span></td></tr>
-    <tr><td>喉/下咽根治性 RT</td><td>保声——SIB(70/63/56) + 内镜GTV + DAHANCA 5mm</td><td><span class="new-badge">v2.0</span></td></tr>
-    <tr><td>腺样囊性癌 (ACC)</td><td>面神经径路、颅底孔道追踪</td><td></td></tr>
-    <tr><td>喉癌/下咽癌</td><td>软骨侵犯、Stoma、RP/Ⅵ区、失败模式</td><td></td></tr>
-    <tr><td>鼻咽癌 (NPC)</td><td>GTV 0mm逐级5mm、岩尖+卵圆孔双侧</td><td></td></tr>
-    <tr><td>眼眶肿瘤</td><td>间室放疗、眼前庭共管、VIII/IX过站</td><td></td></tr>
-    <tr><td>原发不明转移癌</td><td>选择性黏膜、EBV/HPV分层、颈清后逆流</td><td></td></tr>
-    <tr><td>DVH 计划审核</td><td>双轨制——物理师筛子+医生裁决、降级PORT-OAR</td><td></td></tr>
+    <tr><td><b>口腔癌术后 PORT</b></td><td>舌/口底/牙龈/颊/硬腭/RMT/唇——IX/VIII过站、口底铁律、颈清逆流、皮瓣</td><td><span class="new-badge">v3.0</span></td></tr>
+    <tr><td><b>口咽癌术后 PORT</b></td><td>扁桃体/舌根/软腭/咽侧壁——TORS、RP双侧必照、p16分层</td><td><span class="new-badge">v3.0</span></td></tr>
+    <tr><td><b>口咽癌根治性 RT</b></td><td>非手术——GTV+SIB(70/63/56)、诱导化疗后、HPV+</td><td><span class="new-badge">新建</span></td></tr>
+    <tr><td><b>化免降级（共享）</b></td><td>pCR/MPR——PORT降级、根治性RT降级、SBRT增强（替雷利珠+白紫+顺铂）</td><td><span class="new-badge">新建</span></td></tr>
   </table>
+
+  <h3 style="font-size:15px;margin:14px 0 6px">🆕 喉/下咽 — 全新模块化</h3>
+  <table>
+    <tr><td><b>喉/下咽术后 PORT</b></td><td>全喉/部分喉——Stoma全层、咽重建、VI区、RP、软骨全层</td><td><span class="new-badge">新建</span></td></tr>
+    <tr><td><b>喉/下咽根治性 RT</b></td><td>保声——SIB(70/63/56)、内镜GTV、DAHANCA 5mm</td><td><span class="new-badge">新建</span></td></tr>
+  </table>
+
+  <h3 style="font-size:15px;margin:14px 0 6px">特色肿瘤</h3>
+  <table>
+    <tr><td><b>腺样囊性癌 (ACC)</b></td><td>V2/V3三叉神经三级追踪 · 面神经垂直段分层 · 实体型颈管理 · 鼻咽近中线双侧V2通路</td><td><span class="iron-badge">v1.4.0</span></td></tr>
+    <tr><td><b>鼻咽癌 (NPC)</b></td><td>GTV 0mm逐级5mm · 岩尖+卵圆孔双侧 · III区前界修正 · 3100例转移率 · Lancet 2025</td><td></td></tr>
+    <tr><td><b>眼眶肿瘤</b></td><td>间室放疗（门+隔壁）· VIII→IX→IIa淋巴级联 · 骨侵犯→66Gy · 4Gy/2fx MALT</td><td></td></tr>
+    <tr><td><b>原发不明转移癌</b></td><td>两阶段NPC筛查 · 选择性黏膜（4跨中线结构）· 同侧颈单照 · 颈清后逆流</td><td></td></tr>
+  </table>
+
+  <h3 style="font-size:15px;margin:14px 0 6px">质控与特殊场景</h3>
+  <table>
+    <tr><td><b>DVH 计划审核</b></td><td>双轨制（物理师筛子+医生裁决）· QUANTEC四维批判 · 完整SBRT量表</td><td></td></tr>
+    <tr><td><b>再程放疗</b></td><td>Quad-Shot(JAMA 2026)+IO · 累积BED计算 · IO增敏SER · SBRT补量</td><td></td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>💡 为什么这个 AI 不一样？</h2>
+  <div class="highlight-box">
+    <b>🔴 铁律清单——模型不会"忘记"关键规则</b><br>
+    每个 Skill 最开头列出 8-14 条硬规则（口底铁律、间室放疗、逆流规则……），AI 第一眼就锚定核心逻辑。长文 Skill（最长 996 行）也不怕注意力稀释。
+  </div>
+  <div class="highlight-box">
+    <b>🔗 自动联动——说一个部位，自动加载关联 Skill</b><br>
+    "眼眶 ACC"→同时加载眼眶 + ACC。"鼻咽部肿块活检腺样囊性癌"→自动加载 ACC Skill 而非 NPC Skill，靶区逻辑完全不同。
+  </div>
+  <div class="highlight-box">
+    <b>📋 前置核查清单——不看完手术记录不画靶区</b><br>
+    口腔 PORT 内置 22 项逐条核查（A-G 组），从"手术记录读了没"到"IX区列入了吗"全部强制走过。
+  </div>
 </div>
 
 <div class="card">
