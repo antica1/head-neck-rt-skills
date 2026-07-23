@@ -1,7 +1,7 @@
 # 头颈肿瘤放疗 AI 靶区规划系统——安装指南
 
 > 上海交通大学医学院附属第九人民医院 · 口腔颌面头颈肿瘤科放疗组
-> 8 个放疗靶区勾画 Skill | GitHub 开源 | 一行命令安装
+> **10 个放疗靶区勾画 Skill** | GitHub 开源 | 一行命令安装
 
 ---
 
@@ -34,12 +34,12 @@ Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 
 ---
 
-## 四、第三步：安装八大放疗 Skill（一行命令）
+## 四、第三步：安装十大放疗 Skill（一行命令）
 
 在 Hermes 底部的输入框里，粘贴这一行 → 回车：
 
 ```
-hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets
+hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation
 ```
 
 看到 ✅ 即安装成功。
@@ -62,11 +62,23 @@ hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt
 
 ---
 
-## 8 个 Skill 涵盖范围
+## 10 个 Skill 涵盖范围
+
+### v3.0.0 新增：口腔口咽癌拆分为三大模块
+
+> ⚠️ 原"口腔口咽癌术后靶区"（v1.2.0，1100行）已拆分为 3 个自包含模块——每个病例只需加载对应的一个。
+
+| Skill | 内容 | v3.0 状态 |
+|-------|------|:--:|
+| **口腔癌术后 PORT** | 舌/口底/牙龈/颊/硬腭/RMT/唇——亚部位 CTV + IX/VIII + 口底铁律 + 皮瓣 + PNI | 🆕 |
+| **口咽癌术后 PORT** | 扁桃体/舌根/软腭/咽侧壁——TORS + RP + 双侧颈 | 🆕 |
+| **口咽癌根治性 RT** | 非手术口咽癌——GTV 勾画 + SIB + 诱导化疗后处理 + HPV+ 分层 | 🆕 |
+| **化免降级（共享）** | pCR/MPR/non-MPR 分层——术后 PORT 降级 + 根治性 RT 降级 + SBRT 增强 | 🆕 |
+
+### 其余 6 个 Skill
 
 | Skill | 内容 |
 |-------|------|
-| 口腔口咽癌术后靶区 | 舌/口底/牙龈/颊/硬腭/RMT/扁桃体/舌根/软腭——亚部位 CTV + 皮瓣 + PNI |
 | 腺样囊性癌 (ACC) | 面神经径路——垂直段/水平段、颅底孔道追踪 |
 | 原发不明颈部转移癌 (HNCUP) | 选择性黏膜照射、EBV/HPV 分层、颈清后逆流 |
 | 眼眶肿瘤 | 间室放疗（门和隔壁比喻）、眼前庭共管、VIII/IX 过站 |
@@ -99,4 +111,4 @@ A: GitHub 关注 `antica1`——每次更新自动推送。Hermes 内运行 `her
 ## 获取帮助
 
 - GitHub Issues: https://github.com/antica1
-- 八个 Skill 仓库全部开源，欢迎提建议、报告问题、贡献靶区经验
+- 十个 Skill 仓库全部开源，欢迎提建议、报告问题、贡献靶区经验

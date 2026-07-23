@@ -17,6 +17,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .card li { margin:6px 0; }
 .step { background:#e8f0fe; border-radius:8px; padding:12px 16px; margin:10px 0; }
 .step .num { display:inline-block; width:24px;height:24px; background:#e94560; color:#fff; border-radius:50%; text-align:center; line-height:24px; font-size:13px; font-weight:bold; margin-right:8px; }
+.new-badge { background:#e94560; color:#fff; font-size:11px; padding:2px 6px; border-radius:4px; margin-left:4px; }
 code { background:#f0f0f0; padding:2px 6px; border-radius:4px; font-size:13px; word-break:break-all; }
 .cmd { background:#1a1a2e; color:#0f0; padding:14px; border-radius:8px; font-size:11px; overflow-x:auto; white-space:pre-wrap; word-break:break-all; margin:10px 0; }
 .btn { display:block; background:#e94560; color:#fff; text-align:center; padding:14px; border-radius:10px; font-size:16px; font-weight:bold; text-decoration:none; margin:16px; }
@@ -32,7 +33,7 @@ td:first-child, th:first-child { width:45%; }
 
 <div class="header">
   <h1>🎯 头颈放疗靶区 AI 分析系统</h1>
-  <p>8 个 Skill | AJCC 第 9 版 | 开源免费</p>
+  <p>10 个 Skill | v3.0.0 全新模块化 | AJCC 第 9 版 | 开源免费</p>
 </div>
 
 <div class="card">
@@ -53,22 +54,24 @@ td:first-child, th:first-child { width:45%; }
   
   <div class="step"><span class="num">2</span><b>配置 AI 模型</b><br>注册 DeepSeek（platform.deepseek.com，手机号免费注册）→ 填入 Hermes 设置</div>
   
-  <div class="step"><span class="num">3</span><b>安装 8 个 Skill</b>（在 Hermes 输入框粘贴）</div>
-  <div class="cmd">hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets</div>
+  <div class="step"><span class="num">3</span><b>安装 10 个 Skill</b>（在 Hermes 输入框粘贴）</div>
+  <div class="cmd">hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation</div>
 </div>
 
 <div class="card">
-  <h2>📂 8 个 Skill 一览</h2>
+  <h2>📂 10 个 Skill 一览</h2>
   <table>
-    <tr><th>Skill</th><th>覆盖内容</th></tr>
-    <tr><td>口腔口咽癌术后</td><td>舌/口底/牙龈/颊/硬腭/RMT/扁桃体/舌根</td></tr>
-    <tr><td>腺样囊性癌 (ACC)</td><td>面神经径路、颅底孔道追踪</td></tr>
-    <tr><td>喉癌/下咽癌</td><td>软骨侵犯、Stoma、RP/Ⅵ区、失败模式</td></tr>
-    <tr><td>鼻咽癌 (NPC)</td><td>GTV 0mm逐级5mm、岩尖+卵圆孔双侧</td></tr>
-    <tr><td>眼眶肿瘤</td><td>间室放疗、眼前庭共管、VIII/IX过站</td></tr>
-    <tr><td>原发不明转移癌</td><td>选择性黏膜、EBV/HPV分层、颈清后逆流</td></tr>
-    <tr><td>DVH 计划审核</td><td>双轨制、QUANTEC四维批判、降级PORT-OAR</td></tr>
-    <tr><td>再程放疗</td><td>Quad-Shot+IO、累积BED、SER增敏</td></tr>
+    <tr><th>Skill</th><th>覆盖内容</th><th></th></tr>
+    <tr><td>口腔癌术后 PORT</td><td>舌/口底/牙龈/颊/硬腭/RMT/唇——IX/VIII + 口底铁律 + 皮瓣</td><td><span class="new-badge">v3.0</span></td></tr>
+    <tr><td>口咽癌术后 PORT</td><td>扁桃体/舌根/软腭/咽侧壁——TORS + RP + 双侧颈</td><td><span class="new-badge">v3.0</span></td></tr>
+    <tr><td>口咽癌根治性 RT</td><td>非手术——GTV 勾画 + SIB (70/63/56) + 诱导化疗后 + HPV+ 分层</td><td><span class="new-badge">新建</span></td></tr>
+    <tr><td>化免降级（共享）</td><td>pCR/MPR——术后 PORT 降级 + 根治性 RT 降级 + SBRT 增强</td><td><span class="new-badge">v2.0</span></td></tr>
+    <tr><td>腺样囊性癌 (ACC)</td><td>面神经径路、颅底孔道追踪</td><td></td></tr>
+    <tr><td>喉癌/下咽癌</td><td>软骨侵犯、Stoma、RP/Ⅵ区、失败模式</td><td></td></tr>
+    <tr><td>鼻咽癌 (NPC)</td><td>GTV 0mm逐级5mm、岩尖+卵圆孔双侧</td><td></td></tr>
+    <tr><td>眼眶肿瘤</td><td>间室放疗、眼前庭共管、VIII/IX过站</td><td></td></tr>
+    <tr><td>原发不明转移癌</td><td>选择性黏膜、EBV/HPV分层、颈清后逆流</td><td></td></tr>
+    <tr><td>DVH 计划审核</td><td>双轨制——物理师筛子+医生裁决、降级PORT-OAR</td><td></td></tr>
   </table>
 </div>
 
