@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "头颈肿瘤放疗靶区勾画 Skill 系列"
+message: "如果本系列 Skill 对您的临床工作或研究有帮助，请引用如下："
+type: software
+authors:
+  - family-names: "朱"
+    given-names: "国培"
+    affiliation: "上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心"
+    orcid: ""
+repository-code: "https://github.com/antica1/head-neck-rt-skills"
+license: CC-BY-NC-SA-4.0
+version: "2026.07"
+date-released: 2026-07-15
+keywords:
+  - "head and neck cancer"
+  - "radiotherapy"
+  - "target delineation"
+  - "salivary gland"
+  - "nasopharyngeal carcinoma"
+  - "oral cancer"
