@@ -8,6 +8,7 @@ metadata:
   hermes:
     tags: [head-neck, radiotherapy, neoadjuvant, de-escalation, chemoimmunotherapy, SBRT]
     triggers_on: [化免新辅助, 新辅助化疗, 新辅助免疫, 降阶梯, 降级, pCR, MPR, 替雷利珠, 白蛋白紫杉醇, 顺铂新辅助, neoadjuvant, de-escalation, PORT降级, 根治性RT降级]
+    related_skills: [port-oral-postop, port-oropharynx-postop, oropharynx-definitive-rt, shared-knowledge]
 ---
 
 # 化免新辅助后放疗降级策略

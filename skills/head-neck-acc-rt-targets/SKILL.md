@@ -1,4 +1,9 @@
 ---
+metadata:
+  hermes:
+    tags: [head-neck, radiotherapy, target-delineation, acc, adenoid-cystic-carcinoma]
+    triggers_on: [腺样囊性癌, ACC, 腺样囊性癌靶区, 腺样囊性癌放疗, 神经侵犯, 面神经, 面神经径路, 颅底孔道, 茎乳孔, 翼腭窝, PNI, perineural invasion, 神经追踪, 神经径路, 感觉神经, 三叉神经, 腭部ACC, 腭部腺样囊性癌, 腮腺ACC, 颌下腺ACC, 舌下腺ACC, 口腔ACC, adenoid cystic carcinoma, 腺样囊性癌术后, 腺样囊性癌放疗靶区, ACC术后]
+    related_skills: [shared-knowledge, head-neck-dvh-plan-review]
 name: adenoid-cystic-carcinoma-rt-targets
 description: "腺样囊性癌ACC术后放疗靶区勾画——面神经径路/颅底孔道、PNI追踪。Postoperative RT for adenoid cystic carcinoma — nerve pathway coverage, skull base foramen."
 version: 1.5.1
@@ -429,3 +434,4 @@ CTV___：______（___ Gy — 理由：______）
 ═══════════════════════════════
 
 注：四类加量指征：①R1/R2切缘 ②ENE+淋巴结 ③手术不易切净区(茎乳孔/腮腺深叶/颅底/翼腭窝/颏结节/前上门牙-鼻底硬腭) ④不手术T4/T4b临近颅底/脑膜/眼眶/颈动脉。病理切缘阴性不等于肿瘤床绝对安全——手术记录中未描述但肿瘤曾临近上述区域时仍需考虑加量。
+```

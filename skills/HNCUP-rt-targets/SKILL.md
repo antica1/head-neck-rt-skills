@@ -1,4 +1,9 @@
 ---
+metadata:
+  hermes:
+    tags: [head-neck, radiotherapy, cup, cervical, unknown-primary]
+    triggers_on: [原发不明, 原发灶不明, 颈部转移癌, 不明原发灶, 颈部淋巴结转移, 颈部转移, CUP, HNCUP, cervical CUP, unknown primary, 颈部转移性癌, 颈部转移癌靶区, 颈部不明原发, EBV相关转移, HPV相关转移, 选择性黏膜照射, 选择性黏膜勾画, 逆流规则, 双侧颈部, 对侧颈预防, NPC筛查, 鼻咽镜阴性, PET阴性]
+    related_skills: [head-neck-dvh-plan-review, npc-rt-target-delineation, shared-knowledge]
 name: cervical-cup-rt-targets
 description: "原发不明颈部转移癌HNCUP靶区勾画——选择性黏膜、EBV/HPV分层、颈清后逆流规则。True CUP RT target delineation — selective mucosal irradiation."
 version: 1.0.0
@@ -509,3 +514,4 @@ CTV___：______（___ Gy — 理由：______）
 ═══════════════════════════════
 
 注：四类加量指征：①R1/R2切缘 ②ENE+淋巴结 ③手术不易切净区(茎乳孔/腮腺深叶/颅底/翼腭窝/颏结节/前上门牙-鼻底硬腭) ④不手术T4/T4b临近颅底/脑膜/眼眶/颈动脉。病理切缘阴性不等于肿瘤床绝对安全——手术记录中未描述但肿瘤曾临近上述区域时仍需考虑加量。
+```

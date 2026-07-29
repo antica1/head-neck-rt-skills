@@ -1,9 +1,9 @@
 ---
-name: "npc-rt-target-delineation"
-description: "鼻咽癌精准靶区勾画 — 颅底孔道、海绵窦、Lancet 2025 & IG-2024 国际指南"
----
-
----
+metadata:
+  hermes:
+    tags: [head-neck, radiotherapy, target-delineation, nasopharyngeal-carcinoma]
+    triggers_on: [鼻咽癌, NPC, 鼻咽靶区, 颅底孔道, 破裂孔, 卵圆孔, 圆孔, 海绵窦, 咽隐窝, 咽旁间隙, 咽后淋巴结, Lancet 2025, IG-2024, nasopharyngeal carcinoma, 鼻咽癌靶区, 鼻咽癌放疗, 鼻咽, 鼻咽部, 蝶骨, 岩尖, 斜坡, 颈动脉管, 咽鼓管, Rosemmuller, 鼻咽癌CTV, 鼻咽癌GTV]
+    related_skills: [shared-knowledge, head-neck-dvh-plan-review]
 name: npc-rt-target-delineation
 description: "Precision target volume delineation for nasopharyngeal carcinoma radiotherapy — skull base foramina, cavernous sinus, stepwise CTV construction per Lancet 2025 and IG-2024 International Guidelines."
 version: 1.0.0

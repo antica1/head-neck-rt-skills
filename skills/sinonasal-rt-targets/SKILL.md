@@ -1,12 +1,14 @@
 ---
+metadata:
+  hermes:
+    tags: [head-neck, radiotherapy, target-delineation, sinonasal]
+    triggers_on: [鼻腔癌, 鼻窦癌, 鼻腔鼻窦癌, 上颌窦癌, 筛窦癌, 鼻腔靶区, 鼻窦靶区, 视路保护, 视神经保护, 视交叉, 诱导化疗后放疗, SNUC, 嗅神经母细胞瘤, 鼻窦未分化癌, sinonasal, maxillary sinus, ethmoid sinus, nasal cavity, 鼻腔靶区勾画, 鼻窦靶区勾画, 筛窦靶区, 上颌窦靶区, 内翻性乳头状瘤恶变, 鼻腔黑色素瘤, 嗅母, esthesioneuroblastoma, 视路, 眼球保护]
+    related_skills: [shared-knowledge, head-neck-dvh-plan-review]
 name: sinonasal-rt-targets
 description: 鼻腔鼻窦癌放疗靶区勾画——上颌窦/筛窦/鼻腔亚部位CTV、视路保护、诱导化疗后放疗、SNUC/嗅神经母细胞瘤特殊类型。Sinonasal carcinoma RT — maxillary/ethmoid/nasal CTV, optic pathway sparing, post-induction RT, SNUC/esthesioneuroblastoma.
 version: 1.3.2
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
-metadata:
-  hermes:
-    tags: [head-neck, radiotherapy, target-delineation, sinonasal]
 ---
 
 > **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.

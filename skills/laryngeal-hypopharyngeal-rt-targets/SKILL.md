@@ -7,6 +7,8 @@ license: MIT
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, larynx, hypopharynx, index]
+    triggers_on: [喉癌, 下咽癌, 喉靶区, 下咽靶区, larynx, hypopharynx, 喉放疗, 下咽放疗, 喉癌靶区, 下咽癌靶区, 声门上喉癌, 声门型喉癌, 声门下喉癌, 梨状窝, 环后区, 喉咽后壁, 喉保留, 喉功能保留, 喉癌术后, 下咽癌术后, 喉癌根治, 下咽癌根治]
+    related_skills: [larynx-hypopharynx-postop, larynx-hypopharynx-definitive]
     split_into: [larynx-hypopharynx-postop, larynx-hypopharynx-definitive]
 ---
 
