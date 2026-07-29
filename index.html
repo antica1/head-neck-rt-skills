@@ -34,7 +34,7 @@ th { background:#f5f7fa; font-weight:bold; }
 
 <div class="header">
   <h1>🎯 头颈放疗靶区 AI 分析系统</h1>
-  <p>12 个专科 Skill · AJCC 第 9 版 · Lancet 2025/IG-2024<br>🔴 铁律清单 · 🔗 自动联动 · 📋 前置核查 · 🏥 九院经验编码</p>
+  <p>17 个专科 Skill · AJCC 第 9 版 · Lancet 2025/IG-2024<br>🔴 铁律清单 · 🔗 自动联动 · 📋 前置核查 · 🏥 九院经验编码</p>
 </div>
 
 <div class="card">
@@ -51,44 +51,47 @@ th { background:#f5f7fa; font-weight:bold; }
 
 <div class="card">
   <h2>🚀 三步开始使用</h2>
-  
+
   <div class="step"><span class="num">1</span><b>下载 Hermes 桌面版</b><br>👉 <a href="https://hermes-agent.nousresearch.com">hermes-agent.nousresearch.com</a><br>Windows / Mac 均可，免费</div>
-  
+
   <div class="step"><span class="num">2</span><b>配置 AI 模型</b><br>注册 DeepSeek（platform.deepseek.com，手机号免费注册）→ 填入 Hermes 设置</div>
-  
-  <div class="step"><span class="num">3</span><b>安装 12 个 Skill</b>（在 Hermes 输入框粘贴）</div>
-  <div class="cmd">hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review reirradiation-plan-recommend port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive</div>
+
+  <div class="step"><span class="num">3</span><b>安装 17 个 Skill</b>（在 Hermes 输入框粘贴）</div>
+  <div class="cmd">hermes skills install head-neck-acc-rt-targets HNCUP-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review head-neck-reirradiation oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets salivary-gland-rt-targets sinonasal-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive shared-knowledge</div>
 </div>
 
 <div class="card">
-  <h2>📂 12 个 Skill 一览</h2>
-  
-  <h3 style="font-size:15px;margin:14px 0 6px">🆕 口腔口咽 — 全新模块化</h3>
+  <h2>📂 17 个 Skill 一览</h2>
+
+  <h3 style="font-size:15px;margin:14px 0 6px">口腔口咽 — 模块化</h3>
   <table>
-    <tr><td><b>口腔癌术后 PORT</b></td><td>舌/口底/牙龈/颊/硬腭/RMT/唇——IX/VIII过站、口底铁律、颈清逆流、皮瓣</td><td><span class="new-badge">v3.0</span></td></tr>
-    <tr><td><b>口咽癌术后 PORT</b></td><td>扁桃体/舌根/软腭/咽侧壁——TORS、RP双侧必照、p16分层</td><td><span class="new-badge">v3.0</span></td></tr>
-    <tr><td><b>口咽癌根治性 RT</b></td><td>非手术——GTV+SIB(70/63/56)、诱导化疗后、HPV+</td><td><span class="new-badge">新建</span></td></tr>
-    <tr><td><b>化免降级（共享）</b></td><td>pCR/MPR——PORT降级、根治性RT降级、SBRT增强（替雷利珠+白紫+顺铂）</td><td><span class="new-badge">新建</span></td></tr>
+    <tr><td><b>口腔癌术后 PORT</b></td><td>舌/口底/牙龈/颊/硬腭/RMT/唇——IX/VIII过站、口底铁律、颈清逆流、皮瓣</td></tr>
+    <tr><td><b>口咽癌术后 PORT</b></td><td>扁桃体/舌根/软腭/咽侧壁——TORS、RP双侧必照、p16分层</td></tr>
+    <tr><td><b>口咽癌根治性 RT</b></td><td>非手术——GTV+SIB(70/63/56/35fx)、诱导化疗后、HPV+</td></tr>
+    <tr><td><b>化免降级（共享）</b></td><td>pCR/MPR——PORT降级、根治性RT降级、SBRT增强（替雷利珠+白紫+顺铂）</td></tr>
   </table>
 
-  <h3 style="font-size:15px;margin:14px 0 6px">🆕 喉/下咽 — 全新模块化</h3>
+  <h3 style="font-size:15px;margin:14px 0 6px">喉/下咽 — 模块化</h3>
   <table>
-    <tr><td><b>喉/下咽术后 PORT</b></td><td>全喉/部分喉——Stoma全层、咽重建、VI区、RP、软骨全层</td><td><span class="new-badge">新建</span></td></tr>
-    <tr><td><b>喉/下咽根治性 RT</b></td><td>保声——SIB(70/63/56)、内镜GTV、DAHANCA 5mm</td><td><span class="new-badge">新建</span></td></tr>
+    <tr><td><b>喉/下咽术后 PORT</b></td><td>全喉/部分喉——Stoma全层、咽重建、VI区、RP、软骨全层</td></tr>
+    <tr><td><b>喉/下咽根治性 RT</b></td><td>保声——SIB(70/63/56)、内镜GTV、DAHANCA 5mm</td></tr>
   </table>
 
   <h3 style="font-size:15px;margin:14px 0 6px">特色肿瘤</h3>
   <table>
-    <tr><td><b>腺样囊性癌 (ACC)</b></td><td>V2/V3三叉神经三级追踪 · 面神经垂直段分层 · 实体型颈管理 · 鼻咽近中线双侧V2通路</td><td><span class="iron-badge">v1.4.0</span></td></tr>
-    <tr><td><b>鼻咽癌 (NPC)</b></td><td>GTV 0mm逐级5mm · 岩尖+卵圆孔双侧 · III区前界修正 · 3100例转移率 · Lancet 2025</td><td></td></tr>
-    <tr><td><b>眼眶肿瘤</b></td><td>间室放疗（门+隔壁）· VIII→IX→IIa淋巴级联 · 骨侵犯→66Gy · 4Gy/2fx MALT</td><td></td></tr>
-    <tr><td><b>原发不明转移癌</b></td><td>两阶段NPC筛查 · 选择性黏膜（4跨中线结构）· 同侧颈单照 · 颈清后逆流</td><td></td></tr>
+    <tr><td><b>腺样囊性癌 (ACC)</b></td><td>V2/V3三叉神经三级追踪 · 面神经垂直段分层 · 实体型颈管理 · 鼻咽近中线双侧V2通路</td></tr>
+    <tr><td><b>鼻咽癌 (NPC)</b></td><td>GTV 0mm逐级5mm · 岩尖+卵圆孔双侧 · III区前界修正 · 3100例转移率 · Lancet 2025 + IG-2024</td></tr>
+    <tr><td><b>眼眶肿瘤</b></td><td>间室放疗（门+隔壁）· VIII→IX→IIa淋巴级联 · 骨侵犯→66Gy · 4Gy/2fx MALT · 眼前庭共管</td></tr>
+    <tr><td><b>原发不明转移癌 (HNCUP)</b></td><td>两阶段NPC筛查 · 选择性黏膜（4跨中线结构）· 同侧颈单照 · 颈清后逆流</td></tr>
+    <tr><td><b>唾液腺癌</b></td><td>腮腺/颌下腺/舌下腺/副腮腺 + 非标准PORT + RP规则 + 面神经→内听道</td></tr>
+    <tr><td><b>鼻腔鼻窦癌</b></td><td>上颌窦/筛窦/蝶窦 + 视路保护 + SNUC/嗅母/黑色素瘤 + SMARCA4/INI1</td></tr>
   </table>
 
   <h3 style="font-size:15px;margin:14px 0 6px">质控与特殊场景</h3>
   <table>
-    <tr><td><b>DVH 计划审核</b></td><td>双轨制（物理师筛子+医生裁决）· QUANTEC四维批判 · 完整SBRT量表</td><td></td></tr>
-    <tr><td><b>再程放疗</b></td><td>Quad-Shot(JAMA 2026)+IO · 累积BED计算 · IO增敏SER · SBRT补量</td><td></td></tr>
+    <tr><td><b>DVH 计划审核</b></td><td>双轨制（物理师筛子+医生裁决）· QUANTEC四维批判 · 完整SBRT量表(Timmerman 2022)</td></tr>
+    <tr><td><b>再程放疗</b></td><td>Quad-Shot(JAMA 2026)+IO · 累积BED计算 · IO增敏SER · SBRT补量</td></tr>
+    <tr><td><b>共享知识库</b></td><td>口底铁律 · 间室放疗 · 七窍相通 · 淋巴逆流规则——跨 Skill 通用原则</td></tr>
   </table>
 </div>
 
@@ -96,11 +99,11 @@ th { background:#f5f7fa; font-weight:bold; }
   <h2>💡 为什么这个 AI 不一样？</h2>
   <div class="highlight-box">
     <b>🔴 铁律清单——模型不会"忘记"关键规则</b><br>
-    每个 Skill 最开头列出 8-14 条硬规则（口底铁律、间室放疗、逆流规则……），AI 第一眼就锚定核心逻辑。长文 Skill（最长 996 行）也不怕注意力稀释。
+    每个 Skill 最开头列出 8-14 条硬规则（口底铁律、间室放疗、逆流规则……），AI 第一眼就锚定核心逻辑。
   </div>
   <div class="highlight-box">
     <b>🔗 自动联动——说一个部位，自动加载关联 Skill</b><br>
-    "眼眶 ACC"→同时加载眼眶 + ACC。"鼻咽部肿块活检腺样囊性癌"→自动加载 ACC Skill 而非 NPC Skill，靶区逻辑完全不同。
+    "眼眶 ACC"→同时加载眼眶 + ACC。"鼻咽部肿块活检腺样囊性癌"→自动加载 ACC Skill 而非 NPC Skill。
   </div>
   <div class="highlight-box">
     <b>📋 前置核查清单——不看完手术记录不画靶区</b><br>
@@ -114,7 +117,7 @@ th { background:#f5f7fa; font-weight:bold; }
   <p style="margin-top:8px;font-size:13px;color:#888;">上海交通大学医学院附属第九人民医院 · 口腔颌面头颈肿瘤科放疗组</p>
 </div>
 
-<div class="footer">扫码即用 · 免费开源 · 同行互助</div>
+<div class="footer">免费开源 · 同行互助 · 17 个 Skill 持续更新</div>
 
 </body>
 </html>

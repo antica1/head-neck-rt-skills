@@ -1,12 +1,7 @@
 # 头颈肿瘤放疗 AI 靶区规划系统——安装指南
 
-<<<<<<< HEAD
 > 上海交通大学医学院附属第九人民医院 · 口腔颌面头颈肿瘤科放疗中心
-> **10 个核心 Skill + 6 个模块化子 Skill** | GitHub 开源 | CC BY-NC-SA 4.0
-=======
-> 上海交通大学医学院附属第九人民医院 · 口腔颌面头颈肿瘤科放疗组
-> **12 个独立放疗靶区 Skill** | GitHub 开源 | 一行命令安装 | v1.4.0
->>>>>>> 80f57cbdd490c65aabbfc9fd126c4c4929bcd7f6
+> **17 个独立放疗靶区 Skill** | GitHub 开源 | CC BY-NC-SA 4.0 | v2.0.0
 
 ---
 
@@ -15,19 +10,7 @@
 ### 1. 下载 Hermes 桌面版
 👉 https://hermes-agent.nousresearch.com（Windows / Mac 均可）
 
-<<<<<<< HEAD
----
-
-## 二、第一步：安装 Hermes 桌面版（一次性）
-
-1. 浏览器打开：https://hermes-agent.nousresearch.com
-2. 点击 **Download for Windows**（或 Mac）
-3. 双击安装包 → 一路"下一步"→ 完成
-4. 桌面出现 Hermes 图标 → 双击打开
-
----
-
-## 三、第二步：配置 AI 模型（一次性）
+### 2. 配置 AI 模型
 
 Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 
@@ -39,30 +22,19 @@ Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 
 > 也支持 Kimi、GLM 等其他模型。注册 DeepSeek 只需手机号，新用户送免费额度。
 
----
-
-## 四、第三步：安装全部 Skill（一行命令）
+### 3. 安装全部 Skill
 
 在 Hermes 底部的输入框里，粘贴这一行 → 回车：
-=======
-### 2. 配置 AI 模型
-注册 DeepSeek（platform.deepseek.com）→ 填入 Hermes 设置
->>>>>>> 80f57cbdd490c65aabbfc9fd126c4c4929bcd7f6
 
-### 3. 安装全部 Skill
 ```
-<<<<<<< HEAD
-hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review head-neck-reirradiation oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets salivary-gland-rt-targets sinonasal-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive
-=======
-hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review reirradiation-plan-recommend port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive
->>>>>>> 80f57cbdd490c65aabbfc9fd126c4c4929bcd7f6
+hermes skills install head-neck-acc-rt-targets HNCUP-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review head-neck-reirradiation oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets salivary-gland-rt-targets sinonasal-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive shared-knowledge
 ```
 
 ---
 
-## 12 个 Skill 一览
+## 17 个 Skill 一览
 
-### 🆕 口腔口咽 — 全新模块化
+### 口腔口咽 — 模块化
 
 | Skill | 覆盖内容 |
 |-------|---------|
@@ -71,7 +43,7 @@ hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt
 | **口咽癌根治性 RT** | 非手术——GTV+SIB(70/63/56) + 诱导化疗后 + HPV+ |
 | **化免降级（共享模块）** | pCR/MPR——PORT降级 + 根治性RT降级 + SBRT增强（替雷利珠+白紫+顺铂） |
 
-### 🆕 喉/下咽 — 全新模块化
+### 喉/下咽 — 模块化
 
 | Skill | 覆盖内容 |
 |-------|---------|
@@ -82,10 +54,12 @@ hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt
 
 | Skill | 覆盖内容 |
 |-------|---------|
-| **腺样囊性癌 (ACC) v1.4.0** | 🆕 三叉神经V2/V3三级追踪（命名→全海绵窦 / 小PNI→海绵窦下界 / 无PNI→颅底）· 面神经垂直段分层管理 · 实体型颈管理（不受口裂限制）· 鼻咽近中线双侧V2通路 |
+| **腺样囊性癌 (ACC)** | 🆕 三叉神经V2/V3三级追踪（命名→全海绵窦 / 小PNI→海绵窦下界 / 无PNI→颅底）· 面神经垂直段分层管理 · 实体型颈管理（不受口裂限制）· 鼻咽近中线双侧V2通路 |
 | **鼻咽癌 (NPC)** | GTV 0mm逐级5mm · 岩尖+卵圆孔双侧（九院）· III区前界=胸锁乳突肌后缘 · 3100例转移率数据 · Lancet 2025 + IG-2024 |
 | **眼眶肿瘤** | 间室放疗（门+隔壁）· VIII→IX→IIa淋巴级联 · 骨侵犯→66Gy · 4Gy/2fx超低剂量MALT · 眼前庭共管 |
 | **原发不明转移癌 (HNCUP)** | 两阶段NPC筛查 · 选择性黏膜（4跨中线结构）· 同侧颈单照 · 颈清后逆流规则 |
+| **唾液腺癌** | 腮腺/颌下腺/舌下腺/副腮腺 + 非标准 PORT + RP 规则 + 面神经→内听道 |
+| **鼻腔鼻窦癌** | 上颌窦/筛窦/蝶窦 + 视路保护 + SNUC/嗅母/黑色素瘤 + SMARCA4/INI1 + ICAR 2024 颈部数据 |
 
 ### 质控与特殊场景
 
@@ -93,51 +67,21 @@ hermes skills install head-neck-acc-rt-targets hncup-rt-targets orbital-tumor-rt
 |-------|---------|
 | **DVH 计划审核** | 双轨制（物理师筛子+医生裁决）· QUANTEC四维批判 · 完整SBRT量表(Timmerman 2022) |
 | **再程放疗** | Quad-Shot(JAMA 2026)+IO · 累积BED计算 · IO增敏SER · SBRT补量 |
+| **共享知识库** | 口底铁律 · 间室放疗 · 七窍相通 · 淋巴逆流规则——跨 Skill 通用原则 |
 
 ---
 
-<<<<<<< HEAD
-## 五、10 个核心 Skill 一览
+## ✨ 核心亮点
 
-### 口腔口咽
-
-| Skill | 内容 |
-|-------|------|
-| **口腔口咽癌术后靶区** | 舌/口底/牙龈/颊/硬腭/RMT/扁桃体/舌根/软腭——亚部位 CTV + 口底铁律 + 皮瓣 + PNI + 降级三梯度 |
-| **口腔癌术后 PORT**（子模块） | 舌/口底/牙龈/颊/硬腭/RMT/唇——VIII/IX 过站 + 颈清逆流 |
-| **口咽癌术后 PORT**（子模块） | 扁桃体/舌根/软腭/咽侧壁——TORS + RP 双侧必照 + p16 分层 |
-| **口咽癌根治性 RT**（子模块） | GTV+SIB(70/63/56) + 诱导化疗后 + HPV+ |
-| **化免降级**（子模块） | pCR/MPR——PORT 降级 + 根治性 RT 降级 + SBRT 增强（替雷利珠+白紫+顺铂） |
-
-### 喉/下咽
-
-| Skill | 内容 |
-|-------|------|
-| **喉癌/下咽癌靶区** | 软骨侵犯、Stoma 管理、RP/Ⅵ区必照、失败模式对照 |
-| **喉/下咽术后 PORT**（子模块） | 全喉/部分喉——Stoma 全层 + 咽重建 + VI 区 + 软骨全层 |
-| **喉/下咽根治性 RT**（子模块） | 保声——SIB(70/63/56) + 内镜 GTV + DAHANCA 5mm |
-
-### 特色肿瘤
-
-| Skill | 版本 | 内容 |
-|-------|:--:|------|
-| **腺样囊性癌 (ACC)** | v1.5.1 | V2/V3 三级神经追踪 + 面神经垂直段 + 实体型颈管理 + 鼻腔鼻窦 ACC + CAP 化疗 |
-| **鼻咽癌 (NPC)** | v1.2.0 | GTV 0mm 逐级 5mm + 岩尖卵圆孔双侧（九院）+ Lancet 2025 |
-| **眼眶肿瘤** | v1.0.0 | 间室放疗（门+隔壁）+ VIII→IX→IIa 淋巴级联 + 眼前庭共管 |
-| **原发不明转移癌 (HNCUP)** | v1.0.0 | 选择性黏膜（4 跨中线结构）+ EBV/HPV 分层 + 颈清后逆流 |
-| **唾液腺癌** | v1.2.1 | 腮腺/颌下腺/舌下腺/副腮腺 + 非标准 PORT + RP 规则 + 面神经→内听道 |
-| **鼻腔鼻窦癌** | v1.3.2 | 上颌窦/筛窦/蝶窦 + 视路保护 + SNUC/嗅母/黑色素瘤 + SMARCA4/INI1 + ICAR 2024 颈部数据 |
-
-### 质控与特殊场景
-
-| Skill | 版本 | 内容 |
-|-------|:--:|------|
-| **DVH 计划审核** | v1.2.0 | 双轨制 + QUANTEC 四维批判 + 唾液腺剂量-效应数据 |
-| **再程放疗** | v1.1.0 | Quad-Shot(JAMA 2026)+IO + 累积 BED + SBRT 补量 |
+- 🔴 **铁律清单**——每个 Skill 开头列出 8-14 条不容违反的硬规则，模型注意力焦点锚定
+- 🔗 **技能自动联动**——眼眶 ACC 自动加载 ACC Skill，HNCUP 自动加载 NPC Skill
+- 📋 **前置核查清单**——靶区生成前逐条走完 22 项检查，不可遗漏
+- 🏥 **全部九院经验编码**——口底铁律、间室放疗、逆流规则、四级加量指征……手术不易切净区自动标记
+- 📝 **可直接粘贴入病历**——每份报告附"靶区规划摘要"模板
 
 ---
 
-## 六、开始使用
+## 开始使用
 
 在 Hermes 聊天框里，直接输入患者的病史、手术记录、病理报告，AI 会自动：
 
@@ -169,15 +113,6 @@ A: 能。Hermes 右上角麦克风按钮——按下说话，自动用 Whisper �
 
 **Q: 在哪里看更新？**
 A: GitHub 关注 `antica1`——每次更新自动推送。Hermes 内运行 `hermes skills update` 即可更新。
-=======
-## ✨ 核心亮点
-
-- 🔴 **铁律清单**——每个 Skill 开头列出 8-14 条不容违反的硬规则，模型注意力焦点锚定
-- 🔗 **技能自动联动**——眼眶 ACC 自动加载 ACC Skill，HNCUP 自动加载 NPC Skill
-- 📋 **前置核查清单**——靶区生成前逐条走完 22 项检查，不可遗漏
-- 🏥 **全部九院经验编码**——口底铁律、间室放疗、逆流规则、四级加量指征……手术不易切净区自动标记
-- 📝 **可直接粘贴入病历**——每份报告附"靶区规划摘要"模板
->>>>>>> 80f57cbdd490c65aabbfc9fd126c4c4929bcd7f6
 
 **Q: 如何引用？**
 A: 引用 CITATION.cff。朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
@@ -186,11 +121,6 @@ A: 引用 CITATION.cff。朱国培, 上海九院放疗中心. 头颈肿瘤放疗
 
 ## 获取帮助
 
-<<<<<<< HEAD
 - 总入口：https://github.com/antica1/head-neck-rt-skills
-- 16 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验
+- 17 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验
 - 授权：CC BY-NC-SA 4.0（署名-非商业-相同方式共享）
-=======
-- GitHub: https://github.com/antica1
-- 全部开源，欢迎提建议、报告问题
->>>>>>> 80f57cbdd490c65aabbfc9fd126c4c4929bcd7f6
