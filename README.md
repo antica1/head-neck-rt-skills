@@ -1,7 +1,7 @@
 # 头颈肿瘤放疗 AI 靶区规划系统 —— 安装与使用指南
 
 > 上海交通大学医学院附属第九人民医院 · 口腔颌面头颈肿瘤科放疗中心
-> **17 个放疗靶区 Skill** | GitHub 开源 | CC BY-NC-SA 4.0 | v2.1.0
+> **18 个放疗靶区 Skill** | GitHub 开源 | CC BY-NC-SA 4.0 | v2.2.0
 
 ---
 
@@ -21,7 +21,7 @@
 ## 方式 A：Claude Code 安装
 
 ```bash
-# 克隆总仓库（包含全部 17 个 Skill）
+# 克隆总仓库（包含全部 18 个 Skill）
 git clone https://github.com/antica1/head-neck-rt-skills.git
 
 # 在 Claude Code 中添加 skills/ 目录路径即可加载全部 Skill
