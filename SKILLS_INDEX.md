@@ -1,7 +1,7 @@
 # 头颈放疗靶区 Skill 完整索引
 
-> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.1.0 | 2026-07-29
-> 17 个 Skill · 7,253 行 Markdown · Claude Code & Hermes 双平台
+> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.2.0 | 2026-07-30
+> 18 个 Skill · 8,126 行 Markdown · Claude Code & Hermes 双平台
 
 ---
 
@@ -35,7 +35,9 @@ head-neck-rt-skills/
     ├── sinonasal-rt-targets/        # 鼻腔鼻窦癌（525 行）
     ├── salivary-gland-rt-targets/   # 唾液腺癌（806 行）
     ├── head-neck-reirradiation/     # 再程放疗（261 行）
-    └── head-neck-dvh-review/        # DVH 计划审核（257 行）
+    ├── head-neck-lymphoma-rt-targets/  # 头颈部淋巴瘤放疗（873 行）🆕
+│
+└── head-neck-dvh-review/        # DVH 计划审核（257 行）
 ```
 
 ---
