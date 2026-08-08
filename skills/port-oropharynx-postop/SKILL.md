@@ -4,22 +4,44 @@ description: "Self-contained oropharynx PORT module — surgical bed fusion, man
 version: 1.0.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: MIT
-nmetadata:
+metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oropharynx, postoperative]
     related_skills: [neoadjuvant-deescalation, oropharynx-definitive-rt]
-    triggers_on: [口咽癌, 扁桃体癌, 舌根癌, 软腭癌, 咽侧壁癌, oropharynx, tonsil, base of tongue, soft palate, TORS]
+    triggers_on: [口咽癌, 口咽术后, 扁桃体癌, 舌根癌, 软腭癌, 咽侧壁癌, TORS, 经口机器人手术, 口咽PORT, 口咽靶区, oropharynx, tonsil, BOT, base of tongue, soft palate, pharyngeal wall, TORS PORT]
 ---
 
 # 口咽癌术后放疗靶区勾画（PORT）
 
-> **自包含模块** —— 处理口咽癌 PORT 无需加载其他模块。
+## 🔑 铁律清单
+
+| # | 铁律 | 触发条件 |
+|---|------|---------|
+| 1 | **RP双侧必照(口咽癌)** | 口咽癌一律 |
+| 2 | **中线原发→双侧颈** | 舌根/软腭/近中线咽侧壁 |
+| 3 | **TORS术后→术腔+5mm沿咽缩肌** | TORS术后 |
+| 4 | **p16+HPV+降阶梯可能** | p16阳性 |
+| 5 | **舌根→舌深部+会厌前间隙** | 舌根癌 |
+| 6 | **软腭→翼下颌缝+咽旁间隙** | 软腭癌 |
+| 7 | **扁桃体→II区高危+腮腺旁淋巴结** | 扁桃体癌 |
+| 8 | **术后60/54 Gy序贯(不用SIB)** | 所有口咽PORT |
+
+> **自包含模块**
 > 若患者有化免新辅助史，额外加载 `neoadjuvant-deescalation`。
 > 若为根治性放疗（非手术），加载 `oropharynx-definitive-rt`。
 >
 > 朱国培 · 上海交通大学医学院附属第九人民医院口腔颌面-头颈肿瘤科
 
 ---
+
+## ⚠️ 影像依赖声明
+
+> **本 Skill 中的所有靶区边界均为基于解剖的"默认建议"。实际勾画以术前 MRI/CT 为准。AI 无法读片——报告中边界须以"建议 + 依据 + 请确认"格式输出。** 若术前影像未提供肿瘤具体范围→CTV 外放 **+5mm**。
+
+## 📄 报告输出——双版本
+
+> **出报告前必须询问：精简版（~1页，仅靶区+剂量）还是完整版（含推理+循证）。模板见 `port-oral-postop` §报告输出。**
+
 
 ## 术后 PORT 的独特挑战
 

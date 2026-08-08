@@ -4,15 +4,29 @@ description: "Radiotherapy de-escalation after neoadjuvant chemo-immunotherapy �
 version: 2.0.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: MIT
-nmetadata:
+metadata:
   hermes:
     tags: [head-neck, radiotherapy, neoadjuvant, de-escalation, chemoimmunotherapy, SBRT]
-    triggers_on: [化免, 新辅助, 化疗免疫, neoadjuvant, pCR, MPR, 降级, de-escalation, 免疫维持, KEYNOTE-689, SBRT, NACI]
+    triggers_on: [化免新辅助, 新辅助化疗, 新辅助免疫, 降阶梯, 降级, pCR, MPR, 替雷利珠, 白蛋白紫杉醇, 顺铂新辅助, neoadjuvant, de-escalation, PORT降级, 根治性RT降级]
+    related_skills: [port-oral-postop, port-oropharynx-postop, oropharynx-definitive-rt, shared-knowledge]
 ---
 
 # 化免新辅助后放疗降级策略
 
-> **共享模块** —— 适用于 (A) 术后 PORT 降级 和 (B) 根治性 RT 降级。
+## 铁律清单
+
+| # | 铁律 | 触发条件 |
+|---|------|---------|
+| 1 | pCR → PORT降级（60→54 Gy 或豁免） | 术后病理确认pCR（原发灶+淋巴结均无存活肿瘤） |
+| 2 | MPR → PORT标准剂量但CTV缩小 | MPR A型（孤立微残留，Ki-67<20%） |
+| 3 | 非MPR → 标准PORT（60-66 Gy），不可降级 | 残余>10%或化免耐药 |
+| 4 | pCR + cN0 → 可免颈部照射 | 治疗前N0，术后病理确认LN pCR |
+| 5 | 化免后手术 → 融合术前影像勾画瘤床 | 手术按治疗后MRI缩小切除时 |
+| 6 | SBRT加强用于深部反应 | 下颌骨侵及/重建骨瓣，需降低ORN风险 |
+| 7 | 降阶梯决策需MDT | 任何降级方案（尤其是豁免PORT） |
+| 8 | 九院替雷利珠+白紫+顺铂方案 | 化免新辅助标准方案参考 |
+
+> **共享模块**
 > 加载条件：患者有化免新辅助史。由各主模块的清单 F 组触发。
 >
 > 九院窦圣金、蒋雯、朱国培、夏荣辉等综述（2026）的临床实操版。
@@ -31,7 +45,7 @@ nmetadata:
 | **常见于** | 口腔癌（居多）、口咽癌 | 口咽癌 |
 | **降级逻辑** | 病理缓解→缩范围/降剂量/免疫维持 | 化免后影像退缩→缩范围/降剂量 |
 | **核心依据** | **术后病理**（pCR/MPR 有组织学确认） | **影像+活检**（CR 仅有影像推断→更保守） |
-| **最大降级空间** | pCR → 可降至 50-54 Gy 甚至免疫维持免 PORT | 化免后 CR → 可考虑 60 Gy（不轻易降至 54 Gy） |
+| **最大降级空间** | pCR → 可降至 50-54 Gy（预防区剂量）。⚠️ **临床试验范畴**：免疫维持免 PORT 目前缺乏前瞻性 RCT 支持，NCCN/CSCO 尚未批准。仅应在临床试验或 MDT 高度选择病例中考虑 | 化免后 CR → 可考虑 60 Gy（不轻易降至 54 Gy） |
 
 ---
 
