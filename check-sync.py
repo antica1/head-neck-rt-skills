@@ -21,7 +21,7 @@ import subprocess
 import difflib
 
 MAIN = r"D:\头颈肿瘤放疗靶区\主仓库\skills"
-RUN  = r"C:\Users\antic\AppData\Local\hermes\skills\research"
+RUN  = r"C:\Users\antic\AppData\Local\hermes\skills"   # 顶层：含分类子目录与独立技能
 REPO = r"D:\头颈肿瘤放疗靶区\主仓库"
 
 def read(p):
@@ -85,13 +85,20 @@ def main():
     for name in main_skills:
         m_path = os.path.join(MAIN, name, "SKILL.md")
         tm = read(m_path)
-        # 2026-08 起目录名已统一 = YAML name = 运行目录名，直接匹配
-        r_path = os.path.join(RUN, name, "SKILL.md")
-        tr = read(r_path)
+        # 2026-08 起目录名已统一 = YAML name。运行目录搜索顶层+所有分类子目录
+        r_path = None
+        for cand in [os.path.join(RUN, name, "SKILL.md")] + [
+                os.path.join(RUN, cat, name, "SKILL.md")
+                for cat in sorted(os.listdir(RUN))
+                if os.path.isdir(os.path.join(RUN, cat))]:
+            if os.path.exists(cand):
+                r_path = cand
+                break
+        tr = read(r_path) if r_path else None
 
         # 主仓库 vs 运行目录
         if tr is None:
-            print(f"  ❌ {name}: 运行目录缺失 SKILL.md（主仓库有，yaml name={yn}）")
+            print(f"  ❌ {name}: 运行目录缺失 SKILL.md（主仓库有，yaml name={yaml_name(tm)}）")
             errors += 1
         elif tm != tr:
             vm, vr = version(tm), version(tr)
@@ -135,7 +142,17 @@ def main():
                          "hospital-", "institutional-", "journal-", "conference-", "medical-",
                          "rt-academic", "rt-department", "competitor-", "blogwatcher", "arxiv",
                          "agnes-", "pdf-figure")
+        # Hermes 分类目录（组织结构，非技能）——不参与发布检查
+        CATEGORY_DIRS = {"apple", "autonomous-ai-agents", "clinical-literature-review", "creative",
+                         "email", "github", "head-neck-rt-methodology", "hermes-desktop-plugins",
+                         "media", "mlops", "note-taking", "productivity", "promotion-defense-review",
+                         "reference-verification", "research", "smart-home", "social-media",
+                         "software-development", "yuanbao"}
         for name in run_skills:
+            if name in CATEGORY_DIRS:
+                continue  # 分类目录/顶层技能，跳过
+            if name.startswith("."):
+                continue  # Hermes 隐藏目录（.hub/.curator_backups 等）
             if name in main_names:
                 continue  # 已有对应（目录名或 YAML name 匹配）
             if name.startswith(skip_prefixes):
