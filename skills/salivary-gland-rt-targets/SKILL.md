@@ -8,8 +8,10 @@ name: salivary-gland-rt-targets
 description: "唾液腺癌放疗靶区勾画——术后PORT、淋巴上皮癌根治性CRT、腮腺/颌下腺/舌下腺CTV。Salivary gland carcinoma RT — PORT, lymphoepithelial carcinoma definitive CRT, parotid/submandibular/sublingual CTV."
 version: 1.2.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 ---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 # 唾液腺癌放疗靶区勾画
 

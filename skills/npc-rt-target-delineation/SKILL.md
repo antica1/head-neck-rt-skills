@@ -3,7 +3,7 @@ name: npc-rt-target-delineation
 description: "鼻咽癌NPC放疗靶区勾画——颅底孔道、海绵窦、逐级CTV构建。Lancet 2025 & IG-2024。Precision NPC target volume delineation — skull base foramina, cavernous sinus, stepwise CTV."
 version: 1.3.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 nmetadata:
   hermes:
     tags: [head-neck, radiotherapy, target-delineation]
@@ -24,6 +24,8 @@ nmetadata:
       - 鼻咽癌靶区
     related_skills: [head-neck-dvh-plan-review, reirradiation-plan-recommend, hncup-rt-targets]
 ---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 # 鼻咽癌精准靶区勾画 — 解剖参考手册
 

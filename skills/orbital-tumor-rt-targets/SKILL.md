@@ -3,7 +3,7 @@ name: orbital-tumor-rt-targets
 description: "眼眶肿瘤放疗靶区勾画——间室放疗(门+隔壁比喻)、眼前庭共管。Orbital RT — compartment irradiation, lacrimal apparatus, orbital apex."
 version: 1.0.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, orbital, eye, lymphoma, SBRT]
@@ -11,6 +11,8 @@ metadata:
     related_skills: [adenoid-cystic-carcinoma-rt-targets, reirradiation-plan-recommend, npc-rt-target-delineation, head-neck-dvh-plan-review]
 
 ---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 # 眼眶肿瘤放疗靶区勾画指南
 

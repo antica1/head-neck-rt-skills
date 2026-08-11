@@ -3,7 +3,7 @@ name: laryngeal-hypopharyngeal-rt-targets
 description: "Laryngeal/hypopharyngeal radiotherapy master index — split into 2 self-contained modules (PORT + definitive RT). v2.0.0 redirect."
 version: 2.0.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, larynx, hypopharynx, index]
@@ -11,6 +11,8 @@ metadata:
     related_skills: [larynx-hypopharynx-postop, larynx-hypopharynx-definitive]
     split_into: [larynx-hypopharynx-postop, larynx-hypopharynx-definitive]
 ---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 # 喉癌与下咽癌放疗靶区勾画——总索引（v2.0.0）
 

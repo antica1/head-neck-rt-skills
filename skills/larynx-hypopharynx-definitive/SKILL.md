@@ -3,13 +3,15 @@ name: larynx-hypopharynx-definitive
 description: "Self-contained laryngeal/hypopharyngeal definitive (non-surgical) RT skill. GTV-based SIB delineation (70/63/56 Gy), endoscopy-required GTV definition, DAHANCA 5mm margin validation, cartilage invasion rules, level VI/RP mandatory for hypopharynx, T1-T2 glottic larynx RT as voice preservation standard."
 version: 1.1.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, definitive, larynx, hypopharynx, SIB]
     related_skills: [larynx-hypopharynx-postop, neoadjuvant-deescalation]
     triggers_on: [喉癌根治性放疗, 下咽癌根治性放疗, 保声放疗, definitive RT, 同步放化疗, CRT, larynx preservation, SIB]
 ---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 # 喉癌与下咽癌根治性放疗靶区勾画
 

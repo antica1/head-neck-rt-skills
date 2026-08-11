@@ -3,12 +3,16 @@ name: tongue-fom-port-escalation
 description: "Use when 舌癌累及口底术后PORT：同侧颈Ⅰ-Ⅲ提级60Gy+对侧Ia/Ib/II预防54Gy。"
 version: 1.0.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oral-cavity, tongue, floor-of-mouth, neck]
     related_skills: [port-oral-postop]
     triggers_on: [舌癌累及口底, 舌癌口底, 舌癌对侧颈, 对侧颈预防, 同侧颈提级, Ⅲ区阳性, 口底铁律, tongue floor of mouth, tongue FOM, DOI>10mm, DOI 10mm]
+
+---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 ---
 

@@ -3,13 +3,15 @@ name: larynx-hypopharynx-postop
 description: "Self-contained laryngeal/hypopharyngeal postoperative PORT skill. Total laryngectomy with stoma CTV, partial laryngectomy, pharyngeal reconstruction, level VI/RP mandatory for hypopharynx, cartilage invasion rules, neoadjuvant de-escalation reference."
 version: 1.1.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, larynx, hypopharynx, postoperative]
     related_skills: [neoadjuvant-deescalation]
     triggers_on: [喉癌, 下咽癌, 全喉切除, 部分喉切除, 喉术后, larynx, hypopharynx, laryngectomy, PORT, stoma]
 ---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 # 喉癌与下咽癌术后放疗靶区勾画（PORT）
 

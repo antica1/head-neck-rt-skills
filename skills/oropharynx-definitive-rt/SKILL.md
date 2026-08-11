@@ -3,13 +3,15 @@ name: oropharynx-definitive-rt
 description: "Oropharynx definitive (non-surgical) radiotherapy — GTV-based target delineation, SIB dosing, post-induction chemotherapy GTV management, HPV+ de-escalation, OAR constraints, and neck management for radical RT."
 version: 1.0.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, definitive, oropharynx, radical, SIB]
     related_skills: [port-oropharynx-postop, neoadjuvant-deescalation]
     triggers_on: [口咽根治, 口咽根治性放疗, 口咽SIB, 口咽非手术, 扁桃体根治, 舌根根治, 诱导化疗后口咽, HPV+口咽, oropharynx definitive, oropharynx SIB, 70Gy口咽]
 ---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 # 口咽癌根治性（非手术）放疗靶区勾画
 

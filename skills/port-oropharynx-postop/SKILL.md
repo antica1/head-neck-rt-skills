@@ -3,13 +3,15 @@ name: port-oropharynx-postop
 description: "Self-contained oropharynx PORT module — surgical bed fusion, mandatory checklist, 4 oropharynx subsites CTV (tonsil, BOT, soft palate, pharyngeal wall), RP always required, TORS specifics, neck management, margins, PNI, dose strategy, and evidence base."
 version: 1.0.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oropharynx, postoperative]
     related_skills: [neoadjuvant-deescalation, oropharynx-definitive-rt]
     triggers_on: [口咽癌, 口咽术后, 扁桃体癌, 舌根癌, 软腭癌, 咽侧壁癌, TORS, 经口机器人手术, 口咽PORT, 口咽靶区, oropharynx, tonsil, BOT, base of tongue, soft palate, pharyngeal wall, TORS PORT]
 ---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 # 口咽癌术后放疗靶区勾画（PORT）
 

@@ -3,13 +3,15 @@ name: reirradiation-plan-recommend
 description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、累积BED计算。Re-irradiation — Quad-Shot, SBRT+IO, cumulative BED, SER correction."
 version: 1.1.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: MIT
+license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, reirradiation, sbrt, immunotherapy]
     triggers_on: [再程放疗, 再照射, 二次放疗, Quad-Shot, SBRT再程, 复发放疗, 累积BED, IO增敏, reirradiation, re-irradiation, retreatment, Quad Shot, BED calculation, 再程方案]
     related_skills: [head-neck-dvh-plan-review, shared-knowledge]
 ---
+
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 # 头颈肿瘤再程放疗方案推荐
 
