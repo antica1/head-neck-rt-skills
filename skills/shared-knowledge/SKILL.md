@@ -219,7 +219,7 @@ license: CC BY-NC-SA 4.0
 
 | 技能仓库 | 内容 |
 |---------|------|
-| `head-neck-acc-rt-targets` | 头颈部腺样囊性癌术后靶区 |
+| `adenoid-cystic-carcinoma-rt-targets` | 头颈部腺样囊性癌术后靶区 |
 | `npc-rt-target-delineation` | 鼻咽癌精准靶区勾画 |
 | `orbital-tumor-rt-targets` | 眼眶肿瘤放疗靶区 |
 | `hncup-rt-targets` | 颈部原发不明转移癌放疗靶区 |
@@ -227,8 +227,8 @@ license: CC BY-NC-SA 4.0
 | `sinonasal-rt-targets` | 鼻腔鼻窦放疗靶区 |
 | `salivary-gland-rt-targets` | 唾液腺癌放疗靶区 |
 | `laryngeal-hypopharyngeal-rt-targets` | 喉癌/下咽癌放疗靶区 |
-| `head-neck-dvh-review` | DVH 计划审核 |
-| `head-neck-reirradiation` | 再程放疗方案 |
+| `head-neck-dvh-plan-review` | DVH 计划审核 |
+| `reirradiation-plan-recommend` | 再程放疗方案 |
 | `port-oral-postop` | 口腔癌术后 PORT（子模块） |
 | `port-oropharynx-postop` | 口咽癌术后 PORT（子模块） |
 | `oropharynx-definitive-rt` | 口咽癌根治性 RT（子模块） |

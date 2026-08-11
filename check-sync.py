@@ -85,18 +85,9 @@ def main():
     for name in main_skills:
         m_path = os.path.join(MAIN, name, "SKILL.md")
         tm = read(m_path)
-        # 运行目录用 YAML name 作为目录名（可能 ≠ 主仓库目录名）
-        yn = yaml_name(tm)
-        r_path = None
-        if yn:
-            cand = os.path.join(RUN, yn, "SKILL.md")
-            if os.path.exists(cand):
-                r_path = cand
-        if r_path is None:
-            cand2 = os.path.join(RUN, name, "SKILL.md")
-            if os.path.exists(cand2):
-                r_path = cand2
-        tr = read(r_path) if r_path else None
+        # 2026-08 起目录名已统一 = YAML name = 运行目录名，直接匹配
+        r_path = os.path.join(RUN, name, "SKILL.md")
+        tr = read(r_path)
 
         # 主仓库 vs 运行目录
         if tr is None:

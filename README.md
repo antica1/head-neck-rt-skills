@@ -37,7 +37,7 @@ Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 在 Hermes 底部的输入框里，粘贴这一行 → 回车：
 
 ```
-hermes skills install head-neck-acc-rt-targets HNCUP-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review head-neck-reirradiation oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets salivary-gland-rt-targets sinonasal-rt-targets head-neck-lymphoma-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive shared-knowledge
+hermes skills install adenoid-cystic-carcinoma-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-plan-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets salivary-gland-rt-targets sinonasal-rt-targets head-neck-lymphoma-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive shared-knowledge
 ```
 
 > 如遇个别 Skill 安装失败，可单独重试：`hermes skills install <skill名>`

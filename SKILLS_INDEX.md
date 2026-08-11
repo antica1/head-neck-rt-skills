@@ -28,16 +28,16 @@ head-neck-rt-skills/
     │   ├── larynx-hypopharynx-postop/        # 喉/下咽术后 PORT（381 行）
     │   └── larynx-hypopharynx-definitive/    # 喉/下咽根治性 RT（308 行）
     │
-    ├── head-neck-acc-rt-targets/    # ACC 腺样囊性癌（437 行）
-    ├── HNCUP-rt-targets/            # 原发不明转移癌（517 行）
+    ├── adenoid-cystic-carcinoma-rt-targets/    # ACC 腺样囊性癌（437 行）
+    ├── hncup-rt-targets/            # 原发不明转移癌（517 行）
     ├── npc-rt-target-delineation/   # NPC 鼻咽癌（78 行）
     ├── orbital-tumor-rt-targets/    # 眼眶肿瘤（1,026 行）
     ├── sinonasal-rt-targets/        # 鼻腔鼻窦癌（525 行）
     ├── salivary-gland-rt-targets/   # 唾液腺癌（806 行）
-    ├── head-neck-reirradiation/     # 再程放疗（261 行）
+    ├── reirradiation-plan-recommend/     # 再程放疗（261 行）
     ├── head-neck-lymphoma-rt-targets/  # 头颈部淋巴瘤放疗（873 行）🆕
 │
-└── head-neck-dvh-review/        # DVH 计划审核（257 行）
+└── head-neck-dvh-plan-review/        # DVH 计划审核（257 行）
 ```
 
 ---
@@ -60,14 +60,14 @@ shared-knowledge
     │   ├── larynx-hypopharynx-postop   ← neoadjuvant-deescalation ─┤
     │   └── larynx-hypopharynx-definitive ──────────────────────────┤
     │                                                                │
-    ├── head-neck-acc-rt-targets                                     │
-    ├── HNCUP-rt-targets                ← npc-rt-target-delineation  │
+    ├── adenoid-cystic-carcinoma-rt-targets                                     │
+    ├── hncup-rt-targets                ← npc-rt-target-delineation  │
     ├── npc-rt-target-delineation                                    │
-    ├── orbital-tumor-rt-targets        ← head-neck-acc-rt-targets   │
+    ├── orbital-tumor-rt-targets        ← adenoid-cystic-carcinoma-rt-targets   │
     ├── sinonasal-rt-targets                                         │
-    ├── salivary-gland-rt-targets       ← head-neck-acc-rt-targets   │
-    ├── head-neck-reirradiation                                      │
-    └── head-neck-dvh-review                                         │
+    ├── salivary-gland-rt-targets       ← adenoid-cystic-carcinoma-rt-targets   │
+    ├── reirradiation-plan-recommend                                      │
+    └── head-neck-dvh-plan-review                                         │
 ```
 
 ---
@@ -85,16 +85,16 @@ shared-knowledge
 | laryngeal-hypopharyngeal-rt-targets | laryngeal-hypopharyngeal-rt-targets | 50 | 2.0.0 |
 | larynx-hypopharynx-postop | larynx-hypopharynx-postop | 381 | — |
 | larynx-hypopharynx-definitive | larynx-hypopharynx-definitive | 308 | — |
-| head-neck-acc-rt-targets | adenoid-cystic-carcinoma-rt-targets | 437 | 1.5.1 |
-| HNCUP-rt-targets | hncup-rt-targets | 517 | 1.0.0 |
+| adenoid-cystic-carcinoma-rt-targets | adenoid-cystic-carcinoma-rt-targets | 437 | 1.5.1 |
+| hncup-rt-targets | hncup-rt-targets | 517 | 1.0.0 |
 | npc-rt-target-delineation | npc-rt-target-delineation | 78 | 1.0.0 |
 | orbital-tumor-rt-targets | orbital-tumor-rt-targets | 1,026 | 1.0.0 |
 | sinonasal-rt-targets | sinonasal-rt-targets | 525 | 1.3.2 |
 | salivary-gland-rt-targets | salivary-gland-rt-targets | 806 | 1.2.0 |
-| head-neck-reirradiation | reirradiation-plan-recommend | 261 | — |
-| head-neck-dvh-review | head-neck-dvh-plan-review | 257 | — |
+| reirradiation-plan-recommend | reirradiation-plan-recommend | 261 | — |
+| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 257 | — |
 
-> **注意**：YAML `name` 是 `related_skills` 引用的标识符。多数仓库目录名与 YAML name 一致；少数历史目录名（如 `head-neck-acc-rt-targets`→`adenoid-cystic-carcinoma-rt-targets`、`head-neck-reirradiation`→`reirradiation-plan-recommend`、`head-neck-dvh-review`→`head-neck-dvh-plan-review`）用于 GitHub 仓库 URL（短名），YAML name 用于 Hermes 内部索引（语义名）。HNCUP 的 YAML name 已统一为 `hncup-rt-targets`（旧名 `cervical-cup-rt-targets` 已废弃）。
+> **注意**：2026-08 已完成目录名统一——全部 Skill 的主仓库目录名与 YAML `name` 一致（`hncup-rt-targets`、`adenoid-cystic-carcinoma-rt-targets`、`head-neck-dvh-plan-review`、`reirradiation-plan-recommend`）。旧目录名（`HNCUP-rt-targets`、`head-neck-acc-rt-targets`、`head-neck-dvh-review`、`head-neck-reirradiation`）与旧 YAML name（`cervical-cup-rt-targets`）均已废弃；GitHub 独立仓库若仍用旧名，靠 301 重定向兼容。
 
 ---
 
@@ -102,17 +102,17 @@ shared-knowledge
 
 | 触发场景 | 自动加载链 |
 |----------|-----------|
-| "眼眶 ACC" / "泪腺 ACC" | orbital-tumor-rt-targets → head-neck-acc-rt-targets |
-| "腮腺 ACC" / "颌下腺 ACC" | salivary-gland-rt-targets → head-neck-acc-rt-targets |
-| "鼻咽部 ACC" | npc-rt-target-delineation → head-neck-acc-rt-targets |
+| "眼眶 ACC" / "泪腺 ACC" | orbital-tumor-rt-targets → adenoid-cystic-carcinoma-rt-targets |
+| "腮腺 ACC" / "颌下腺 ACC" | salivary-gland-rt-targets → adenoid-cystic-carcinoma-rt-targets |
+| "鼻咽部 ACC" | npc-rt-target-delineation → adenoid-cystic-carcinoma-rt-targets |
 | "口腔癌术后 + 化免 pCR" | port-oral-postop → neoadjuvant-deescalation |
 | "口咽癌术后 + 化免 MPR" | port-oropharynx-postop → neoadjuvant-deescalation |
 | "下咽癌术后 + 化免 pCR" | larynx-hypopharynx-postop → neoadjuvant-deescalation |
 | "喉癌根治 + 化免 pCR" | larynx-hypopharynx-definitive → neoadjuvant-deescalation |
 | "口咽根治 SIB + 化免 pCR" | oropharynx-definitive-rt → neoadjuvant-deescalation |
-| "CUP 颈部转移 + 怀疑 NPC" | HNCUP-rt-targets → npc-rt-target-delineation |
-| "再程放疗 + 需 DVH 审核" | head-neck-reirradiation → head-neck-dvh-review |
-| "任何靶区生成 + 需 DVH 审核" | any-skill → head-neck-dvh-review |
+| "CUP 颈部转移 + 怀疑 NPC" | hncup-rt-targets → npc-rt-target-delineation |
+| "再程放疗 + 需 DVH 审核" | reirradiation-plan-recommend → head-neck-dvh-plan-review |
+| "任何靶区生成 + 需 DVH 审核" | any-skill → head-neck-dvh-plan-review |
 
 ---
 
@@ -129,14 +129,14 @@ shared-knowledge
 | laryngeal-hypopharyngeal-rt-targets | ❌ | 仅索引路由——无需铁律（合理） |
 | larynx-hypopharynx-postop | ✅ | 喉 PORT 铁律 |
 | larynx-hypopharynx-definitive | ⚠️ | 308 行完整临床 Skill——待补 |
-| head-neck-acc-rt-targets | ✅ | ACC 三级追踪铁律 |
-| HNCUP-rt-targets | ✅ | CUP 铁律 |
+| adenoid-cystic-carcinoma-rt-targets | ✅ | ACC 三级追踪铁律 |
+| hncup-rt-targets | ✅ | CUP 铁律 |
 | npc-rt-target-delineation | ❌ | 78 行纯解剖参考——无需铁律（合理） |
 | orbital-tumor-rt-targets | ✅ | 眼眶铁律 |
 | sinonasal-rt-targets | ⚠️ | 525 行完整临床 Skill——待补 |
 | salivary-gland-rt-targets | ✅ | 唾液腺铁律 |
-| head-neck-reirradiation | ✅ | 再程放疗铁律 |
-| head-neck-dvh-review | ✅ | DVH 审核铁律 |
+| reirradiation-plan-recommend | ✅ | 再程放疗铁律 |
+| head-neck-dvh-plan-review | ✅ | DVH 审核铁律 |
 
 **铁律覆盖率**：13/17（含 2 个不应有铁律的纯索引/参考文件） = 实际覆盖率 13/15 = 87%
 
@@ -158,7 +158,7 @@ shared-knowledge
 
 **Hermes（一行全装）：**
 ```
-hermes skills install head-neck-acc-rt-targets HNCUP-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-review head-neck-reirradiation oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets salivary-gland-rt-targets sinonasal-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive shared-knowledge
+hermes skills install adenoid-cystic-carcinoma-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-plan-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets salivary-gland-rt-targets sinonasal-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive shared-knowledge
 ```
 
 **Claude Code（一行克隆）：**

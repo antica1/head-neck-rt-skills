@@ -54,10 +54,10 @@ sync_repo() {
 }
 
 for repo in \
-    HNCUP-rt-targets \
-    head-neck-acc-rt-targets \
-    head-neck-dvh-review \
-    head-neck-reirradiation \
+    hncup-rt-targets \
+    adenoid-cystic-carcinoma-rt-targets \
+    head-neck-dvh-plan-review \
+    reirradiation-plan-recommend \
     laryngeal-hypopharyngeal-rt-targets \
     larynx-hypopharynx-definitive \
     larynx-hypopharynx-postop \
