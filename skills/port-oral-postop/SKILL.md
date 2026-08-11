@@ -1,14 +1,14 @@
 ---
 name: port-oral-postop
-description: "Self-contained oral cavity PORT module — surgical bed fusion, mandatory checklist, 8 oral subsites CTV, transit nodes (VIII/IX), RP decisions, floor-of-mouth rule, flap handling, neck management, margins, PNI, dose strategy, 9-step method, and evidence base."
-version: 1.0.0
+description: "Self-contained oral cavity PORT module — surgical bed fusion, mandatory checklist, 8 oral subsites CTV, transit nodes (VIII/IX), RP decisions, floor-of-mouth rule, flap handling, neck management, margins, PNI, dose strategy, OSF/betel-quid special management, 9-step method, and evidence base."
+version: 1.1.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: MIT
 metadata:
   hermes:
-    tags: [head-neck, radiotherapy, port, oral-cavity, postoperative]
+    tags: [head-neck, radiotherapy, port, oral-cavity, postoperative, osf, betel-quid]
     related_skills: [neoadjuvant-deescalation]
-    triggers_on: [口腔癌, 舌癌, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律]
+    triggers_on: [口腔癌, 舌癌, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis]
 
 ---
 
@@ -284,7 +284,7 @@ metadata:
 
 **皮肤侵犯**：受侵→全层+Bolus 0.5-1cm+切缘+2cm；溃烂→外放 3cm。
 
-**气管切开**：⚠️ 非铁律——仅当肿瘤/LN 紧邻造口（3 cm 内）或间质种植累及→造口全层纳入 CTV + 周围 1-2cm 皮下。仅麻醉通路且远离肿瘤→不照。
+**气管切开**：⚠️ 非铁律——仅当肿瘤/LN 紧邻造口（≤2 cm）或间质种植累及→造口全层纳入 CTV + 周围 1-2cm 皮下。仅麻醉通路且远离肿瘤→不照。
 
 **跳跃路径**：舌→直接跳跃至 IV；Ia→直接 III 前缘；I→皮下→VI；颊→双侧 IX。
 
@@ -544,6 +544,59 @@ CTV = "重建术前 GTV-P + 1 cm" 与 "手术缺损区/皮瓣 + 0.5 cm" 的**复
 
 ---
 
+## 九、槟榔相关口腔黏膜纤维化（OSF）背景的特殊处理
+
+> 2026-08 新增。基于槟榔相关口腔癌术后放疗病例（牙龈癌 ENE+、多灶不典型增生）临床复盘，结合 NIVOPOSTOP III 期证据。OSF 是口腔癌 PORT 的**独立背景变量**——不改变靶区主体逻辑（术床/颈部/剂量均按前述章节），但在四个维度叠加特殊处理。
+
+### 9.1 OSF 与区域癌化——背景判定
+
+| 项目 | 内容 |
+|------|------|
+| **定义** | 槟榔碱引起的口腔黏膜下胶原沉积、血供减少、张口受限，为"区域癌化"（field cancerization）的典型背景 |
+| **临床意义** | 整个口腔黏膜处于癌变易感状态 → 多灶癌前病变（白斑/红斑/不典型增生）常见，第二原发癌风险高 |
+| **恶变风险量化** | Meci 2025（Laryngoscope, PMID:40346862，TriNetX 59,204 例）：OSF 5 年恶变率 **18.6%**、口腔白斑 **15.6%**；Surendran 2026（Head Neck, PMID:42056023，24 年 668 例）：OPMD 总体恶变率 11.7% |
+| **触发** | 病史含"槟榔/嚼槟榔/口腔黏膜纤维化/黏膜下纤维化"即激活本节 |
+
+### 9.2 多灶不典型增生的靶区处理——三原则
+
+| 原则 | 处理 | 依据 |
+|------|------|------|
+| **野内灶**（同侧颊/舌根等在 PORT 覆盖范围内） | 随 PORT 天然覆盖，PTV-54 预防剂量已达清除不典型增生的量级，不额外扩野 | 54 Gy 足以控制增殖活跃的异型增生上皮 |
+| **野外灶**（如上腭、对侧颊，远离术床） | **不扩野**。首选局部完整切除/激光/PDT，术后 3-6 个月复查 | Sidhu 2026（PMID:41960444）：手术切除转化风险显著低于监测；PDT 系统综述（Abdul 2025, PMID:41522925）对白斑完全消退率高 |
+| **重度不典型增生/CIS** | 不属于轻中度——**升级为独立处理**（完整切除+病理确认，或按第二原发灶独立规划） | 高级别病灶是恶性进展的独立强预测因子（Sidhu 2026） |
+
+> **核心原则**：不因不典型增生改变 PORT 主体靶区结构。为癌前病变扩大照射野，在 OSF 患者身上毒性-获益比不成立（黏膜炎、张口困难、骨坏死风险均放大）。
+
+### 9.3 OSF 患者毒性管理——四条特殊注意
+
+| 关注点 | 处理 |
+|--------|------|
+| **骨坏死（ORN）** | OSF 患者下颌骨血供已受损。计划约束从严：下颌骨 Dmax ≤ 66-70 Gy，V60 尽量压低；放疗前完成牙科评估（拔牙/牙周/龋齿），拔牙与放疗间隔 ≥ 2 周 |
+| **黏膜耐受** | 纤维化黏膜修复能力差 → 急性黏膜炎更重、迁延。放疗中加强口腔护理、营养支持、真菌感染防治 |
+| **张口受限** | OSF 本身致张口受限，放疗叠加颞颌关节/咬肌受量会加重。每日张口训练，必要时颞下颌关节作为 OAR 评估 |
+| **放疗后监测** | 全口腔黏膜可视化检查（白光+必要时 NBI/甲苯胺蓝染色）每 3-6 个月一次；Karan 2024（PMID:39484056）：多灶癌前病变是第二原发癌强预测因子，中位第二原发时间 3.25 年——任何进展灶即时活检 |
+
+### 9.4 高危术后的免疫辅助——NIVOPOSTOP 证据与中国国情适配
+
+> **NIVOPOSTOP（GORTEC 2018-01）**：首个阳性 III 期，Lancet 2026（Bourhis J, PMID:41448222）。高危术后 LA-SCCHN（ENE+ / 镜下切缘阳性 / ≥4 枚淋巴结无 ENE / 多灶 PNI），680 例，口腔癌占 58%，获益与 PD-L1 表达无关。
+> 方案：顺铂 100 mg/m² q3w ×3 + 放疗 66 Gy ± 纳武利尤单抗（240 mg 导入 → 同步 360 mg q3w ×3 → 辅助维持 480 mg q4w ×6）。
+> 结果：**DFS HR 0.76（95% CI 0.60-0.98），P=0.034**；3 年 DFS 63.1% vs 52.5%；获益主要来自局控复发（LRC HR 0.63）而非远处转移；4 级治疗相关 AE 10% vs 5%。
+
+| 方案 | 推荐度 | 说明 |
+|------|--------|------|
+| **PORT 同步顺铂**（100 mg/m² q3w 或 40 mg/m² qw） | 标准 | ENE+ 是术后同步放化疗经典适应证（NCCN/CSCO）——本例全身治疗的地基 |
+| **放化疗结束后序贯 PD-1 辅助维持**（放疗后 2-4 周启动，单药 6 个月，如纳武利尤单抗 480 mg q4w ×6） | **建议（国情版）** | NIVOPOSTOP 阳性证据支持高危术后辅助免疫，采用其维持段方案。国情现实：同步三联（放化疗+免疫）毒性叠加（4 级 AE 翻倍）、国内医生普遍不采纳；序贯单药辅助毒性独立可管、不影响放化疗完成度，是多数医生愿意采纳的模式。需知情告知：此为阳性试验方案的序贯变体，同步段被省略 |
+| 同步放化疗 + 同步免疫（三联照搬） | 可选不推荐 | NIVOPOSTOP 原始方案证据最强，但毒性叠加、OSF 黏膜耐受差——仅在体能好、MDT 评估后选择性采用 |
+| 单纯 PORT（不加免疫） | 次选 | 仅高龄、肾功能不全、ECOG 差等免疫禁忌时 |
+
+> **执行要点**：序贯辅助启动时机=放疗结束后 2-4 周（黏膜炎消退窗口）；每月筛查免疫相关 AE（甲状腺功能、肝功能、皮肤黏膜、垂体-肾上腺轴）。
+
+### 9.5 非放疗干预——戒槟榔
+
+> 继续咀嚼槟榔是 OSF 背景口腔癌**复发与第二原发癌最主要的可干预风险因素**。放疗前应确认患者已彻底戒断，并同时戒烟酒——对预后的影响不亚于任何靶区决策。
+
+---
+
 ## 参考文献
 
 | 文献 | 来源 |
@@ -558,6 +611,13 @@ CTV = "重建术前 GTV-P + 1 cm" 与 "手术缺损区/皮瓣 + 0.5 cm" 的**复
 | Post-op RT after mandibular flap reconstruction. Oral Oncol. 2026 | 42296774 |
 | 九院靶区病例荟萃（6例）. 2017 | 九院 |
 | 九院进修班课件：HNSCC术后放疗及靶区规范. 2025 | 九院 |
+| Bourhis J et al. NIVOPOSTOP (GORTEC 2018-01): Nivolumab added to cisplatin and RT after surgery for HNSCC. Lancet. 2026 | 41448222 |
+| Meci A et al. Malignant transformation rate of oral premalignant disorders. Laryngoscope. 2025 | 40346862 |
+| Surendran S et al. Pattern of progression of OPMD: 24-year study. Head Neck. 2026 | 42056023 |
+| Sidhu S et al. Treatment modalities for premalignant oral lesions: comparative study. Bioinformation. 2026 | 41960444 |
+| Chen Y et al. PORT and combined local SCC events (SEER). Discov Oncol. 2026 | 41559512 |
+| Karan J et al. Risk factors of oral second primary tumours. Oral Oncol Rep. 2024 | 39484056 |
+| Abdul NS. PDT for oral precancerous lesions and oral cancers: systematic review. J Pharm Bioallied Sci. 2025 | 41522925 |
 
 ---
 
