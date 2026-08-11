@@ -1,16 +1,16 @@
 ---
+name: hncup-rt-targets
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, cup, cervical, unknown-primary]
     triggers_on: [原发不明, 原发灶不明, 颈部转移癌, 不明原发灶, 颈部淋巴结转移, 颈部转移, CUP, HNCUP, cervical CUP, unknown primary, 颈部转移性癌, 颈部转移癌靶区, 颈部不明原发, EBV相关转移, HPV相关转移, 选择性黏膜照射, 选择性黏膜勾画, 逆流规则, 双侧颈部, 对侧颈预防, NPC筛查, 鼻咽镜阴性, PET阴性]
     related_skills: [head-neck-dvh-plan-review, npc-rt-target-delineation, shared-knowledge]
-name: cervical-cup-rt-targets
 description: "原发不明颈部转移癌HNCUP靶区勾画——选择性黏膜、EBV/HPV分层、颈清后逆流规则。True CUP RT target delineation — selective mucosal irradiation."
 version: 1.0.0
 author: Dou Shengjin, Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 ---
-> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗组原创知识产权。五大原创框架——间室放疗（门+隔壁）、淋巴逆流规则、QUANTEC 四维批判、口底铁律、化免新辅助后 PORT 降级三梯度——均为九院体系的组成部分。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 九院放疗组. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗组原创知识产权。五大原创框架——间室放疗（门+隔壁）、淋巴逆流规则、QUANTEC 四维批判、口底铁律、化免新辅助后 PORT 降级三梯度——均为九院体系的组成部分。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 
 

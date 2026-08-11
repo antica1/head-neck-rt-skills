@@ -22,7 +22,7 @@ nmetadata:
       - Lancet 2025
       - IG-2024
       - 鼻咽癌靶区
-    related_skills: [head-neck-dvh-plan-review, reirradiation-plan-recommend, cervical-cup-rt-targets]
+    related_skills: [head-neck-dvh-plan-review, reirradiation-plan-recommend, hncup-rt-targets]
 ---
 
 # 鼻咽癌精准靶区勾画 — 解剖参考手册
