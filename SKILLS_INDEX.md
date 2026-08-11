@@ -86,7 +86,7 @@ shared-knowledge
 | larynx-hypopharynx-postop | larynx-hypopharynx-postop | 381 | — |
 | larynx-hypopharynx-definitive | larynx-hypopharynx-definitive | 308 | — |
 | head-neck-acc-rt-targets | adenoid-cystic-carcinoma-rt-targets | 437 | 1.5.1 |
-| HNCUP-rt-targets | cervical-cup-rt-targets | 517 | 1.0.0 |
+| HNCUP-rt-targets | hncup-rt-targets | 517 | 1.0.0 |
 | npc-rt-target-delineation | npc-rt-target-delineation | 78 | 1.0.0 |
 | orbital-tumor-rt-targets | orbital-tumor-rt-targets | 1,026 | 1.0.0 |
 | sinonasal-rt-targets | sinonasal-rt-targets | 525 | 1.3.2 |
@@ -94,7 +94,7 @@ shared-knowledge
 | head-neck-reirradiation | reirradiation-plan-recommend | 261 | — |
 | head-neck-dvh-review | head-neck-dvh-plan-review | 257 | — |
 
-> **注意**：YAML `name` 是 `related_skills` 引用的标识符。3 个仓库的目录名与 YAML name 不一致：`head-neck-acc-rt-targets` → `adenoid-cystic-carcinoma-rt-targets`、`HNCUP-rt-targets` → `cervical-cup-rt-targets`、`head-neck-reirradiation` → `reirradiation-plan-recommend`、`head-neck-dvh-review` → `head-neck-dvh-plan-review`。这是有意为之——目录名用于 GitHub 仓库 URL（短名），YAML name 用于 Hermes 内部索引（语义名）。
+> **注意**：YAML `name` 是 `related_skills` 引用的标识符。多数仓库目录名与 YAML name 一致；少数历史目录名（如 `head-neck-acc-rt-targets`→`adenoid-cystic-carcinoma-rt-targets`、`head-neck-reirradiation`→`reirradiation-plan-recommend`、`head-neck-dvh-review`→`head-neck-dvh-plan-review`）用于 GitHub 仓库 URL（短名），YAML name 用于 Hermes 内部索引（语义名）。HNCUP 的 YAML name 已统一为 `hncup-rt-targets`（旧名 `cervical-cup-rt-targets` 已废弃）。
 
 ---
 
