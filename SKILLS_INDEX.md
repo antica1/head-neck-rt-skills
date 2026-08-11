@@ -74,22 +74,23 @@ head-neck-rt-skills/
 
 | 仓库名（目录） | YAML `name` | 行数 | 版本 |
 |:---|---:|---:|:---:|
-| neoadjuvant-deescalation | neoadjuvant-deescalation | 242 | — |
-| oral-oropharynx-postop-rt-targets | oral-oropharynx-postop-rt-targets | 1,089 | 1.2.0 |
-| port-oral-postop | port-oral-postop | 574 | 1.0.0 |
-| port-oropharynx-postop | port-oropharynx-postop | 207 | — |
-| oropharynx-definitive-rt | oropharynx-definitive-rt | 267 | — |
-| laryngeal-hypopharyngeal-rt-targets | laryngeal-hypopharyngeal-rt-targets | 50 | 2.0.0 |
-| larynx-hypopharynx-postop | larynx-hypopharynx-postop | 381 | — |
-| larynx-hypopharynx-definitive | larynx-hypopharynx-definitive | 308 | — |
+| neoadjuvant-deescalation | neoadjuvant-deescalation | 244 | 2.0.0 |
+| oral-oropharynx-postop-rt-targets | oral-oropharynx-postop-rt-targets | 1,089 | 1.2.1 |
+| port-oral-postop | port-oral-postop | 680 | 1.2.0 |
+| port-oropharynx-postop | port-oropharynx-postop | 209 | 1.0.0 |
+| oropharynx-definitive-rt | oropharynx-definitive-rt | 269 | 1.0.0 |
+| laryngeal-hypopharyngeal-rt-targets | laryngeal-hypopharyngeal-rt-targets | 49 | 2.0.0 |
+| larynx-hypopharynx-postop | larynx-hypopharynx-postop | 398 | 1.1.0 |
+| larynx-hypopharynx-definitive | larynx-hypopharynx-definitive | 327 | 1.1.0 |
 | adenoid-cystic-carcinoma-rt-targets | adenoid-cystic-carcinoma-rt-targets | 437 | 1.5.1 |
 | hncup-rt-targets | hncup-rt-targets | 517 | 1.0.0 |
-| npc-rt-target-delineation | npc-rt-target-delineation | 78 | 1.0.0 |
-| orbital-tumor-rt-targets | orbital-tumor-rt-targets | 1,026 | 1.0.0 |
-| sinonasal-rt-targets | sinonasal-rt-targets | 525 | 1.3.2 |
-| salivary-gland-rt-targets | salivary-gland-rt-targets | 806 | 1.2.0 |
-| reirradiation-plan-recommend | reirradiation-plan-recommend | 261 | — |
-| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 257 | — |
+| npc-rt-target-delineation | npc-rt-target-delineation | 497 | 1.3.0 |
+| orbital-tumor-rt-targets | orbital-tumor-rt-targets | 1,028 | 1.0.0 |
+| sinonasal-rt-targets | sinonasal-rt-targets | 549 | 1.4.1 |
+| salivary-gland-rt-targets | salivary-gland-rt-targets | 805 | 1.2.0 |
+| head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 876 | 1.0.1 |
+| reirradiation-plan-recommend | reirradiation-plan-recommend | 263 | 1.1.0 |
+| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 257 | 1.3.0 |
 
 > **注意**：2026-08 已完成目录名统一——全部 Skill 的主仓库目录名与 YAML `name` 一致（`hncup-rt-targets`、`adenoid-cystic-carcinoma-rt-targets`、`head-neck-dvh-plan-review`、`reirradiation-plan-recommend`）。旧目录名（`HNCUP-rt-targets`、`head-neck-acc-rt-targets`、`head-neck-dvh-review`、`head-neck-reirradiation`）与旧 YAML name（`cervical-cup-rt-targets`）均已废弃；GitHub 独立仓库若仍用旧名，靠 301 重定向兼容。
 
