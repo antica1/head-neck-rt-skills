@@ -3,7 +3,7 @@ metadata:
   hermes:
     tags: [head-neck, radiotherapy, target-delineation, salivary-gland]
     triggers_on: [腮腺癌, 颌下腺癌, 舌下腺癌, 唾液腺癌, 唾液腺靶区, 腮腺靶区, 淋巴上皮癌, 涎腺癌, 腮腺术后, 颌下腺术后, salivary gland, parotid, submandibular, sublingual, 唾液腺放疗, 涎腺放疗, 腮腺放疗, 颌下腺放疗, 大唾液腺, 小唾液腺, LEC, lymphoepithelial carcinoma, 淋巴上皮癌放疗, 腮腺PORT, 涎腺PORT]
-    related_skills: [head-neck-dvh-plan-review, adenoid-cystic-carcinoma-rt-targets, shared-knowledge]
+    related_skills: [head-neck-dvh-plan-review, adenoid-cystic-carcinoma-rt-targets]
 name: salivary-gland-rt-targets
 description: "唾液腺癌放疗靶区勾画——术后PORT、淋巴上皮癌根治性CRT、腮腺/颌下腺/舌下腺CTV。Salivary gland carcinoma RT — PORT, lymphoepithelial carcinoma definitive CRT, parotid/submandibular/sublingual CTV."
 version: 1.2.0

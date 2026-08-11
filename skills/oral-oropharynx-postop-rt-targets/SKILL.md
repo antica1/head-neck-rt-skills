@@ -3,7 +3,7 @@ metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oral-cavity, oropharynx, postoperative]
     triggers_on: [口腔癌, 口咽癌, 口腔术后, 口咽术后, PORT, 术后放疗, 口腔靶区, 口咽靶区, 皮瓣放疗, 口底铁律, 化免新辅助, 新辅助化疗, 降级放疗, 口底, 舌癌, 颊癌, 牙龈癌, 硬腭癌, 扁桃体癌, 舌根癌, 软腭癌, oral cavity, oropharynx, postoperative radiotherapy, 口腔靶区勾画, 口咽靶区勾画, 皮瓣重建放疗, 重建皮瓣, 术后PORT]
-    related_skills: [port-oral-postop, port-oropharynx-postop, neoadjuvant-deescalation, shared-knowledge]
+    related_skills: [port-oral-postop, port-oropharynx-postop, neoadjuvant-deescalation]
 name: oral-oropharynx-postop-rt-targets
 description: "口腔口咽癌术后放疗靶区勾画——口底铁律、化免新辅助后降级PORT、皮瓣处理。Oral/oropharyngeal postop RT — floor of mouth, de-escalation, flap management."
 version: 1.2.1

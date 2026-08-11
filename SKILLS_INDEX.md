@@ -1,7 +1,7 @@
 # 头颈放疗靶区 Skill 完整索引
 
-> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.2.0 | 2026-07-30
-> 18 个 Skill · 8,126 行 Markdown · Claude Code & Hermes 双平台
+> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.3.0 | 2026-08-11
+> 17 个公开 Skill · Claude Code & Hermes 双平台（shared-knowledge 已移至私有仓库，2026-08-11）
 
 ---
 
@@ -14,7 +14,6 @@ head-neck-rt-skills/
 ├── index.html                       # Web 入口页
 ├── SKILLS_INDEX.md                  # 本文件——完整索引
 └── skills/
-    ├── shared-knowledge/            # 根——共享知识库（224 行）
     │
     ├── neoadjuvant-deescalation/    # 化免新辅助降级（242 行）——被 11 个 Skill 引用
     │
@@ -45,7 +44,6 @@ head-neck-rt-skills/
 ## 二、依赖关系图
 
 ```
-shared-knowledge
     │
     ├── neoadjuvant-deescalation ──────────────────────────────────┐
     │   (当患者有新辅助史时加载)                                      │
@@ -76,7 +74,6 @@ shared-knowledge
 
 | 仓库名（目录） | YAML `name` | 行数 | 版本 |
 |:---|---:|---:|:---:|
-| shared-knowledge | shared-knowledge | 228 | 1.4.0 |
 | neoadjuvant-deescalation | neoadjuvant-deescalation | 242 | — |
 | oral-oropharynx-postop-rt-targets | oral-oropharynx-postop-rt-targets | 1,089 | 1.2.0 |
 | port-oral-postop | port-oral-postop | 574 | 1.0.0 |
@@ -120,7 +117,6 @@ shared-knowledge
 
 | Skill | 铁律条数 | 状态 |
 |------|:---:|:---:|
-| shared-knowledge | ✅ | 共享知识库——含口底铁律、间室放疗、淋巴逆流规则 |
 | neoadjuvant-deescalation | ✅ | 化免降级梯度规则 |
 | oral-oropharynx-postop-rt-targets | ✅ | PORT 总集铁律 |
 | port-oral-postop | ✅ 12 条 | 口腔 PORT 铁律 |
@@ -158,7 +154,6 @@ shared-knowledge
 
 **Hermes（一行全装）：**
 ```
-hermes skills install adenoid-cystic-carcinoma-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-plan-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets salivary-gland-rt-targets sinonasal-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive shared-knowledge
 ```
 
 **Claude Code（一行克隆）：**

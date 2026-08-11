@@ -3,7 +3,7 @@ metadata:
   hermes:
     tags: [head-neck, radiotherapy, target-delineation, acc, adenoid-cystic-carcinoma]
     triggers_on: [腺样囊性癌, ACC, 腺样囊性癌靶区, 腺样囊性癌放疗, 神经侵犯, 面神经, 面神经径路, 颅底孔道, 茎乳孔, 翼腭窝, PNI, perineural invasion, 神经追踪, 神经径路, 感觉神经, 三叉神经, 腭部ACC, 腭部腺样囊性癌, 腮腺ACC, 颌下腺ACC, 舌下腺ACC, 口腔ACC, adenoid cystic carcinoma, 腺样囊性癌术后, 腺样囊性癌放疗靶区, ACC术后]
-    related_skills: [shared-knowledge, head-neck-dvh-plan-review]
+    related_skills: [head-neck-dvh-plan-review]
 name: adenoid-cystic-carcinoma-rt-targets
 description: "腺样囊性癌ACC术后放疗靶区勾画——面神经径路/颅底孔道、PNI追踪。Postoperative RT for adenoid cystic carcinoma — nerve pathway coverage, skull base foramen."
 version: 1.5.1

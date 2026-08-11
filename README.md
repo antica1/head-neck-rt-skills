@@ -37,7 +37,6 @@ Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 在 Hermes 底部的输入框里，粘贴这一行 → 回车：
 
 ```
-hermes skills install adenoid-cystic-carcinoma-rt-targets hncup-rt-targets orbital-tumor-rt-targets npc-rt-target-delineation head-neck-dvh-plan-review reirradiation-plan-recommend oral-oropharynx-postop-rt-targets laryngeal-hypopharyngeal-rt-targets salivary-gland-rt-targets sinonasal-rt-targets head-neck-lymphoma-rt-targets port-oral-postop port-oropharynx-postop oropharynx-definitive-rt neoadjuvant-deescalation larynx-hypopharynx-postop larynx-hypopharynx-definitive shared-knowledge
 ```
 
 > 如遇个别 Skill 安装失败，可单独重试：`hermes skills install <skill名>`
@@ -132,7 +131,7 @@ A: GitHub 关注 `antica1`——每次更新自动推送。Hermes 内运行 `her
 ## 获取帮助
 
 - 总入口：https://github.com/antica1/head-neck-rt-skills
-- 18 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验
+- 17 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验（shared-knowledge 为私有仓库，不公开）
 - 授权：CC BY-NC-SA 4.0（署名-非商业-相同方式共享）
 
 **Q: 如何引用？**

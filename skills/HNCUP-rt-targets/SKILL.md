@@ -4,7 +4,7 @@ metadata:
   hermes:
     tags: [head-neck, radiotherapy, cup, cervical, unknown-primary]
     triggers_on: [原发不明, 原发灶不明, 颈部转移癌, 不明原发灶, 颈部淋巴结转移, 颈部转移, CUP, HNCUP, cervical CUP, unknown primary, 颈部转移性癌, 颈部转移癌靶区, 颈部不明原发, EBV相关转移, HPV相关转移, 选择性黏膜照射, 选择性黏膜勾画, 逆流规则, 双侧颈部, 对侧颈预防, NPC筛查, 鼻咽镜阴性, PET阴性]
-    related_skills: [head-neck-dvh-plan-review, npc-rt-target-delineation, shared-knowledge]
+    related_skills: [head-neck-dvh-plan-review, npc-rt-target-delineation]
 description: "原发不明颈部转移癌HNCUP靶区勾画——选择性黏膜、EBV/HPV分层、颈清后逆流规则。True CUP RT target delineation — selective mucosal irradiation."
 version: 1.0.0
 author: Dou Shengjin, Zhu Guopei / Shanghai Ninth People's Hospital

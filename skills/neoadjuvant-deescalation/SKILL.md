@@ -8,7 +8,7 @@ metadata:
   hermes:
     tags: [head-neck, radiotherapy, neoadjuvant, de-escalation, chemoimmunotherapy, SBRT]
     triggers_on: [化免新辅助, 新辅助化疗, 新辅助免疫, 降阶梯, 降级, pCR, MPR, 替雷利珠, 白蛋白紫杉醇, 顺铂新辅助, neoadjuvant, de-escalation, PORT降级, 根治性RT降级]
-    related_skills: [port-oral-postop, port-oropharynx-postop, oropharynx-definitive-rt, shared-knowledge]
+    related_skills: [port-oral-postop, port-oropharynx-postop, oropharynx-definitive-rt]
 ---
 
 > **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.

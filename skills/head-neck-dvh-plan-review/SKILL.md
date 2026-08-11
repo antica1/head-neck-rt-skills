@@ -8,7 +8,6 @@ metadata:
   hermes:
     tags: [head-neck, radiotherapy, dvh-plan-review, SBRT, OAR-constraints]
     triggers_on: [DVH, 计划审核, 物理师审核, 计划评估, 剂量约束, OAR审核, 靶区覆盖, 脊髓约束, 脑干约束, 视交叉约束, 腮腺约束, SBRT约束, QUANTEC, 双轨制, plan review, plan check, dose constraint, DVH review]
-    related_skills: [shared-knowledge]
     references: ["Timmerman R. IJROBP 2022;112(1):4-21", "H&N IMRT clinical protocol OAR priority table"]
 ---
 
@@ -256,4 +255,3 @@ metadata:
 | AAPM TG-101. SBRT constraints. 2010 | SBRT 早期约束 |
 | UK SABR 2022. PMID:35272913 | SBRT 英国共识 |
 | H&N IMRT clinical protocol OAR priority table | 头颈 IMRT 优先级分层共识 |
-    related_skills: [shared-knowledge]
