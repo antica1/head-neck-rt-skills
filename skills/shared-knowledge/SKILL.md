@@ -263,10 +263,10 @@ license: CC BY-NC-SA 4.0
 
 ### 三台电脑协作经验
 
-- **GitHub 是唯一真相源**——任何一台电脑修改后 push，其他电脑 pull 即可同步
+- **GitHub 是唯一真相源**——发布仅限主发布电脑（2026-08 定），其他电脑只 pull 不 push
 - **旧Skill清理**：重命名后旧名称文件夹需手动删除，否则 Hermes 加载两个版本
 - **NPC Skill 特殊**：v2.0 扁平化版本（79L）是提纲，完整版（496L）在本地 Hermes→推回 GitHub 恢复
-- **sync-skills.sh** 在 `head-neck-rt-skills/` 目录——修改 skills/ 下文件后运行即可批量推送 17 个独立仓库
+- **发布流程**：修改 skills/ 下文件 → 同步 Hermes 运行目录 → 跑 `check-sync.py` 验证三位置 → git push（2026-08 起废弃 sync-skills.sh/sync-all.ps1 多仓库批量推送）
 - **Windows 注意**：git-bash 的 `/tmp` 是会话隔离的——后台进程和前台进程的 `/tmp` 是不同目录
 - **插件安装**：用 `hermes plugins install` 而非手动复制，否则 Python 包依赖可能断链
 
