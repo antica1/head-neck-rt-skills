@@ -6,7 +6,7 @@ metadata:
     related_skills: [port-oral-postop, port-oropharynx-postop, neoadjuvant-deescalation, shared-knowledge]
 name: oral-oropharynx-postop-rt-targets
 description: "口腔口咽癌术后放疗靶区勾画——口底铁律、化免新辅助后降级PORT、皮瓣处理。Oral/oropharyngeal postop RT — floor of mouth, de-escalation, flap management."
-version: 1.2.0
+version: 1.2.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 ---
@@ -361,7 +361,7 @@ CTV-54（预防区）：
 |------|--------|------------|
 | **唇** | 上唇 / 下唇 / 口角 | 淋巴引流差异大（上唇→耳前/Ib；下唇→颏下/Ia→Ib） |
 | **舌** | 舌尖 / 舌背 / 舌腹 / 舌缘 / 偏前 vs 偏舌根 | 舌尖→Ia→Ib；舌根→II/III；舌缘偏后→可能达口咽 |
-| **口底** | 侧口底 / 前口底 | 侧口底→同侧 Ib+II；前口底→双侧 Ia+Ib |
+| **口底** | 侧口底 / 前口底（解剖位置描述） | **处理上为单一中线结构（2026-08 修正）**：受累即全口底风险——双侧 Ia、双侧 Ib、双侧 IIa 前缘均覆盖，不因偏侧/偏前分治；同侧按高危提级 |
 | **牙龈** | 上/下 + 牙位 + 颊侧/舌侧 | 颊侧牙龈→颊黏膜方向；舌侧牙龈→口底/舌方向 |
 | **颊黏膜** | 前颊 / 后颊 | 前颊≈口角-前磨牙；后颊≈磨牙-翼下颌缝→RMT 方向 |
 | **硬腭** | 前/中/后 | 后部接近软腭→可能有软腭方向的亚临床扩展 |

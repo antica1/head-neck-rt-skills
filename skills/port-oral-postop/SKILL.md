@@ -1,7 +1,7 @@
 ---
 name: port-oral-postop
-description: "Self-contained oral cavity PORT module — surgical bed fusion, mandatory checklist, 8 oral subsites CTV, transit nodes (VIII/IX), RP decisions, floor-of-mouth rule, flap handling, neck management, margins, PNI, dose strategy, OSF/betel-quid special management, 9-step method, and evidence base."
-version: 1.1.0
+description: "Self-contained oral cavity PORT module — surgical bed fusion, mandatory checklist, 8 oral subsites CTV, transit nodes (VIII/IX), RP decisions, floor-of-mouth rule (single midline structure), flap handling, neck management, margins, PNI, dose strategy, OSF/betel-quid special management, 9-step method, and evidence base."
+version: 1.1.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: MIT
 metadata:
@@ -392,10 +392,14 @@ CTV = "重建术前 GTV-P + 1 cm" 与 "手术缺损区/皮瓣 + 0.5 cm" 的**复
 
 ### 2.3 口底癌
 
-| 口底 | CTV | 颈部 |
+> **口底是单一中线结构（朱国培修正，2026-08）**：下文的"侧口底/前口底"仅为**解剖位置描述**；靶区处理上，**整个口底是一个亚结构**——不存在"左侧口底/右侧口底"之分，不能因原发偏侧或偏前而分治（豁免对侧）。口底受累（无论位置）→ 双侧 Ia、双侧 Ib、双侧 IIa 前缘均为下一站高危累积区。
+
+| 口底位置（解剖描述） | 术床 CTV | 颈部（处理统一，不因位置分治） |
 |------|-----|------|
-| 前口底 | 术腔+1.5cm，对侧前口底1cm，双侧下颌骨舌侧骨膜 | **双侧 Ia+Ib+II+III** |
-| 侧口底 | 术腔+1.5cm，同侧下颌骨舌侧骨膜，同侧舌腹 | 同侧 Ib+II+III |
+| 前口底 | 术腔+1.5cm，对侧前口底1cm，双侧下颌骨舌侧骨膜 | **双侧 Ia + 双侧 Ib + 双侧 IIa 前缘** + 同侧 II/III |
+| 侧口底 | 术腔+1.5cm，**口底全层**（含对侧口底黏膜下），同侧下颌骨舌侧骨膜+舌腹 | **双侧 Ia + 双侧 Ib + 双侧 IIa 前缘** + 同侧 II/III |
+
+> 同侧按高危提级（如 pN1 → 同侧 I-III 全链 60 Gy，见"舌癌累及口底"修正模块）；对侧前缘不低于 50-54 Gy。
 
 ### 2.4 牙龈癌
 
