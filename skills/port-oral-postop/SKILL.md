@@ -1,14 +1,14 @@
 ---
 name: port-oral-postop
 description: "Self-contained oral cavity PORT module — surgical bed fusion, mandatory checklist, 8 oral subsites CTV, transit nodes (VIII/IX), RP decisions, floor-of-mouth rule (single midline structure), flap handling, neck management, margins, PNI, dose strategy, OSF/betel-quid special management, 9-step method, and evidence base."
-version: 1.1.1
+version: 1.2.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oral-cavity, postoperative, osf, betel-quid]
     related_skills: [neoadjuvant-deescalation]
-    triggers_on: [口腔癌, 舌癌, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis]
+    triggers_on: [口腔癌, 舌癌, 舌癌累及口底, 舌癌口底, 舌癌对侧颈, 对侧颈预防, 同侧颈提级, Ⅲ区阳性, DOI>10mm, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis, tongue floor of mouth, tongue FOM]
 
 ---
 
@@ -391,6 +391,46 @@ CTV = "重建术前 GTV-P + 1 cm" 与 "手术缺损区/皮瓣 + 0.5 cm" 的**复
 | 舌腹 | 舌腹术腔+口底接触面+1.5cm，**同侧口底必须纳入** | 同侧 Ib+II+III |
 | 舌缘偏前 | 同侧舌体+口底前 | Ib+II |
 | 舌缘偏后（近舌根） | 同侧舌根1-1.5cm | Ib+II+III，⚠️ 可能需 RP |
+
+#### 舌癌累及口底——提级修正规则（2026-08 蒋雯裁定，朱国培定稿）
+
+> **触发**：舌癌（口腔）累及口底——**无论是否过中线、无论 N 分期**，满足即激活以下两条规则，替代本节默认决策。
+
+**规则 1：同侧颈 Ⅰ-Ⅲ 全链提级 60 Gy**
+
+| 项 | 内容 |
+|---|------|
+| 触发 | 同侧颈部阳性（如Ⅲ区单枚 LN+，pN1） |
+| 决策 | 同侧 **Ⅰ、Ⅱ、Ⅲ区全链 60 Gy / 30 fx**（阳性 LN 床含内；ENE+ 区域缩野补量 66 Gy） |
+| 替代的默认 | 本节默认"同侧Ⅱ区 54 Gy 预防"——**不足** |
+
+- 依据：Ⅱ区是舌癌第一引流站，转移率 35%（2024 绿皮书；口腔癌各区：Ⅱ 35% / Ⅲ 16% / Ⅰ 15%）；Ⅲ区已阳性 = 同侧淋巴链已被"污染"，Ⅱ区亚临床负荷远超"纯预防"概念；阳性侧全链 60 Gy 是多数中心实践（与术床同步，不用 SIB，九院规则）
+
+**规则 2：口底是单一中线结构——双侧 Ia/Ib/IIa 前缘均为高危累积区**
+
+| 项 | 内容 |
+|---|------|
+| 触发 | 舌癌累及口底（无论过中线与否） |
+| 决策 | **双侧 Ia + 双侧 Ib + 双侧 IIa 前缘** 全部覆盖，50-54 Gy / 30 fx（高危累积区；同侧按规则 1 提级 60 Gy） |
+| 替代的默认 | 本节"未过中线 → 对侧豁免"——**忽略口底为中线整体结构这一更重变量** |
+
+- 解剖概念（朱国培修正 2026-08）：**口底是中线单一结构——不存在"左侧口底 / 右侧口底"之分**；口轮匝肌等肌群与肌间隙相互连通——一旦口底受累，**整个口底受累风险都很高**；不能把左右口底当作两个独立结构分别处理
+- 口底（整体）的邻近危险区：**双侧 Ia、双侧 Ib、双侧 IIa 前缘**——均为**下一站累积区**，风险极高
+- 依据：口底整体受累 → 双侧淋巴引流通道开放（Ia/Ib/IIa 前缘为首站）；T3（DOI>10mm，AJCC 8th）+ 累及口底 → 双侧隐匿转移风险升高；"未过中线"仅说明大体肿块偏侧，不构成豁免双侧高危区的理由
+
+**修正后剂量表**（示例：右舌癌累及口底+右口咽，未过中线，右颈Ⅲ区单枚LN+，DOI>10mm）
+
+| 靶区 | 范围 | 剂量 |
+|------|------|:--:|
+| PTV-60（术床） | 右舌术腔 + **同侧口底全层**（口底铁律）+ 右口咽受累区 | 60 Gy / 30 fx |
+| PTV-60（同侧颈提级） | 右颈 **Ⅰ、Ⅱ、Ⅲ区**（Ⅲ区 LN 床含内） | 60 Gy / 30 fx |
+| PTV-54（高危累积区） | **双侧 Ia + 双侧 Ib + 双侧 IIa 前缘** + 右颈 Ⅳ 区（Ⅲ区阳性→12% 转移率→必预防）+ 同侧 RP 外侧组（累及口咽→后门开放） | 54 Gy / 30 fx |
+
+> Ⅳ 区维持 54 Gy：Ⅲ区阳性→Ⅳ区转移率 12%（2024 绿皮书），54 Gy 预防已充分覆盖，无需随同侧链提级。口底为中线整体——双侧 Ia/Ib/IIa 前缘按高危累积区覆盖（对侧不低于 50 Gy，同侧随规则 1 提级至 60 Gy）。
+
+**仍需病理确认的变量**：ENE（阳性→缩野 66 Gy + 颈鞘至颅底 54 Gy）/ 切缘（R1→术床外放 +5-10 mm）/ PNI（阳性→沿神经至颅底孔道）/ 皮瓣（九院全皮瓣照射）
+
+**裁定记录**：提出者 蒋雯（wen）2026-08-04 病例反馈（右舌癌累及口底+右侧口咽，未过中线，右颈Ⅲ区单枚LN+，DOI>10mm，pT3 pN1）；异议 ① 同侧Ⅰ/Ⅱ/Ⅳ仅 54 Gy 不够 ② 对侧不放疗不够；裁定 朱国培 2026-08："蒋文医生的这个观点很对"；CaseLog: cases/2026/08/04_1425_port-oral-postop.md
 
 ### 2.3 口底癌
 
