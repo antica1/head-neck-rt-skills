@@ -23,9 +23,9 @@ head-neck-rt-skills/
     │
     ├── oropharynx-definitive-rt/    # 口咽根治性 RT（267 行）
     │
-    ├── laryngeal-hypopharyngeal-rt-targets/  # 喉/下咽索引（50 行）——仅路由
-    │   ├── larynx-hypopharynx-postop/        # 喉/下咽术后 PORT（381 行）
-    │   └── larynx-hypopharynx-definitive/    # 喉/下咽根治性 RT（308 行）
+    ├── larynx-rt-targets/          # 喉癌全流程（根治+PORT，394 行）——声门/声门上/声门下/跨声门、Stoma、VI区
+    ├── hypopharynx-rt-targets/     # 下咽癌全流程（根治+PORT，386 行）——梨状窝/环后/咽后壁、RP上界C1、VI触发
+    │   （2026-08-16 重构：原 laryngeal-hypopharyngeal-rt-targets + larynx-hypopharynx-postop + larynx-hypopharynx-definitive 三合一 → 精简为 2 个按部位模块）
     │
     ├── adenoid-cystic-carcinoma-rt-targets/    # ACC 腺样囊性癌（437 行）
     ├── hncup-rt-targets/            # 原发不明转移癌（517 行）
@@ -55,9 +55,8 @@ head-neck-rt-skills/
     │                                                                │
     ├── oropharynx-definitive-rt        ← neoadjuvant-deescalation ─┤
     │                                                                │
-    ├── laryngeal-hypopharyngeal-rt-targets ────────────────────────┤
-    │   ├── larynx-hypopharynx-postop   ← neoadjuvant-deescalation ─┤
-    │   └── larynx-hypopharynx-definitive ──────────────────────────┤
+    ├── larynx-rt-targets            ← neoadjuvant-deescalation ──┤
+    ├── hypopharynx-rt-targets       ← neoadjuvant-deescalation ──┤
     │                                                                │
     ├── adenoid-cystic-carcinoma-rt-targets                                     │
     ├── hncup-rt-targets                ← npc-rt-target-delineation  │
@@ -80,9 +79,8 @@ head-neck-rt-skills/
 | port-oral-postop | port-oral-postop | 713 | 1.3.1 |
 | port-oropharynx-postop | port-oropharynx-postop | 209 | 1.0.0 |
 | oropharynx-definitive-rt | oropharynx-definitive-rt | 269 | 1.0.0 |
-| laryngeal-hypopharyngeal-rt-targets | laryngeal-hypopharyngeal-rt-targets | 49 | 2.0.0 |
-| larynx-hypopharynx-postop | larynx-hypopharynx-postop | 398 | 1.1.0 |
-| larynx-hypopharynx-definitive | larynx-hypopharynx-definitive | 327 | 1.1.0 |
+| larynx-rt-targets | larynx-rt-targets | 394 | 1.0.0 |
+| hypopharynx-rt-targets | hypopharynx-rt-targets | 386 | 1.0.0 |
 | adenoid-cystic-carcinoma-rt-targets | adenoid-cystic-carcinoma-rt-targets | 437 | 1.5.1 |
 | hncup-rt-targets | hncup-rt-targets | 517 | 1.0.0 |
 | npc-rt-target-delineation | npc-rt-target-delineation | 497 | 1.3.0 |
@@ -106,8 +104,8 @@ head-neck-rt-skills/
 | "鼻咽部 ACC" | npc-rt-target-delineation → adenoid-cystic-carcinoma-rt-targets |
 | "口腔癌术后 + 化免 pCR" | port-oral-postop → neoadjuvant-deescalation |
 | "口咽癌术后 + 化免 MPR" | port-oropharynx-postop → neoadjuvant-deescalation |
-| "下咽癌术后 + 化免 pCR" | larynx-hypopharynx-postop → neoadjuvant-deescalation |
-| "喉癌根治 + 化免 pCR" | larynx-hypopharynx-definitive → neoadjuvant-deescalation |
+| "下咽癌术后 + 化免 pCR" | hypopharynx-rt-targets → neoadjuvant-deescalation |
+| "喉癌根治 + 化免 pCR" | larynx-rt-targets → neoadjuvant-deescalation |
 | "口咽根治 SIB + 化免 pCR" | oropharynx-definitive-rt → neoadjuvant-deescalation |
 | "CUP 颈部转移 + 怀疑 NPC" | hncup-rt-targets → npc-rt-target-delineation |
 | "再程放疗 + 需 DVH 审核" | reirradiation-plan-recommend → head-neck-dvh-plan-review |
@@ -124,9 +122,8 @@ head-neck-rt-skills/
 | port-oral-postop | ✅ 12 条 | 口腔 PORT 铁律 |
 | port-oropharynx-postop | ✅ | 口咽 PORT 铁律 |
 | oropharynx-definitive-rt | ✅ 14 条 | 口咽根治铁律 |
-| laryngeal-hypopharyngeal-rt-targets | ❌ | 仅索引路由——无需铁律（合理） |
-| larynx-hypopharynx-postop | ✅ | 喉 PORT 铁律 |
-| larynx-hypopharynx-definitive | ⚠️ | 308 行完整临床 Skill——待补 |
+| larynx-rt-targets | ✅ 12 条 | 喉全流程铁律（根治+PORT） |
+| hypopharynx-rt-targets | ✅ 10 条 | 下咽全流程铁律（根治+PORT） |
 | adenoid-cystic-carcinoma-rt-targets | ✅ | ACC 三级追踪铁律 |
 | hncup-rt-targets | ✅ | CUP 铁律 |
 | npc-rt-target-delineation | ❌ | 78 行纯解剖参考——无需铁律（合理） |
