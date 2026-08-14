@@ -1,7 +1,7 @@
 # 头颈肿瘤放疗 AI 靶区规划系统——安装指南
 
 > 上海交通大学医学院附属第九人民医院 · 口腔颌面头颈肿瘤科放疗中心
-> **10 个核心 Skill + 8 个模块化子 Skill** | GitHub 开源 | 一行命令安装 | CC BY-NC-SA 4.0
+> **15 个放疗靶区 Skill** | GitHub 开源 | 一行命令安装 | CC BY-NC-SA 4.0
 
 ---
 
@@ -37,6 +37,27 @@ Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 在 Hermes 底部的输入框里，粘贴这一行 → 回车：
 
 ```
+hermes skills install head-neck-rt-skills
+```
+
+或手动逐个安装（15 个独立仓库）：
+
+```
+hermes skills install adenoid-cystic-carcinoma-rt-targets
+hermes skills install head-neck-dvh-plan-review
+hermes skills install head-neck-lymphoma-rt-targets
+hermes skills install hncup-rt-targets
+hermes skills install hypopharynx-rt-targets
+hermes skills install larynx-rt-targets
+hermes skills install neoadjuvant-deescalation
+hermes skills install npc-rt-target-delineation
+hermes skills install orbital-tumor-rt-targets
+hermes skills install oropharynx-definitive-rt
+hermes skills install port-oral-postop
+hermes skills install port-oropharynx-postop
+hermes skills install reirradiation-plan-recommend
+hermes skills install salivary-gland-rt-targets
+hermes skills install sinonasal-rt-targets
 ```
 
 > 如遇个别 Skill 安装失败，可单独重试：`hermes skills install <skill名>`
@@ -49,20 +70,20 @@ Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 
 | Skill | 版本 | 覆盖内容 |
 |-------|:--:|---------|
-| **腺样囊性癌 (ACC)** | v1.5.1 | V2/V3 三级神经追踪 + 面神经垂直段 + 实体型颈管理 + 鼻腔鼻窦 ACC + CAP 化疗 |
-| **鼻咽癌 (NPC)** | v1.2.0 | GTV 0mm 逐级 5mm + 岩尖卵圆孔双侧（九院）+ Lancet 2025 |
-| **眼眶肿瘤** | v1.0.0 | 间室放疗（门+隔壁）+ VIII→IX→IIa 淋巴级联 + 眼前庭共管 |
+| **腺样囊性癌 (ACC)** | v1.6.0 | V2/V3 三级神经追踪 + 面神经垂直段 + 实体型颈管理 + 鼻腔鼻窦 ACC + CAP 化疗 + 骨寡转移 SBRT |
+| **鼻咽癌 (NPC)** | v1.3.0 | GTV 0mm 逐级 5mm + 岩尖卵圆孔双侧（九院）+ Lancet 2025 |
+| **眼眶肿瘤** | v1.1.0 | 间室放疗（门+隔壁）+ VIII→IX→IIa 淋巴级联 + 眼前庭共管 |
 | **原发不明转移癌 (HNCUP)** | v1.0.0 | 选择性黏膜（4 跨中线结构）+ EBV/HPV 分层 + 颈清后逆流 |
-| **唾液腺癌** | v1.2.1 | 腮腺/颌下腺/舌下腺/副腮腺 + 非标准 PORT + RP 规则 + 面神经→内听道 |
-| **鼻腔鼻窦癌** | v1.3.2 | 上颌窦/筛窦/蝶窦 + 视路保护 + SNUC/嗅母/黑色素瘤 + SMARCA4/INI1 + ICAR 2024 颈部数据 |
-| **头颈淋巴瘤 (RT)** | v2.2.0 | ISRT/INRT 框架 + 亚型剂量 + 颈部解剖 + OAR（含原发骨淋巴瘤） |
+| **唾液腺癌** | v1.2.0 | 腮腺/颌下腺/舌下腺/副腮腺 + 非标准 PORT + RP 规则 + 面神经→内听道 |
+| **鼻腔鼻窦癌** | v1.4.1 | 上颌窦/筛窦/蝶窦 + 视路保护 + SNUC/嗅母/黑色素瘤 + SMARCA4/INI1 + ICAR 2024 颈部数据 |
+| **头颈淋巴瘤 (RT)** | v1.1.0 | ISRT/INRT 框架 + 亚型剂量 + 颈部解剖 + OAR（含原发骨淋巴瘤） |
 
 ### 质控与特殊场景
 
 | Skill | 版本 | 覆盖内容 |
 |-------|:--:|---------|
-| **DVH 计划审核** | v1.2.0 | 双轨制 + QUANTEC 四维批判 + 唾液腺剂量-效应数据 |
-| **再程放疗** | v1.1.0 | Quad-Shot(JAMA 2026)+IO + 累积 BED + SBRT 补量 |
+| **DVH 计划审核** | v1.3.0 | 双轨制 + QUANTEC 四维批判 + 唾液腺剂量-效应数据 |
+| **再程放疗** | v1.2.0 | Quad-Shot(JAMA 2026)+IO + 累积 BED + SBRT 补量 + 骨寡转移 SBRT |
 
 ### 🆕 口腔口咽 — 模块化
 
@@ -73,12 +94,12 @@ Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 | **口咽癌根治性 RT** | 非手术——GTV+SIB(70/63/56) + 诱导化疗后 + HPV+ |
 | **化免降级（共享模块）** | pCR/MPR——PORT降级 + 根治性RT降级 + SBRT增强（替雷利珠+白紫+顺铂） |
 
-### 🆕 喉/下咽 — 模块化
+### 🆕 喉/下咽 — 按部位模块化（2026-08 重构）
 
 | Skill | 覆盖内容 |
 |-------|---------|
-| **喉/下咽术后 PORT** | 全喉/部分喉——Stoma全层 + 咽重建 + VI区 + RP + 软骨全层 |
-| **喉/下咽根治性 RT** | 保声——SIB(70/63/56) + 内镜GTV + DAHANCA 5mm |
+| **喉癌全流程 (larynx-rt-targets)** | 根治+PORT 自包含——声门保声 SIB + Stoma 全层 + VI区 + 软骨全层 + 降级（降范围优先） |
+| **下咽癌全流程 (hypopharynx-rt-targets)** | 根治+PORT 自包含——梨状窝/环后/咽后壁 + RP上界C1 + VI触发 + 咽重建 + 降级（降剂量优先） |
 
 ---
 
@@ -131,7 +152,7 @@ A: GitHub 关注 `antica1`——每次更新自动推送。Hermes 内运行 `her
 ## 获取帮助
 
 - 总入口：https://github.com/antica1/head-neck-rt-skills
-- 17 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验（shared-knowledge 为私有仓库，不公开）
+- 15 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验（shared-knowledge 为私有仓库，不公开）
 - 授权：CC BY-NC-SA 4.0（署名-非商业-相同方式共享）
 
 **Q: 如何引用？**
