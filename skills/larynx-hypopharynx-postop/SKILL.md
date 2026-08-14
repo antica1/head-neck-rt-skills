@@ -1,7 +1,7 @@
 ---
 name: larynx-hypopharynx-postop
 description: "Self-contained laryngeal/hypopharyngeal postoperative PORT skill. Total laryngectomy with stoma CTV, partial laryngectomy, pharyngeal reconstruction, level VI/RP mandatory for hypopharynx, cartilage invasion rules, neoadjuvant de-escalation reference."
-version: 1.1.0
+version: 1.2.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -96,6 +96,15 @@ metadata:
 | **内镜** | 黏膜表面范围、前连合暴露程度 | **不可替代**——影像学均低估黏膜范围 |
 
 > ⚠️ **无论 CT、MRI 还是 PET——内镜检查所见范围是 GTV 定义的必要组成部分。** 前连合处必须以内镜所见为准。
+
+### 术后放疗时间窗（2025 国家癌症中心指南）
+
+| 场景 | 时间要求 | 来源 |
+|------|---------|------|
+| **下咽癌术后** | 术后 3-4 周影像复查 → 术前/术后对比 → **术后 4-6 周内开始放疗** | 易俊林通信（下咽癌指南） |
+| **喉癌术后** | **术后 6 周之内开始** | 张烨通信（喉癌指南） |
+| **诱导化疗后** | 放疗需在诱导化疗后 **3-4 周内**开始 | 两指南一致 |
+| 手术切缘阳性/ENE+ | 术后**同期放化疗**（非单纯 PORT） | 两指南一致 |
 
 ---
 
@@ -392,6 +401,8 @@ CTV-54（预防）：
 | Bradley PJ et al. Anterior commissure. Eur Arch Otorhinolaryngol. PMID:16909217 | — |
 | 窦圣金, 蒋雯, 劳峥等. 化免新辅助后 PORT 降级策略. 九院. 2026 | 九院 |
 | 九院进修班课件：喉、下咽放疗规范和靶区定义. 2025 | 九院 |
+| 国家癌症中心. 下咽癌靶区勾画和计划设计指南（2025版）. 中华放射肿瘤学杂志 2026;35(8):718-735（易俊林通信，DOI 10.3760/cma.j.cn113030-20260302-00093） | NCC/T-RT 012-2025 |
+| 国家癌症中心. 喉癌靶区勾画和计划设计指南（2025版）. 中华放射肿瘤学杂志 2026;35(8):701-717（张烨通信，DOI 10.3760/cma.j.cn113030-20260302-00092） | NCC/T-RT 011-2025 |
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: larynx-hypopharynx-definitive
 description: "Self-contained laryngeal/hypopharyngeal definitive (non-surgical) RT skill. GTV-based SIB delineation (70/63/56 Gy), endoscopy-required GTV definition, DAHANCA 5mm margin validation, cartilage invasion rules, level VI/RP mandatory for hypopharynx, T1-T2 glottic larynx RT as voice preservation standard."
-version: 1.1.0
+version: 1.2.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -87,6 +87,16 @@ metadata:
 
 ## 二、GTV 勾画——根治性 RT 的核心
 
+### 2.0 诱导化疗前定位流程（2025 国家癌症中心指南）
+
+> 🔥 **MDT 决定先诱导化疗时**：
+> 1. **诱导化疗前先做放疗定位**（CT 模拟定位）
+> 2. 诱导化疗后**重新定位**
+> 3. **两次定位图像融合**——评估肿瘤大小和位置改变对靶区确定的影响
+> 4. **放疗需在诱导化疗后 3-4 周内开始**
+>
+> 术后放疗：术后 3-4 周影像复查 → 术前/术后影像对比 → **术后 4-6 周内开始**（下咽）；喉癌术后 **6 周内**开始（张烨通信）
+
 ### 2.1 GTV 定义的特殊规则
 
 > ⚠️ **内镜下可见病变但 CT/MRI 不可见（T1 声门癌常见）→ GTV 以内镜描述范围为准。前连合必须基于内镜所见纳入。**
@@ -111,6 +121,15 @@ metadata:
 | **软骨侵犯区** | **全层软骨纳入** | 软骨内无真正的外科平面 |
 
 > **DAHANCA 5mm 验证**（Hansen 2024）：过渡至统一 5mm GTV→CTV1 外放后，3 年局部控制率无变化。**5mm 是最低安全外放——但不是所有亚部位都够**（声门下 2cm，环后 2-3cm）。
+
+> **2025 国家癌症中心指南（易俊林通信，下咽癌）**：考虑下咽癌黏膜下浸润特点，**GTVp 基础上建议外扩 1.2cm**，按解剖屏障（骨性结构、空腔、肌肉筋膜）修回——比 DAHANCA 5mm 更宽，作为下咽癌 CTV1 的基准外放。
+
+### 2.3 PTV 外扩（2025 国家癌症中心指南）
+
+- **下咽癌**：GTVp 外扩 **3-8mm**——**向前及向上方向可适度扩大**（除原发咽后壁肿瘤）；GTVnd 和 CTV 外扩 3mm
+- **喉癌**：GTVp 外扩 **5-8mm**；GTVnd 和 CTV 至少外扩 3mm
+- 放疗前验证推荐**锥形线束 CT（CBCT）引导**
+- PRV：脊髓等串联器官外扩 **5mm**（下咽）/ **3mm**（喉）；晶状体/耳蜗等小结构也建议 PRV
 
 ---
 
@@ -247,6 +266,22 @@ metadata:
 > - 下咽后壁 / 外侧壁 / 梨状窝外侧壁 → **高RP风险**（必照，上界C1）
 > - 环后区 → **低RP风险**（MRI阴性时可考虑豁免同侧RP）
 
+### 淋巴结触发规则（2025 国家癌症中心下咽癌指南——表2 注释）
+
+> 🔥 **下咽癌颈部 CTV 分层触发条件**（比"按 T/N 分期"更精细）：
+
+| 触发情形 | 需要照射 |
+|---------|---------|
+| **Ib 区有阳性淋巴结** | Ib 区 |
+| **IIa 区 >3cm 淋巴结或淋巴结破膜（ENE）** | Ib 区 |
+| **II 或 III 区淋巴结巨大，侵犯颌下腺或颈部皮肤** | Ib 区 |
+| **颈部因淋巴结转移接受了不规则手术** | Ib 区 |
+| **肿瘤侵犯以 Ib 区为淋巴引流首站的解剖结构** | Ib 区 |
+| **IIIb 区淋巴结转移 或 II 区淋巴结转移** | VIb 区 |
+| **咽后淋巴结转移 或 咽后壁受侵** | VIIa 区 |
+| **VI 区淋巴结转移 或 梨状窝尖部/环后区/甲状腺/气管/颈段食管受侵** | VI 区 |
+| **Ia、IX、X 区不常规照射** | 除非该区域已有转移淋巴结 |
+
 ---
 
 ## 七、OAR 约束
@@ -321,6 +356,8 @@ metadata:
 | Bradley PJ et al. Anterior commissure. Eur Arch Otorhinolaryngol. PMID:16909217 | — |
 | Looman et al. V区豁免. Radiother Oncol. 2026 | — |
 | 九院进修班课件：喉、下咽放疗规范和靶区定义. 2025 | 九院 |
+| 国家癌症中心. 下咽癌靶区勾画和计划设计指南（2025版）. 中华放射肿瘤学杂志 2026;35(8):718-735（易俊林通信，DOI 10.3760/cma.j.cn113030-20260302-00093） | NCC/T-RT 012-2025 |
+| 国家癌症中心. 喉癌靶区勾画和计划设计指南（2025版）. 中华放射肿瘤学杂志 2026;35(8):701-717（张烨通信，DOI 10.3760/cma.j.cn113030-20260302-00092） | NCC/T-RT 011-2025 |
 
 ---
 
