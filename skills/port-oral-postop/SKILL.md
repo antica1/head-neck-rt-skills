@@ -1,7 +1,7 @@
 ---
 name: port-oral-postop
 description: "Self-contained oral cavity PORT module — surgical bed fusion, mandatory checklist, 8 oral subsites CTV, transit nodes (VIII/IX), RP decisions, floor-of-mouth rule (single midline structure), flap handling, neck management, margins, PNI, dose strategy, OSF/betel-quid special management, 9-step method, and evidence base."
-version: 1.3.0
+version: 1.3.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -699,6 +699,19 @@ CTV = "重建术前 GTV-P + 1 cm" 与 "手术缺损区/皮瓣 + 0.5 cm" 的**复
 **Cho et al. (2019)**：114例零皮瓣内复发。但 GORTEC/HNCIG 共识仅 55.6% 同意豁免皮瓣。九院当前：全皮瓣照射。
 
 **九院靶区荟萃（2017）**：病例1——右颊SCC术后，"手术涉及翼内外肌远端，肌肉离断回缩将肿瘤带至颞下窝"→验证肌肉回缩规则。病例2——舌癌术后，CTV含口底+部分舌根+咽旁→验证口底必照。病例4——软腭+咽侧壁术后，同侧RP+PPS→验证RP指征。
+
+**九院靶区荟萃补充（2017 全 7 例，自整合版迁移）**：
+
+| 病例 | 部位 | 关键靶区逻辑 | 验证规则 |
+|------|------|------------|---------|
+| 病例 1 | 右颊 SCC 术后 | 手术涉及翼内外肌远端，肌肉离断回缩带瘤至颞下窝。上牙龈/腭部/颊部术后应含同侧咽旁间隙、全咀嚼肌间隙及颞下窝 | ✅ 肌肉回缩规则 |
+| 病例 2 | 舌癌术后 | CTV：瘤床+舌+口底+部分舌根+咽旁。颈部：同侧 Ia-Vb + 对侧 Ia-IIb | ✅ 口底必照+对侧预防 |
+| 病例 3 | 下牙龈癌术后 | 对侧 I 区预防覆盖 | ✅ 近中线→对侧预防 |
+| 病例 4 | 软腭+咽侧壁术后 | 同侧 RP+PPS + 对侧 RP+PPS+II | ✅ RP 指征+对侧覆盖 |
+| 病例 5 | 舌下腺 ACC 术后 | 沿舌神经→卵圆孔→海绵窦 + 翼内外肌+翼下颌间隙 | ✅ ACC 感觉神经优先 |
+| 病例 6 | 腮腺癌术后 | 未行颈清→仅同侧预防 Ib-III | ✅ 颈清 vs 未清决定范围 |
+
+> **荟萃核心价值**：2017 年靶区逻辑已含肌肉回缩、对侧预防、口底覆盖——2025 年系统化为规则。病例 1 与肌肉回缩规则逐字一致。
 
 **ESTRO 2025 一致性**：CTV = 术前 GTV-P + 术后手术缺损/皮瓣 复合体积——与九院进修班教学逐字一致。95% 镜下侵犯在 GTV-P 边缘 5mm 内。九院 2017 年靶区逻辑比 ESTRO 2025 早了 8 年。
 
