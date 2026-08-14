@@ -184,7 +184,7 @@ The assessment of orbital invasion severity differs fundamentally between specia
 
 ### 2.1 Orbital Lymphoma — CTV
 
-> 🔗 **已拆分为独立模块**：`orbital-lymphoma-rt-targets`（MALT/DLBCL/滤泡/套细胞——剂量、CTV 按病变范围、4 Gy/2fx 超低剂量）。本 Skill 专注眼眶实体瘤。触发眼眶淋巴瘤病例时加载 `orbital-lymphoma-rt-targets`。
+> 🔗 **眼眶淋巴瘤见 `head-neck-lymphoma-rt-targets` §九**（头颈部淋巴瘤主 Skill——含眼眶 MALT 4 Gy/2fx 超低剂量、亚型剂量表、CTV 按病变范围、OAR 约束。范围覆盖全头颈淋巴瘤，含腮腺/颈部等）。本 Skill 专注眼眶实体瘤。
 
 ### 2.2 Orbital Solid Tumors — CTV
 
@@ -499,7 +499,7 @@ Before finalizing any orbital CTV, verify the following on **all three planes**:
 
 ### 3.1 Orbital Lymphoma
 
-> 🔗 **已拆分为独立模块**：`orbital-lymphoma-rt-targets`（MALT 4 Gy/2fx、DLBCL 30-36 Gy 巩固、滤泡/套细胞剂量表见该模块）。
+> 🔗 **眼眶淋巴瘤剂量见 `head-neck-lymphoma-rt-targets` §九.2**（MALT 4 Gy/2fx、DLBCL 30-36 Gy 巩固、滤泡/套细胞剂量表）。
 
 ### 3.2 Orbital Solid Malignancies
 
@@ -916,7 +916,7 @@ To facilitate MDT decision-making, the following semi-quantitative framework can
 
 ### 10.1 Ultra-Low Dose RT for Orbital Lymphoma — The New Standard
 
-> 🔗 **淋巴瘤文献综述已随模块拆分迁移**：Pinnix 2024（JAMA Oncol）、ILROG 2025 双侧眼眶数据、Shelukar 2022 "boom-boom" RT——见 `orbital-lymphoma-rt-targets` 参考文献。
+> 🔗 **淋巴瘤文献综述见 `head-neck-lymphoma-rt-targets`**：Pinnix 2024（JAMA Oncol）、ILROG 2025 双侧眼眶数据、Shelukar 2022 "boom-boom" RT。
 
 ### 10.2 Lacrimal Gland ACC — RT Is Central to Multimodality Care
 

@@ -30,8 +30,7 @@ head-neck-rt-skills/
     ├── adenoid-cystic-carcinoma-rt-targets/    # ACC 腺样囊性癌（437 行）
     ├── hncup-rt-targets/            # 原发不明转移癌（517 行）
     ├── npc-rt-target-delineation/   # NPC 鼻咽癌（78 行）
-    ├── orbital-tumor-rt-targets/    # 眼眶肿瘤-实体瘤（ACC/肉瘤/脑膜瘤等，~990 行）
-    ├── orbital-lymphoma-rt-targets/ # 眼眶淋巴瘤（MALT/DLBCL，6 KB）🆕 从眼眶拆出
+    ├── orbital-tumor-rt-targets/    # 眼眶肿瘤-实体瘤（ACC/肉瘤/脑膜瘤等；淋巴瘤见 head-neck-lymphoma-rt-targets §九）
     ├── sinonasal-rt-targets/        # 鼻腔鼻窦癌（525 行）
     ├── salivary-gland-rt-targets/   # 唾液腺癌（806 行）
     ├── reirradiation-plan-recommend/     # 再程放疗（261 行）
