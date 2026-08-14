@@ -35,6 +35,7 @@ head-neck-rt-skills/
     ├── salivary-gland-rt-targets/   # 唾液腺癌（806 行）
     ├── reirradiation-plan-recommend/     # 再程放疗（261 行）
     ├── head-neck-lymphoma-rt-targets/  # 头颈部淋巴瘤放疗（873 行）🆕
+    ├── head-neck-sarcoma-rt-targets/   # 头颈肉瘤全流程（656 行）🆕——软组织肉瘤+骨肉瘤（颌骨）、HYPORT术前大分割、NCT03539172艾坦、SBRT转移灶
 │
 └── head-neck-dvh-plan-review/        # DVH 计划审核（257 行）
 ```
@@ -88,6 +89,7 @@ head-neck-rt-skills/
 | sinonasal-rt-targets | sinonasal-rt-targets | 549 | 1.4.1 |
 | salivary-gland-rt-targets | salivary-gland-rt-targets | 805 | 1.2.0 |
 | head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 876 | 1.0.1 |
+| head-neck-sarcoma-rt-targets | head-neck-sarcoma-rt-targets | 656 | 1.1.0 |
 | reirradiation-plan-recommend | reirradiation-plan-recommend | 263 | 1.1.0 |
 | head-neck-dvh-plan-review | head-neck-dvh-plan-review | 257 | 1.3.0 |
 

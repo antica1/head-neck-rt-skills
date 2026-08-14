@@ -1,7 +1,7 @@
 # 头颈肿瘤放疗 AI 靶区规划系统——安装指南
 
 > 上海交通大学医学院附属第九人民医院 · 口腔颌面头颈肿瘤科放疗中心
-> **15 个放疗靶区 Skill** | GitHub 开源 | 一行命令安装 | CC BY-NC-SA 4.0
+> **16 个放疗靶区 Skill** | GitHub 开源 | 一行命令安装 | CC BY-NC-SA 4.0
 
 ---
 
@@ -40,12 +40,13 @@ Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 hermes skills install head-neck-rt-skills
 ```
 
-或手动逐个安装（15 个独立仓库）：
+或手动逐个安装（16 个独立仓库）：
 
 ```
 hermes skills install adenoid-cystic-carcinoma-rt-targets
 hermes skills install head-neck-dvh-plan-review
 hermes skills install head-neck-lymphoma-rt-targets
+hermes skills install head-neck-sarcoma-rt-targets
 hermes skills install hncup-rt-targets
 hermes skills install hypopharynx-rt-targets
 hermes skills install larynx-rt-targets
@@ -77,6 +78,7 @@ hermes skills install sinonasal-rt-targets
 | **唾液腺癌** | v1.2.0 | 腮腺/颌下腺/舌下腺/副腮腺 + 非标准 PORT + RP 规则 + 面神经→内听道 |
 | **鼻腔鼻窦癌** | v1.4.1 | 上颌窦/筛窦/蝶窦 + 视路保护 + SNUC/嗅母/黑色素瘤 + SMARCA4/INI1 + ICAR 2024 颈部数据 |
 | **头颈淋巴瘤 (RT)** | v1.1.0 | ISRT/INRT 框架 + 亚型剂量 + 颈部解剖 + OAR（含原发骨淋巴瘤） |
+| **头颈肉瘤（软组织+骨）🆕** | v1.1.0 | 软组织肉瘤+骨肉瘤（颌骨重点）+ HYPORT 术前大分割 + NCT03539172 艾坦同步放疗 + SBRT 转移灶 |
 
 ### 质控与特殊场景
 
@@ -152,7 +154,7 @@ A: GitHub 关注 `antica1`——每次更新自动推送。Hermes 内运行 `her
 ## 获取帮助
 
 - 总入口：https://github.com/antica1/head-neck-rt-skills
-- 15 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验（shared-knowledge 为私有仓库，不公开）
+- 16 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验（shared-knowledge 为私有仓库，不公开）
 - 授权：CC BY-NC-SA 4.0（署名-非商业-相同方式共享）
 
 **Q: 如何引用？**
