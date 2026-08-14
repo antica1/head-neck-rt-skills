@@ -1,7 +1,7 @@
 ---
 name: orbital-tumor-rt-targets
 description: "眼眶肿瘤放疗靶区勾画——间室放疗(门+隔壁比喻)、眼前庭共管。Orbital RT — compartment irradiation, lacrimal apparatus, orbital apex."
-version: 1.0.0
+version: 1.1.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -184,14 +184,7 @@ The assessment of orbital invasion severity differs fundamentally between specia
 
 ### 2.1 Orbital Lymphoma — CTV
 
-| Extent | CTV Definition | Notes |
-|--------|---------------|-------|
-| **Unilateral orbital involvement (IE)** | **CTV = entire ipsilateral bony orbital cavity** | Standard approach. Includes retrobulbar fat, extraocular muscles, lacrimal gland. Globe can be excluded if not involved. |
-| **Bilateral orbital involvement** | CTV = bilateral bony orbital cavities | Requires independent lens sparing for each side |
-| **Conjunctival-limited MALT** | CTV = conjunctival sac + anterior 1/3 of orbit | Can spare posterior orbit, optic nerve, and lacrimal gland — significant toxicity reduction |
-| **Lacrimal gland primary** | CTV = lacrimal gland fossa + adjacent orbit (individualized) | Must include the entire gland; if extraorbital extension, expand accordingly |
-
-**PTV expansion**: 3-5 mm isotropic (3 mm with daily IGRT; 5 mm without). Recommend thermoplastic mask + bite-block immobilization.
+> 🔗 **已拆分为独立模块**：`orbital-lymphoma-rt-targets`（MALT/DLBCL/滤泡/套细胞——剂量、CTV 按病变范围、4 Gy/2fx 超低剂量）。本 Skill 专注眼眶实体瘤。触发眼眶淋巴瘤病例时加载 `orbital-lymphoma-rt-targets`。
 
 ### 2.2 Orbital Solid Tumors — CTV
 
@@ -506,19 +499,7 @@ Before finalizing any orbital CTV, verify the following on **all three planes**:
 
 ### 3.1 Orbital Lymphoma
 
-| Histology | Standard Dose | Ultra-Low Dose Option | Notes |
-|-----------|-------------|----------------------|-------|
-| **MALT (indolent)** | 24-25.2 Gy / 12-14 fx | 4 Gy / 2 fx (2 Gy × 2, ≥48h apart) | NCCN-endorsed ultra-low dose option; local control ~93% |
-| **MALT (ultra-low → recurrence)** | — | Re-treat 4 Gy/2fx or escalate to 24 Gy | Cumulative OAR must remain within tolerance |
-| **Follicular lymphoma** | 24-30 Gy / 12-15 fx | 4 Gy/2fx (emerging, less robust than MALT) | Limited evidence; use with caution |
-| **DLBCL (post-chemo consolidation)** | 30-36 Gy / 15-18 fx | N/A | PET-adapted: Deauville 1-2 → 24-30 Gy sufficient |
-| **DLBCL (definitive / bridging to CAR-T)** | 30-40 Gy / 15-20 fx | N/A | Bridging RT → CAR-T: 1.5 Gy BID × 10d (=30 Gy) if 2-week window |
-| **Mantle cell lymphoma** | 30-36 Gy / 15-18 fx | N/A |
-
-**Technical note for 4 Gy/2fx delivery**:
-- IMRT/VMAT still recommended despite low dose — lens/cornea/lacrimal gland receive 2 Gy vs 0 Gy matters
-- Verify low-MU segment delivery accuracy on linac
-- Point dose verification with ion chamber or diode recommended
+> 🔗 **已拆分为独立模块**：`orbital-lymphoma-rt-targets`（MALT 4 Gy/2fx、DLBCL 30-36 Gy 巩固、滤泡/套细胞剂量表见该模块）。
 
 ### 3.2 Orbital Solid Malignancies
 
@@ -935,15 +916,7 @@ To facilitate MDT decision-making, the following semi-quantitative framework can
 
 ### 10.1 Ultra-Low Dose RT for Orbital Lymphoma — The New Standard
 
-The past 5 years have seen ultra-low-dose RT (4 Gy/2fx) move from an experimental option to a guideline-endorsed standard for indolent orbital MALT lymphoma:
-
-| Study | Year | N | Key Finding |
-|-------|------|---|-------------|
-| Pinnix CC et al. (JAMA Oncol) | 2024 | Phase 2 | First prospective trial: response-adapted 4 Gy/2fx → CR 92%; residual → additional 20 Gy |
-| ILROG (Yahalom J et al., IJROBP) | 2025 | Multicenter | Bilateral orbital lymphoma: ultra-low-dose RT safe and effective bilaterally |
-| Shelukar S et al. (Chin Clin Oncol) | 2022 | — | "Boom-boom" RT (4 Gy/2fx): high control, minimal toxicity |
-
-**Skill integration**: The ultra-low-dose option is now firmly established in Section 3.1. The ILROG bilateral data validates that bilateral orbital irradiation using 4 Gy/2fx does not compound toxicity significantly — consistent with our approach to bilateral orbital lymphoma.
+> 🔗 **淋巴瘤文献综述已随模块拆分迁移**：Pinnix 2024（JAMA Oncol）、ILROG 2025 双侧眼眶数据、Shelukar 2022 "boom-boom" RT——见 `orbital-lymphoma-rt-targets` 参考文献。
 
 ### 10.2 Lacrimal Gland ACC — RT Is Central to Multimodality Care
 
