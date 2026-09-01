@@ -1,14 +1,14 @@
 ---
 name: port-oral-postop
 description: "Self-contained oral cavity PORT module — surgical bed fusion, mandatory checklist, 8 oral subsites CTV, transit nodes (VIII/IX), RP decisions, floor-of-mouth rule (single midline structure), flap handling, neck management, margins, PNI, dose strategy, OSF/betel-quid special management, 9-step method, and evidence base."
-version: 1.3.1
+version: 1.4.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oral-cavity, postoperative, osf, betel-quid]
     related_skills: [neoadjuvant-deescalation]
-    triggers_on: [口腔癌, 舌癌, 舌癌累及口底, 舌癌口底, 舌癌对侧颈, 对侧颈预防, 同侧颈提级, Ⅲ区阳性, DOI>10mm, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis, tongue floor of mouth, tongue FOM]
+    triggers_on: [口腔癌, 舌癌, 舌癌累及口底, 舌癌口底, 舌癌对侧颈, 对侧颈预防, 同侧颈提级, Ⅲ区阳性, DOI>10mm, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis, tongue floor of mouth, tongue FOM, 术后复发, 复发再手术, 二次手术, 挽救手术, 挽救性PORT, 颈转移复发, 寡进展, 瘤床豁免]
 
 ---
 
@@ -667,6 +667,41 @@ CTV = "重建术前 GTV-P + 1 cm" 与 "手术缺损区/皮瓣 + 0.5 cm" 的**复
 ### 9.5 非放疗干预——戒槟榔
 
 > 继续咀嚼槟榔是 OSF 背景口腔癌**复发与第二原发癌最主要的可干预风险因素**。放疗前应确认患者已彻底戒断，并同时戒烟酒——对预后的影响不亚于任何靶区决策。
+
+---
+
+## 十、复发/挽救性手术后的 PORT——复发间隔决定瘤床覆盖
+
+> **2026-09 朱国培裁定。** 适用情形：口腔癌**首次手术后未行放疗**，因局部复发或颈部淋巴结转移**再次手术**。二次术后的 PORT 靶区由**复发间隔**（首次手术 → 复发/颈转移）决定——核心问题是**原发灶瘤床要不要照**。
+
+### 决策分水岭
+
+| 情形 | 生物学判断 | 二次术后 PORT 靶区 |
+|------|-----------|------------------|
+| **≤1 年**复发 或 颈部淋巴结转移 | 高危行为——原发灶区域未控/残留克隆再活化 | 🔴 **必须包含原发灶瘤床**（原发灶瘤床 + 手术床全层） |
+| **>1 年**颈部淋巴结转移（原发灶无复发迹象） | 原发灶控制良好的**孤立寡进展 / 寡淋巴结转移** | ⚪ **不包括原发灶**——覆盖口底引流区 + 颈部淋巴引流区 |
+
+### 规则 1：≤1 年——瘤床必照
+
+- 一年内复发 = 原发区域未控或快速再生长，**原发灶瘤床是最高危区域**——二次手术后 CTV 的核心
+- 范围：原发灶瘤床 + 手术缺损/重建区 + 邻近淋巴引流区；按「术前影像重建 GTV-P + 二次手术床」复合体积（与首次 PORT 同法，见 §一）
+- 剂量：按二次手术病理（切缘/ENE/PNI）走常规 PORT 剂量策略（60/54/66，见 §七）
+
+### 规则 2：>1 年颈转移——原发灶豁免
+
+- 超过一年出现的颈转移、原发灶影像无复发征象 → 视为**原发灶控制良好的孤立寡进展/寡淋巴结转移**——失败模式集中在区域淋巴系统，原发灶已被证明可控制
+- 二次颈清后 PORT **不包括原发灶瘤床**——避免对原发区域正常组织的二次打击（过度照射）
+- 但仍应覆盖：**口底引流区**（口底铁律延续——口底为单一中线结构，见 §2.3）+ **颈部淋巴引流区**（按颈清范围、病理负荷、逆流规则，见 §四）
+- 逻辑：把放疗资源集中于真正的高危区（区域淋巴系统），不为"已证明可控"的原发灶付出正常组织代价
+
+### 例外与前提（必须核验）
+
+| 前提/例外 | 处理 |
+|----------|------|
+| 首次手术后**已行放疗** | ❌ 不适用本节——属再程放疗，走 `reirradiation-plan-recommend` |
+| 原发灶可疑残留/新发灶（即使 >1 年） | 🔴 瘤床**不得豁免**——豁免的前提是原发灶控制良好 |
+| 二次手术病理提示原发灶区域高危（切缘+/PNI+） | 🔴 瘤床纳入，不受间隔限制 |
+| 复发灶紧邻原发区但表现为颈转移 | 按影像/病理定位，可疑即纳入瘤床 |
 
 ---
 

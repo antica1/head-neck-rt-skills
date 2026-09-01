@@ -18,7 +18,7 @@ head-neck-rt-skills/
     ├── neoadjuvant-deescalation/    # 化免新辅助降级（242 行）——被 11 个 Skill 引用
     │
     ├── oral-oropharynx-postop-rt-targets/  # ❌ 已删除（2026-08-14）——拆分为下方两个独立模块
-    ├── port-oral-postop/                   # 口腔 PORT 自包含模块（713 行）——含口底铁律
+    ├── port-oral-postop/                   # 口腔 PORT 自包含模块（761 行）——含口底铁律
     ├── port-oropharynx-postop/             # 口咽 PORT 自包含模块（209 行）
     │
     ├── oropharynx-definitive-rt/    # 口咽根治性 RT（267 行）
@@ -77,7 +77,7 @@ head-neck-rt-skills/
 |:---|---:|---:|:---:|
 | neoadjuvant-deescalation | neoadjuvant-deescalation | 244 | 2.0.0 |
 | ~~oral-oropharynx-postop-rt-targets~~ | ~~已删除~~ | — | — |
-| port-oral-postop | port-oral-postop | 713 | 1.3.1 |
+| port-oral-postop | port-oral-postop | 761 | 1.4.0 |
 | port-oropharynx-postop | port-oropharynx-postop | 209 | 1.0.0 |
 | oropharynx-definitive-rt | oropharynx-definitive-rt | 269 | 1.0.0 |
 | larynx-rt-targets | larynx-rt-targets | 394 | 1.0.0 |
