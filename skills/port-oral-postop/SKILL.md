@@ -1,14 +1,14 @@
 ---
 name: port-oral-postop
 description: "Self-contained oral cavity PORT module — surgical bed fusion, mandatory checklist, 8 oral subsites CTV, transit nodes (VIII/IX), RP decisions, floor-of-mouth rule (single midline structure), flap handling, neck management, margins, PNI, dose strategy, OSF/betel-quid special management, 9-step method, and evidence base."
-version: 1.4.0
+version: 1.5.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oral-cavity, postoperative, osf, betel-quid]
     related_skills: [neoadjuvant-deescalation]
-    triggers_on: [口腔癌, 舌癌, 舌癌累及口底, 舌癌口底, 舌癌对侧颈, 对侧颈预防, 同侧颈提级, Ⅲ区阳性, DOI>10mm, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis, tongue floor of mouth, tongue FOM, 术后复发, 复发再手术, 二次手术, 挽救手术, 挽救性PORT, 颈转移复发, 寡进展, 瘤床豁免]
+    triggers_on: [口腔癌, 舌癌, 舌癌累及口底, 舌癌口底, 舌癌对侧颈, 对侧颈预防, 同侧颈提级, Ⅲ区阳性, DOI>10mm, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis, tongue floor of mouth, tongue FOM, 术后复发, 复发再手术, 二次手术, 挽救手术, 挽救性PORT, 颈转移复发, 寡进展, 瘤床豁免, 清扫不彻底, 未清颈, 只切原发灶, 上颈清, 肩胛舌骨肌上, 挽救手术, 多次手术, incomplete neck dissection, salvage]
 
 ---
 
@@ -43,6 +43,7 @@ metadata:
 | 12 | 下颌骨截骨端两侧各外放 1cm | 下颌骨切除 |
 | 13 | IV 区：III 区阳性→12% 转移率→必须预防；III 区阴性→仅 2%→可豁免 | cN0 口腔癌 |
 | 14 | **对侧颈**：口底已手术处理+单侧颈清+中线原发 → 对侧 Ia/Ib/II 预防 | 满足条件 |
+| 15 | **手术不彻底三隐性漏照点**：III区声明不彻底 / ENE颈鞘逆流至颅底 / 多次手术引流地形图改写——出报告前逐条核对 | 清扫不完整 / ENE+ / ≥2次手术 |
 
 > ⚠️ 以上铁律即使正文未逐条提及也自动适用。长报告中的靶区描述必须与铁律完全一致——铁律优先于模型"自由裁量"。
 
@@ -667,6 +668,50 @@ CTV = "重建术前 GTV-P + 1 cm" 与 "手术缺损区/皮瓣 + 0.5 cm" 的**复
 ### 9.5 非放疗干预——戒槟榔
 
 > 继续咀嚼槟榔是 OSF 背景口腔癌**复发与第二原发癌最主要的可干预风险因素**。放疗前应确认患者已彻底戒断，并同时戒烟酒——对预后的影响不亚于任何靶区决策。
+
+---
+
+## 九B、手术不彻底的放疗补偿——五情形框架（2026-09 朱国培-伍海军病例讨论）
+
+> **总原则**：手术不彻底的程度 = 放疗靶区扩张的幅度；扩张方向由「未清区域 + 病理负荷 + 引流通道改写方式」共同决定。
+
+### 情形 1：仅原发灶切除，未清颈（🔴 最危险档）
+- 颈部按解剖界限全量勾画（不按"术床+外放"逻辑）+ 外放 5mm（信息缺失补偿）
+- 同侧 Ib+II+III 至少 54-60 Gy；任何阳性证据（穿刺/影像/术中）→ 全链 60 Gy
+- 近中线 → 对侧 Ia/Ib/II 预防 ≥50 Gy；后份 → +RP 外侧组
+- 条件允许先补颈清——放疗是补救不是替代
+
+### 情形 2：仅同侧上颈清（Ib+II / SOHND）
+- III 区＝「声明清扫」与实际彻底性差距最大的区域；术者习惯不彻底者按未清处理
+- 未清 III/IV 按"未手术区"解剖勾画
+- Ib/II 阳性 ≥2 枚或 III(+) → 同侧 I-III 全链 60 Gy
+- Ib 清 + 颊/上龈/RMT/唇 → IX 必照；重负荷 → 颈鞘至颅底
+
+### 情形 3a：前中线原发（舌尖/前口底/下前牙龈）
+- 双侧引流开放：双侧 Ia+Ib+IIa 前缘全覆盖（口底＝单一中线结构）
+- 对侧 ≥50 Gy；皮肤/颏部受累 → 颏下皮下+VI 路径评估
+
+### 情形 3b：后份近咽旁（舌缘后/RMT/后颊/硬腭后1/2/末臼齿牙龈）
+- 同侧 RP 外侧组必照 54-60 Gy；翼下颌缝→颞下窝，上界至颧弓
+- PNI(+) → 沿 V3 至卵圆孔
+- 后份 + 未清颈＝最危险组合：全颈+RP+咀嚼肌间隙三位一体
+
+### 情形 4：ENE+（倍增器，所有规则同时提级）
+- 缩野加量 66 Gy + 同步顺铂；颈鞘至颅底 50-54 Gy（鞘周 5-8mm）
+- II/V 门打开→评估全 V 区；LN 近皮肤(<1cm)→全层+Bolus
+- 同侧 ENE+ + 近中线 → 对侧预防从可选变必须
+
+### 情形 5：多次手术（两开关：复发间隔 + 首次是否放疗）
+- ≤1 年复发 → 原发瘤床+新术床复合必含（不受间隔豁免）
+- >1 年孤立颈转移+原发控制良好 → 可豁免原发瘤床（口底引流区仍照）
+- 首次已放疗 → 走 reirradiation-plan-recommend，不属本节
+- 引流地形图反复改写：IX/VIII/颈鞘上段/RP 宁多勿漏
+- 深界以影像（皮瓣留存层面/强化）为主导，解剖屏障仅参考（伍海军原则：皮瓣确认层面存在即沿其勾画，延伸 2-3 层、<1cm）
+
+### 出报告前三类隐性漏照点核对（并入铁律 15 核查）
+- [ ] III 区"声明清扫但不彻底"
+- [ ] ENE 颈鞘逆流至颅底
+- [ ] 多次手术后引流地形图改写
 
 ---
 
