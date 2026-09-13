@@ -1,11 +1,16 @@
 ---
 name: adenoid-cystic-carcinoma-rt-targets
 description: "腺样囊性癌ACC术后放疗靶区勾画——面神经径路/颅底孔道、PNI追踪。Postoperative RT for adenoid cystic carcinoma — nerve pathway coverage, skull base foramen."
-version: 1.7.0
+version: 1.7.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
+metadata:
+  hermes:
+    tags: [head-neck, radiotherapy, target-delineation, adenoid-cystic-carcinoma, perineural, skull-base]
+    triggers_on: [腺样囊性癌, 腺样囊性, ACC, 筛状型, 管状型, 实体型, 神经侵犯, 嗜神经, PNI, 神经内侵犯, 面神经径路, 三叉神经, V3神经, 卵圆孔, 圆孔, 翼腭窝, 海绵窦, 颅底孔道, Meckel腔, 腮腺ACC, 舌下腺ACC, 硬腭ACC, 鼻腔鼻窦ACC, ACC术后放疗, 腺样囊性癌复发, 骨寡转移, 肺转移, CAP方案, adenoid cystic carcinoma, perineural invasion, skull base foramen]
+    related_skills: [salivary-gland-rt-targets, orbital-tumor-rt-targets, reirradiation-plan-recommend, head-neck-dvh-plan-review]
 ---
-> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗组原创知识产权。五大原创框架——间室放疗（门+隔壁）、淋巴逆流规则、QUANTEC 四维批判、口底铁律、化免新辅助后 PORT 降级三梯度——均为九院体系的组成部分。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。五大原创框架——间室放疗（门+隔壁）、淋巴逆流规则、QUANTEC 四维批判、口底铁律、化免新辅助后 PORT 降级三梯度——均为九院体系的组成部分。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 
 

@@ -1,7 +1,7 @@
 ---
 name: port-oropharynx-postop
 description: "Self-contained oropharynx PORT module — surgical bed fusion, mandatory checklist, 4 oropharynx subsites CTV (tonsil, BOT, soft palate, pharyngeal wall), RP always required, TORS specifics, neck management, margins, PNI, dose strategy, and evidence base."
-version: 1.0.0
+version: 1.0.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -203,6 +203,36 @@ metadata:
 | 舌根 ENE+，术后 PORT | ⚠️ ENE+ 术后仍需注意原发灶床充分覆盖 |
 
 > **核心教训**：单侧颈清+口咽中线/近中线原发灶→对侧颈复发风险真实存在。
+
+---
+
+## 附：靶区规划摘要模板（可复制粘贴入首次病程录）
+
+> 治疗前写入住院病史「诊疗计划」。只列实际使用的 CTV 层级，每层附理由；豁免区和加量区均说明原因；不含 OAR 限量（物理师负责）。
+
+```text
+═══════════════════════════════
+  放疗靶区规划
+═══════════════════════════════
+诊断：______  pT__N__M__（AJCC 第 9 版）
+分期判断：______（为何 T__ 而非 T__：______）
+手术：______（含颈清扫实际范围：______）
+PORT 指征：______
+降级依据：______（如适用）
+
+方案：□ 术后 PORT  □ 根治性 RT   ___ Gy / ___ fx（大野 ___Gy/___fx → 缩野加量 ___Gy/___fx）
+
+CTV___：______（___ Gy — 理由：______）
+加量：______  ___ Gy（理由：□R1/R2 □ENE+ □手术不易切净 □骨切缘不足 1cm □神经切缘+）
+豁免：______（理由：______）
+
+主治：______  日期：______
+═══════════════════════════════
+
+注：术后不做 SIB；54 Gy = 27 fx、60 Gy = 30 fx（均 2.0 Gy/fx）。
+四类加量指征：①R1/R2 切缘 ②ENE+ 淋巴结 ③手术不易切净区（茎乳孔/腮腺深叶/颅底/
+翼腭窝/颏结节/上前门牙-鼻底硬腭/下颌骨未切骨）④T4/N3 临近关键结构。
+```
 
 ---
 

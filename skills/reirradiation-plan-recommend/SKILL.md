@@ -1,11 +1,16 @@
 ---
 name: reirradiation-plan-recommend
 description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、累积BED计算。Re-irradiation — Quad-Shot, SBRT+IO, cumulative BED, SER correction."
-version: 1.3.0
+version: 1.3.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
+metadata:
+  hermes:
+    tags: [head-neck, radiotherapy, reirradiation, SBRT, immunotherapy, cumulative-dose]
+    triggers_on: [再程放疗, 再照射, 复发再程, 二次放疗, 放疗后复发, 累积剂量, 累积BED, EQD2, 间隔修复, Quad-Shot, SBRT再程, IO增敏, 免疫增敏, 骨寡转移, 寡转移SBRT, 脊髓限量, 首程剂量, SBRT补量, 常规分割补量, 放射性骨坏死, reirradiation, re-irradiation, cumulative dose, salvage radiotherapy]
+    related_skills: [head-neck-dvh-plan-review, adenoid-cystic-carcinoma-rt-targets, port-oral-postop]
 ---
-> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗组原创知识产权。五大原创框架——间室放疗（门+隔壁）、淋巴逆流规则、QUANTEC 四维批判、口底铁律、化免新辅助后 PORT 降级三梯度——均为九院体系的组成部分。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
+> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。五大原创框架——间室放疗（门+隔壁）、淋巴逆流规则、QUANTEC 四维批判、口底铁律、化免新辅助后 PORT 降级三梯度——均为九院体系的组成部分。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 
 

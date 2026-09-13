@@ -1,6 +1,6 @@
 # 头颈放疗靶区 Skill 完整索引
 
-> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.5.0 | 2026-09-13
+> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.6.0 | 2026-09-13
 > 16 个公开 Skill · Claude Code & Hermes 双平台（shared-knowledge 已移至私有仓库，2026-08-11）
 
 ---
@@ -27,15 +27,15 @@ head-neck-rt-skills/
     ├── hypopharynx-rt-targets/     # 下咽癌全流程（根治+PORT，406 行）——梨状窝/环后/咽后壁、RP上界C1、VI触发
     │   （2026-08-16 重构：原 laryngeal-hypopharyngeal-rt-targets + larynx-hypopharynx-postop + larynx-hypopharynx-definitive 三合一 → 精简为 2 个按部位模块）
     │
-    ├── adenoid-cystic-carcinoma-rt-targets/    # ACC 腺样囊性癌（473 行）
+    ├── adenoid-cystic-carcinoma-rt-targets/    # ACC 腺样囊性癌（478 行）
     ├── hncup-rt-targets/            # 原发不明转移癌（541 行）
     ├── npc-rt-target-delineation/   # NPC 鼻咽癌（497 行）
     ├── orbital-tumor-rt-targets/    # 眼眶肿瘤-实体瘤（1001 行；淋巴瘤见 head-neck-lymphoma-rt-targets §九）
-    ├── sinonasal-rt-targets/        # 鼻腔鼻窦癌（575 行）
+    ├── sinonasal-rt-targets/        # 鼻腔鼻窦癌（577 行）
     ├── salivary-gland-rt-targets/   # 唾液腺癌（831 行）
-    ├── reirradiation-plan-recommend/     # 再程放疗（284 行）
-    ├── head-neck-lymphoma-rt-targets/  # 头颈部淋巴瘤放疗（920 行）🆕
-    ├── head-neck-sarcoma-rt-targets/   # 头颈肉瘤全流程（656 行）🆕——软组织肉瘤+骨肉瘤（颌骨）、HYPORT术前大分割、NCT03539172艾坦、SBRT转移灶
+    ├── reirradiation-plan-recommend/     # 再程放疗（289 行）
+    ├── head-neck-lymphoma-rt-targets/  # 头颈部淋巴瘤放疗（950 行）🆕
+    ├── head-neck-sarcoma-rt-targets/   # 头颈肉瘤全流程（686 行）🆕——软组织肉瘤+骨肉瘤（颌骨）、HYPORT术前大分割、NCT03539172艾坦、SBRT转移灶
 │
 └── head-neck-dvh-plan-review/        # DVH 计划审核（257 行）
 ```
@@ -75,23 +75,23 @@ head-neck-rt-skills/
 
 | 仓库名（目录） | YAML `name` | 行数 | 版本 |
 |:---|---:|---:|:---:|
-| neoadjuvant-deescalation | neoadjuvant-deescalation | 244 | 2.0.0 |
+| neoadjuvant-deescalation | neoadjuvant-deescalation | 304 | 2.0.1 |
 | ~~oral-oropharynx-postop-rt-targets~~ | ~~已删除~~ | — | — |
 | port-oral-postop | port-oral-postop | 890 | 1.6.0 |
-| port-oropharynx-postop | port-oropharynx-postop | 209 | 1.0.0 |
-| oropharynx-definitive-rt | oropharynx-definitive-rt | 303 | 1.1.0 |
-| larynx-rt-targets | larynx-rt-targets | 415 | 1.0.0 |
-| hypopharynx-rt-targets | hypopharynx-rt-targets | 406 | 1.0.0 |
-| adenoid-cystic-carcinoma-rt-targets | adenoid-cystic-carcinoma-rt-targets | 473 | 1.7.0 |
-| hncup-rt-targets | hncup-rt-targets | 541 | 1.1.0 |
+| port-oropharynx-postop | port-oropharynx-postop | 239 | 1.0.1 |
+| oropharynx-definitive-rt | oropharynx-definitive-rt | 334 | 1.1.1 |
+| larynx-rt-targets | larynx-rt-targets | 446 | 1.0.1 |
+| hypopharynx-rt-targets | hypopharynx-rt-targets | 436 | 1.0.1 |
+| adenoid-cystic-carcinoma-rt-targets | adenoid-cystic-carcinoma-rt-targets | 478 | 1.7.1 |
+| hncup-rt-targets | hncup-rt-targets | 541 | 1.1.1 |
 | npc-rt-target-delineation | npc-rt-target-delineation | 497 | 1.3.0 |
 | orbital-tumor-rt-targets | orbital-tumor-rt-targets | 1001 | 1.1.1 |
-| sinonasal-rt-targets | sinonasal-rt-targets | 575 | 1.5.0 |
+| sinonasal-rt-targets | sinonasal-rt-targets | 577 | 1.5.1 |
 | salivary-gland-rt-targets | salivary-gland-rt-targets | 831 | 1.3.0 |
-| head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 920 | 1.2.0 |
-| head-neck-sarcoma-rt-targets | head-neck-sarcoma-rt-targets | 656 | 1.1.0 |
-| reirradiation-plan-recommend | reirradiation-plan-recommend | 284 | 1.3.0 |
-| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 257 | 1.3.0 |
+| head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 950 | 1.2.1 |
+| head-neck-sarcoma-rt-targets | head-neck-sarcoma-rt-targets | 686 | 1.1.1 |
+| reirradiation-plan-recommend | reirradiation-plan-recommend | 289 | 1.3.1 |
+| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 287 | 1.3.1 |
 
 > **注意**：2026-08 已完成目录名统一——全部 Skill 的主仓库目录名与 YAML `name` 一致（`hncup-rt-targets`、`adenoid-cystic-carcinoma-rt-targets`、`head-neck-dvh-plan-review`、`reirradiation-plan-recommend`）。旧目录名（`HNCUP-rt-targets`、`head-neck-acc-rt-targets`、`head-neck-dvh-review`、`head-neck-reirradiation`）与旧 YAML name（`cervical-cup-rt-targets`）均已废弃；GitHub 独立仓库若仍用旧名，靠 301 重定向兼容。
 
@@ -149,6 +149,7 @@ head-neck-rt-skills/
 | 前端物质完整性 | `name` `description` `version` `author` `license` | 16/16 ✅ |
 | `metadata.hermes` 完整性 | `tags` `triggers_on` `related_skills` | 16/16 ✅ |
 | 代码块闭合 | Markdown ``` 配对 | 16/16 ✅ |
+| **三件套完整性** | `triggers_on` + 铁律清单 + 靶区规划摘要模板 | **16/16 ✅**（2026-09-13 实测补齐） |
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: oropharynx-definitive-rt
 description: "Oropharynx definitive (non-surgical) radiotherapy — GTV-based target delineation, SIB dosing, post-induction chemotherapy GTV management, HPV+ de-escalation, OAR constraints, and neck management for radical RT."
-version: 1.1.0
+version: 1.1.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -296,6 +296,37 @@ metadata:
 | Grégoire V et al. CTV delineation for H&N: DAHANCA/EORTC. Radiother Oncol. 2018 | — |
 | 九院进修班课件：口咽癌放疗 + HNSCC根治性放疗. 2025 | 九院 |
 | 国家癌症中心. 口咽癌靶区勾画和计划设计指南（2025版）. 中华放射肿瘤学杂志 2026;35(7):587-600（吴润叶通信，DOI 10.3760/cma.j.cn113030-20260302-00091） | NCC/T-RT 010-2025 |
+
+---
+
+## 附：靶区规划摘要模板（可复制粘贴入首次病程录）
+
+> 治疗前写入住院病史「诊疗计划」。只列实际使用的 CTV 层级，每层附理由；豁免区和加量区均说明原因；不含 OAR 限量（物理师负责）。
+
+```text
+═══════════════════════════════
+  放疗靶区规划
+═══════════════════════════════
+诊断：______  pT__N__M__（AJCC 第 9 版）
+分期判断：______（为何 T__ 而非 T__：______）
+手术：______（含颈清扫实际范围：______）
+PORT 指征：______
+降级依据：______（如适用）
+
+方案：□ 术后 PORT  □ 根治性 RT   ___ Gy / ___ fx（大野 ___Gy/___fx → 缩野加量 ___Gy/___fx）
+
+CTV___：______（___ Gy — 理由：______）
+加量：______  ___ Gy（理由：□R1/R2 □ENE+ □手术不易切净 □骨切缘不足 1cm □神经切缘+）
+豁免：______（理由：______）
+
+主治：______  日期：______
+═══════════════════════════════
+
+注：根治性 RT 用 SIB（GTV 70/63/56 三档）；术后 PORT 不做 SIB；
+54 Gy = 27 fx、60 Gy = 30 fx（均 2.0 Gy/fx）。
+四类加量指征：①R1/R2 切缘 ②ENE+ 淋巴结 ③手术不易切净区（茎乳孔/腮腺深叶/颅底/
+翼腭窝/颏结节/上前门牙-鼻底硬腭/下颌骨未切骨）④T4/N3 临近关键结构。
+```
 
 ---
 
