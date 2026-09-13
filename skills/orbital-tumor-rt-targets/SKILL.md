@@ -1,7 +1,7 @@
 ---
 name: orbital-tumor-rt-targets
 description: "眼眶肿瘤放疗靶区勾画——间室放疗(门+隔壁比喻)、眼前庭共管。Orbital RT — compartment irradiation, lacrimal apparatus, orbital apex."
-version: 1.1.0
+version: 1.1.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -884,9 +884,9 @@ To facilitate MDT decision-making, the following semi-quantitative framework can
 5. Fasola CE, et al. Low-dose radiation therapy (2 Gy × 2) in orbital lymphoma. *Int J Radiat Oncol Biol Phys*. 2013;86(5):930-935.
 
 **Lacrimal Gland Adenoid Cystic Carcinoma**
-6. Woog JJ, et al. Adenoid cystic carcinoma of the lacrimal gland — A major review. *Indian J Ophthalmol*. 2025. PMID:40995894.
-7. Ahmad SM, et al. Disease-specific and overall survival for patients with lacrimal gland ACC. *Br J Ophthalmol*. 2026. PMID:40866108.
-8. Role of radiotherapy in the multidisciplinary treatment of lacrimal gland ACC. *Ther Adv Med Oncol*. 2026. PMID:41602513.
+6. Pal SS, Alam MS, Manikantan K, et al. Adenoid cystic carcinoma of the lacrimal gland — A major review. *Indian J Ophthalmol*. 2025;73(10):1399-1411. PMID:40995894.
+7. Esmaeli B, Li Z, Lu TJ, et al. Disease-specific and overall survival for patients with lacrimal gland adenoid cystic carcinoma in recent decades. *Br J Ophthalmol*. 2026;110(2):226-232. PMID:40866108.
+8. Wang L, Zhang H, Yi X, et al. Role of radiotherapy in the multidisciplinary treatment of lacrimal gland adenoid cystic carcinoma. *Ther Adv Med Oncol*. 2026;18:17588359251413440. PMID:41602513.
 
 **Uveal Melanoma / Proton Therapy**
 9. Hrbacek J, et al. Three years of ocular proton therapy in the Netherlands. *Acta Ophthalmol*. 2026. PMID:42393916.
@@ -922,8 +922,8 @@ To facilitate MDT decision-making, the following semi-quantitative framework can
 
 | Study | Year | Finding |
 |-------|------|---------|
-| Woog JJ et al. (Indian J Ophthalmol) | 2025 | Major review: RT improves local control in all stages of lacrimal gland ACC |
-| Ahmad SM et al. (Br J Ophthalmol) | 2026 | Disease-specific survival improving with modern RT (IMRT/proton/CIRT) |
+| Pal SS et al. (Indian J Ophthalmol) | 2025 | Major review: RT improves local control in all stages of lacrimal gland ACC |
+| Esmaeli B et al. (Br J Ophthalmol) | 2026 | Disease-specific survival improving with modern RT (IMRT/proton/CIRT) |
 | Ther Adv Med Oncol | 2026 | RT role in multidisciplinary ACC treatment is expanding |
 
 **Skill integration**: Confirms our approach of aggressive post-operative RT (66 Gy/33 fx) for lacrimal gland ACC with PNI. The growing evidence for proton/CIRT for orbital ACC supports Section 5's technology selection tree.
