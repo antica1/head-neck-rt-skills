@@ -1,6 +1,6 @@
 # 头颈放疗靶区 Skill 完整索引
 
-> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.6.0 | 2026-09-13
+> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.7.0 | 2026-09-13
 > 16 个公开 Skill · Claude Code & Hermes 双平台（shared-knowledge 已移至私有仓库，2026-08-11）
 
 ---
@@ -181,6 +181,36 @@ git clone https://github.com/antica1/head-neck-rt-skills.git
 ```
 
 ---
+
+---
+
+## 八、仓库与分支对照表（2026-09-13 统一为 master）
+
+> **全部 17 个公开仓库 + 私有 `shared-knowledge` 的默认分支统一为 `master`**——2026-09-13 把原 5 个 main 仓库（淋巴瘤 / 化免降级 / 口咽根治 / 口腔 PORT / 口咽 PORT）改名完成。克隆、raw 链接、脚本一律用 `master`；`git ls-remote --heads origin` 探测分支名仅作兜底（2026-10 前建的仓库默认 master，之后新建仓库 GitHub 默认给 main，新建后记得立即改名）。
+
+| 仓库 | 类型 | 默认分支 | 版本（2026-09-13） |
+|------|------|:--:|:--:|
+| `head-neck-rt-skills` | 聚合主仓库（分发入口，含 SKILLS_INDEX） | master | 本文件 v2.7.0 |
+| `adenoid-cystic-carcinoma-rt-targets` | 独立仓库 | master | v1.7.1 |
+| `head-neck-dvh-plan-review` | 独立仓库 | master | v1.3.1 |
+| `head-neck-lymphoma-rt-targets` | 独立仓库 | master | v1.2.1 |
+| `head-neck-sarcoma-rt-targets` | 独立仓库 | master | v1.1.1 |
+| `hncup-rt-targets` | 独立仓库 | master | v1.1.1 |
+| `hypopharynx-rt-targets` | 独立仓库 | master | v1.0.1 |
+| `larynx-rt-targets` | 独立仓库 | master | v1.0.1 |
+| `neoadjuvant-deescalation` | 独立仓库 | master | v2.0.1 |
+| `npc-rt-target-delineation` | 独立仓库 | master | v1.3.0 |
+| `orbital-tumor-rt-targets` | 独立仓库 | master | v1.1.1 |
+| `oropharynx-definitive-rt` | 独立仓库 | master | v1.1.1 |
+| `port-oral-postop` | 独立仓库 | master | v1.6.0 |
+| `port-oropharynx-postop` | 独立仓库 | master | v1.0.1 |
+| `reirradiation-plan-recommend` | 独立仓库 | master | v1.3.1 |
+| `salivary-gland-rt-targets` | 独立仓库 | master | v1.3.0 |
+| `sinonasal-rt-targets` | 独立仓库 | master | v1.5.1 |
+| `shared-knowledge`（私有） | 知识库 + 4 个内部工具技能 | master | v1.13.0 |
+| Gitee 镜像 `head-neck-rt-skills` / `shared-knowledge` | 国内备份 | master | 与 GitHub 同步 |
+
+> 独立仓库与聚合主仓库**内容一一对应**：主仓库 `skills/<name>/SKILL.md` 增删改 → 对应独立仓库同步同样内容（推送前先 `git ls-remote --heads origin` 确认分支，再覆盖推送）。
 
 > 朱国培 · 上海交通大学医学院附属第九人民医院口腔颌面-头颈肿瘤科放疗中心
 > 授权：CC BY-NC-SA 4.0 | GitHub: antica1
