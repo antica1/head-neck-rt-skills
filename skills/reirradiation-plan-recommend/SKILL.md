@@ -1,7 +1,7 @@
 ---
 name: reirradiation-plan-recommend
 description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、累积BED计算。Re-irradiation — Quad-Shot, SBRT+IO, cumulative BED, SER correction."
-version: 1.2.0
+version: 1.3.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 ---
@@ -10,6 +10,31 @@ license: CC BY-NC-SA 4.0
 
 
 # 头颈肿瘤再程放疗方案推荐
+
+## 🔴 铁律清单（出报告前逐条核验）
+
+> **模型注意力焦点——以下规则在所有头颈再程放疗方案推荐中自动适用。**
+
+| # | 铁律 | 触发条件 |
+|:--:|------|---------|
+| 1 | **间隔修复四档**：<6 月不修正；6-12 月修复 30%；1-2 年修复 50%；>2 年修复 70% | 任何再程放疗，计算前一程晚期组织残余 EQD2 |
+| 2 | **肿瘤 BED 不复修**：累积肿瘤 BED₁₀ = 前一程 BED₁₀（不复修）+ 本程 BED₁₀，仅晚期 EQD2 按修复比例折减 | 计算累积肿瘤剂量时 |
+| 3 | **Quad-Shot 处方锁定**：3.7 Gy×4 次 BID（间隔 ≥6h），每 4 周一程、最多 3 程，联合 Pembrolizumab 200 mg Q3w，总物理剂量 44.4 Gy | 复发/不可切除/转移性 HNC，前一程 ≤54 Gy 或间隔 >3 年 |
+| 4 | **Q3w 单次方案**：3.5 Gy×1，每 3 周、共 6 程（总 21 Gy），PD-1 或 ADC 须在照射后 24h 内给药 | 前一程 ≤66 Gy，不适于 Quad-Shot 时 |
+| 5 | **ICD 剂量窗口**：单次 6-12 Gy 为最佳 ICD；<4 Gy 不足以激活免疫；>12 Gy 杀伤浸润 T 细胞 | 选 SBRT/低分割 + IO 增敏的单次剂量 |
+| 6 | **方案准入门槛**：SBRT 连续需前一程 ≤50 Gy；Quad-Shot+IO 需 ≤54 Gy 或间隔 >3 年；Q3w 单次需 ≤66 Gy | Step 2 筛选可行方案 |
+| 7 | **累积晚期 EQD2 裁决线**：≤40 Gy 方案无限制；40-50 Gy Quad-Shot 可用、SBRT 连续受限；50-60 Gy 仅 Q3w 单次或常规分割；>60 Gy 仅常规分割且 ≤15 次 | Step 3 最终裁决 |
+| 8 | **SBRT 补量公式**：累积 EQD2₁₀ = EQD2₁₀(SBRT) + EQD2₁₀(常规补量)；EQD2₁₀(SBRT) = 总剂量×(1+d/10)/1.2；补量至 60 Gy（ACC/鳞癌）或 50 Gy（淋巴瘤/良性疾病） | SBRT 首程后常规分割补足根治剂量 |
+| 9 | **补量间隔修正**：<4 周按累积 BED 严格限量；4-12 周黏膜限量可放宽 10%、神经/脑干不放松；>12 周接近常规限量仍需重算累积 BED | SBRT 后补量的间隔判定 |
+| 10 | **ADC SER 残留**：抗 EGFR ADC SER≈1.1-1.3，衰减半衰期 3-4 周，停药 4 个月后可忽略；不确定时以 SER=1.0 作安全备份 | 首程含 ADC/靶向增敏的补量病例 |
+| 11 | **骨寡转移 BED 目标**：BED₁₀ ≥48-60 Gy；外周骨 30 Gy/3fx（BED₁₀=60）；脊柱 30 Gy/5fx（BED₁₀=48）；紧贴脊髓（<3 mm）27 Gy/3fx 或 24 Gy/2fx；颅骨/眼眶 30-35 Gy/5fx | 转移性 ACC 单发骨寡转移 SBRT |
+| 12 | **脊髓硬限量**：3fx 方案 Dmax ≤22.5 Gy、<0.35cc ≤15.9 Gy；5fx 方案 Dmax ≤28 Gy、<0.35cc ≤22 Gy；紧贴脊髓时单次 ≤14-15 Gy | 骨寡转移 SBRT 累及脊柱 |
+| 13 | **骨转移靶区层级**：GTV=MRI T1/T2 融合骨病灶+骨外软组织；CTV=GTV+3-5 mm（不越骨皮质）；PTV=+3 mm | 骨寡转移 SBRT 计划设计 |
+| 14 | **BED₃ 上限警戒**：BED₃ >130 Gy 时 ORN/椎体压缩风险，倾向 30-35 Gy/5fx 而非更高单次量 | 骨寡转移 SBRT 剂量爬升时 |
+
+> ⚠️ 以上铁律即使正文未逐条提及也自动适用。
+
+---
 
 ## 基于病史 → 个性化再照射方案
 

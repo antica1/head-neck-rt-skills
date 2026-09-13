@@ -1,6 +1,6 @@
 # 头颈放疗靶区 Skill 完整索引
 
-> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.4.0 | 2026-09-12
+> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.5.0 | 2026-09-13
 > 16 个公开 Skill · Claude Code & Hermes 双平台（shared-knowledge 已移至私有仓库，2026-08-11）
 
 ---
@@ -27,14 +27,14 @@ head-neck-rt-skills/
     ├── hypopharynx-rt-targets/     # 下咽癌全流程（根治+PORT，406 行）——梨状窝/环后/咽后壁、RP上界C1、VI触发
     │   （2026-08-16 重构：原 laryngeal-hypopharyngeal-rt-targets + larynx-hypopharynx-postop + larynx-hypopharynx-definitive 三合一 → 精简为 2 个按部位模块）
     │
-    ├── adenoid-cystic-carcinoma-rt-targets/    # ACC 腺样囊性癌（447 行）
-    ├── hncup-rt-targets/            # 原发不明转移癌（517 行）
+    ├── adenoid-cystic-carcinoma-rt-targets/    # ACC 腺样囊性癌（473 行）
+    ├── hncup-rt-targets/            # 原发不明转移癌（541 行）
     ├── npc-rt-target-delineation/   # NPC 鼻咽癌（497 行）
     ├── orbital-tumor-rt-targets/    # 眼眶肿瘤-实体瘤（1001 行；淋巴瘤见 head-neck-lymphoma-rt-targets §九）
-    ├── sinonasal-rt-targets/        # 鼻腔鼻窦癌（549 行）
-    ├── salivary-gland-rt-targets/   # 唾液腺癌（805 行）
-    ├── reirradiation-plan-recommend/     # 再程放疗（259 行）
-    ├── head-neck-lymphoma-rt-targets/  # 头颈部淋巴瘤放疗（897 行）🆕
+    ├── sinonasal-rt-targets/        # 鼻腔鼻窦癌（575 行）
+    ├── salivary-gland-rt-targets/   # 唾液腺癌（831 行）
+    ├── reirradiation-plan-recommend/     # 再程放疗（284 行）
+    ├── head-neck-lymphoma-rt-targets/  # 头颈部淋巴瘤放疗（920 行）🆕
     ├── head-neck-sarcoma-rt-targets/   # 头颈肉瘤全流程（656 行）🆕——软组织肉瘤+骨肉瘤（颌骨）、HYPORT术前大分割、NCT03539172艾坦、SBRT转移灶
 │
 └── head-neck-dvh-plan-review/        # DVH 计划审核（257 行）
@@ -82,15 +82,15 @@ head-neck-rt-skills/
 | oropharynx-definitive-rt | oropharynx-definitive-rt | 303 | 1.1.0 |
 | larynx-rt-targets | larynx-rt-targets | 415 | 1.0.0 |
 | hypopharynx-rt-targets | hypopharynx-rt-targets | 406 | 1.0.0 |
-| adenoid-cystic-carcinoma-rt-targets | adenoid-cystic-carcinoma-rt-targets | 447 | 1.6.0 |
-| hncup-rt-targets | hncup-rt-targets | 517 | 1.0.0 |
+| adenoid-cystic-carcinoma-rt-targets | adenoid-cystic-carcinoma-rt-targets | 473 | 1.7.0 |
+| hncup-rt-targets | hncup-rt-targets | 541 | 1.1.0 |
 | npc-rt-target-delineation | npc-rt-target-delineation | 497 | 1.3.0 |
 | orbital-tumor-rt-targets | orbital-tumor-rt-targets | 1001 | 1.1.1 |
-| sinonasal-rt-targets | sinonasal-rt-targets | 549 | 1.4.1 |
-| salivary-gland-rt-targets | salivary-gland-rt-targets | 805 | 1.2.0 |
-| head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 897 | 1.1.0 |
+| sinonasal-rt-targets | sinonasal-rt-targets | 575 | 1.5.0 |
+| salivary-gland-rt-targets | salivary-gland-rt-targets | 831 | 1.3.0 |
+| head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 920 | 1.2.0 |
 | head-neck-sarcoma-rt-targets | head-neck-sarcoma-rt-targets | 656 | 1.1.0 |
-| reirradiation-plan-recommend | reirradiation-plan-recommend | 259 | 1.2.0 |
+| reirradiation-plan-recommend | reirradiation-plan-recommend | 284 | 1.3.0 |
 | head-neck-dvh-plan-review | head-neck-dvh-plan-review | 257 | 1.3.0 |
 
 > **注意**：2026-08 已完成目录名统一——全部 Skill 的主仓库目录名与 YAML `name` 一致（`hncup-rt-targets`、`adenoid-cystic-carcinoma-rt-targets`、`head-neck-dvh-plan-review`、`reirradiation-plan-recommend`）。旧目录名（`HNCUP-rt-targets`、`head-neck-acc-rt-targets`、`head-neck-dvh-review`、`head-neck-reirradiation`）与旧 YAML name（`cervical-cup-rt-targets`）均已废弃；GitHub 独立仓库若仍用旧名，靠 301 重定向兼容。
@@ -129,14 +129,14 @@ head-neck-rt-skills/
 | orbital-tumor-rt-targets | ✅ 12 条 | 眼眶铁律 |
 | head-neck-dvh-plan-review | ✅ 8 条 | DVH 审核铁律 |
 | head-neck-sarcoma-rt-targets | ✅ 12 条 | 头颈肉瘤铁律（软组织+骨） |
-| adenoid-cystic-carcinoma-rt-targets | ❌ 无铁律清单 | 待补（ACC 三级神经追踪/实体型颈规则现散在正文） |
-| hncup-rt-targets | ❌ 无铁律清单 | 待补 |
-| sinonasal-rt-targets | ❌ 无铁律清单 | 待补 |
-| salivary-gland-rt-targets | ❌ 无铁律清单 | 待补 |
-| reirradiation-plan-recommend | ❌ 无铁律清单 | 待补 |
-| head-neck-lymphoma-rt-targets | ⚠️ 有「### 铁律」标题但无编号表 | 待补编号表 |
+| adenoid-cystic-carcinoma-rt-targets | ✅ 15 条 | ACC 三级神经径路铁律（2026-09-13 补） |
+| hncup-rt-targets | ✅ 13 条 | HNCUP 诊断门槛/选择性黏膜/逆流铁律（2026-09-13 补） |
+| sinonasal-rt-targets | ✅ 15 条 | 鼻腔鼻窦铁律（2026-09-13 补） |
+| salivary-gland-rt-targets | ✅ 15 条 | 唾液腺铁律（2026-09-13 补） |
+| reirradiation-plan-recommend | ✅ 14 条 | 再程放疗铁律（2026-09-13 补） |
+| head-neck-lymphoma-rt-targets | ✅ 12 条 | 淋巴瘤 ISRT/剂量铁律（2026-09-13 补） |
 
-**铁律清单覆盖**：10/16 已有编号铁律表（条数如上）；6 个缺清单待补——ACC / hncup / 鼻腔鼻窦 / 唾液腺 / 再程 / 淋巴瘤（后者仅有标题、无编号表）。铁律条数为 2026-09-12 实测值。
+**铁律清单覆盖**：**16/16 全部已有编号铁律表**（条数为 2026-09-13 实测：8–17 条/skill，含 2026-09-13 新补的 ACC / hncup / 鼻腔鼻窦 / 唾液腺 / 再程 / 淋巴瘤 6 个）。
 
 ---
 
