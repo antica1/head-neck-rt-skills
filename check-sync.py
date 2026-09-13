@@ -144,10 +144,10 @@ def main():
                          "agnes-", "pdf-figure")
         # Hermes 分类目录（组织结构，非技能）——不参与发布检查
         CATEGORY_DIRS = {"apple", "autonomous-ai-agents", "clinical-literature-review", "creative",
-                         "email", "github", "head-neck-rt-methodology", "hermes-desktop-plugins",
-                         "media", "mlops", "note-taking", "productivity", "promotion-defense-review",
-                         "reference-verification", "research", "smart-home", "social-media",
-                         "software-development", "yuanbao"}
+                         "devops", "email", "github", "head-neck-rt-methodology", "hermes-desktop-plugins",
+                         "media", "mlops", "note-taking", "productivity", "pptx-visual-qa",
+                         "promotion-defense-review", "reference-verification", "research", "smart-home",
+                         "social-media", "software-development", "web", "yuanbao"}
         for name in run_skills:
             if name in CATEGORY_DIRS:
                 continue  # 分类目录/顶层技能，跳过
