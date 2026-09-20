@@ -4,7 +4,7 @@ description: "鼻咽癌NPC放疗靶区勾画——颅底孔道、海绵窦、逐
 version: 1.3.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
-nmetadata:
+metadata:
   hermes:
     tags: [head-neck, radiotherapy, target-delineation]
     triggers_on:
@@ -493,5 +493,5 @@ CTV-L（低危 ENI）：______ Gy
 主治：______  日期：______
 ═══════════════════════════════
 
-注：四类加量指征：①R1/R2切缘 ②ENE+淋巴结 ③手术不易切净区 ④T4/N3临近颅底/脑膜/眼眶/颈动脉。NPC 根治性 RT 的 GTV 外放 0mm（逐级 CTV 体系），CTV-H = GTV+5mm。
+注：四类加量指征：①R1/R2切缘 ②ENE+淋巴结 ③手术不易切净区 ④不手术T4/T4b临近颅底/脑膜/眼眶/颈动脉。NPC 根治性 RT 的 GTV 外放 0mm（逐级 CTV 体系），CTV-H = GTV+5mm。
 ```

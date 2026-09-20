@@ -7,7 +7,7 @@ license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oral-cavity, postoperative, osf, betel-quid]
-    related_skills: [neoadjuvant-deescalation]
+    related_skills: [neoadjuvant-deescalation, port-oropharynx-postop]
     triggers_on: [口腔癌, 舌癌, 舌癌累及口底, 舌癌口底, 舌癌对侧颈, 对侧颈预防, 同侧颈提级, Ⅲ区阳性, DOI>10mm, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis, tongue floor of mouth, tongue FOM, 术后复发, 复发再手术, 二次手术, 挽救手术, 挽救性PORT, 颈转移复发, 寡进展, 瘤床豁免, 清扫不彻底, 未清颈, 只切原发灶, 上颈清, 肩胛舌骨肌上, 挽救手术, 多次手术, incomplete neck dissection, salvage, 下颌骨, 下颌骨鳞癌, 牙龈癌下颌骨侵犯, 下颌骨侵犯, T4a, pT4a, 下颌管, 下牙槽神经, 截骨端, 骨切缘, 节段切除, 边缘切除, 腓骨瓣, mandible, mandibulectomy, inferior alveolar nerve, mandibular canal]
 
 ---
@@ -882,7 +882,7 @@ CTV___：______（___ Gy — 理由：______）
 
 注：术后不做 SIB；54 Gy = 27 fx、60 Gy = 30 fx（均 2.0 Gy/fx）。
 四类加量指征：①R1/R2 切缘 ②ENE+ 淋巴结 ③手术不易切净区（茎乳孔/腮腺深叶/颅底/
-翼腭窝/颏结节/上前门牙-鼻底硬腭/下颌骨未切骨）④T4/N3 临近关键结构。
+翼腭窝/颏结节/前上门牙-鼻底硬腭/下颌骨未切骨）④不手术T4/T4b 临近颅底/脑膜/眼眶/颈动脉。
 ```
 
 ---

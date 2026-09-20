@@ -1,6 +1,6 @@
 ---
 name: sinonasal-rt-targets
-description: 鼻腔鼻窦癌放疗靶区勾画——上颌窦/筛窦/鼻腔亚部位CTV、视路保护、诱导化疗后放疗、SNUC/嗅神经母细胞瘤特殊类型。Sinonasal carcinoma RT — maxillary/ethmoid/nasal CTV, optic pathway sparing, post-induction RT, SNUC/esthesioneuroblastoma.
+description: "鼻腔鼻窦癌放疗靶区勾画——上颌窦/筛窦/鼻腔亚部位CTV、视路保护、诱导化疗后放疗、SNUC/嗅神经母细胞瘤特殊类型。Sinonasal carcinoma RT — maxillary/ethmoid/nasal CTV, optic pathway sparing, post-induction RT, SNUC/esthesioneuroblastoma."
 version: 1.5.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0

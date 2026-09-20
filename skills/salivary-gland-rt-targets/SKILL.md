@@ -1,14 +1,14 @@
 ---
-metadata:
-  hermes:
-    tags: [head-neck, radiotherapy, target-delineation, salivary-gland]
-    triggers_on: [腮腺癌, 颌下腺癌, 舌下腺癌, 唾液腺癌, 唾液腺靶区, 腮腺靶区, 淋巴上皮癌, 涎腺癌, 腮腺术后, 颌下腺术后, salivary gland, parotid, submandibular, sublingual, 唾液腺放疗, 涎腺放疗, 腮腺放疗, 颌下腺放疗, 大唾液腺, 小唾液腺, LEC, lymphoepithelial carcinoma, 淋巴上皮癌放疗, 腮腺PORT, 涎腺PORT]
-    related_skills: [head-neck-dvh-plan-review, adenoid-cystic-carcinoma-rt-targets]
 name: salivary-gland-rt-targets
 description: "唾液腺癌放疗靶区勾画——术后PORT、淋巴上皮癌根治性CRT、腮腺/颌下腺/舌下腺CTV。Salivary gland carcinoma RT — PORT, lymphoepithelial carcinoma definitive CRT, parotid/submandibular/sublingual CTV."
 version: 1.3.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
+metadata:
+  hermes:
+    tags: [head-neck, radiotherapy, target-delineation, salivary-gland]
+    triggers_on: [腮腺癌, 颌下腺癌, 舌下腺癌, 唾液腺癌, 唾液腺靶区, 腮腺靶区, 淋巴上皮癌, 涎腺癌, 腮腺术后, 颌下腺术后, salivary gland, parotid, submandibular, sublingual, 唾液腺放疗, 涎腺放疗, 腮腺放疗, 颌下腺放疗, 大唾液腺, 小唾液腺, LEC, lymphoepithelial carcinoma, 淋巴上皮癌放疗, 腮腺PORT, 涎腺PORT]
+    related_skills: [head-neck-dvh-plan-review, adenoid-cystic-carcinoma-rt-targets]
 ---
 
 > **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗中心原创知识产权。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
@@ -726,7 +726,6 @@ license: CC BY-NC-SA 4.0
 pN0 + 颈清扫 Ib-IV + ≥15 LN 阴性 → 豁免颈部 ENI
 pN0 + 未做颈清扫或不足 15 LN → 按级别预防（见第五节）
 pN+ → 必须照同侧
-```
 
 ### 8.9 随访——ACC/高级别需 15 年
 
@@ -826,6 +825,9 @@ CTV___：______（___ Gy — 理由：______）
 主治：______  日期：______
 ═══════════════════════════════
 ```
-```
 
 **唾液腺保护参考**：范铭, 等. 放射性唾液腺损伤的研究进展. *中华放射肿瘤学杂志* 2025. DOI:10.3760/cma.j.cn113030-20241216-00478
+
+---
+
+注：四类加量指征：①R1/R2切缘 ②ENE+淋巴结 ③手术不易切净区(茎乳孔/腮腺深叶/颅底/翼腭窝/颏结节/前上门牙-鼻底硬腭) ④不手术T4/T4b临近颅底/脑膜/眼眶/颈动脉。病理切缘阴性不等于肿瘤床绝对安全——手术记录中未描述但肿瘤曾临近上述区域时仍需考虑加量。

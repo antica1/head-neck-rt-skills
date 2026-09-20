@@ -7,7 +7,7 @@ license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oropharynx, postoperative]
-    related_skills: [neoadjuvant-deescalation, oropharynx-definitive-rt]
+    related_skills: [neoadjuvant-deescalation, oropharynx-definitive-rt, port-oral-postop]
     triggers_on: [口咽癌, 口咽术后, 扁桃体癌, 舌根癌, 软腭癌, 咽侧壁癌, TORS, 经口机器人手术, 口咽PORT, 口咽靶区, oropharynx, tonsil, BOT, base of tongue, soft palate, pharyngeal wall, TORS PORT]
 ---
 
@@ -231,7 +231,7 @@ CTV___：______（___ Gy — 理由：______）
 
 注：术后不做 SIB；54 Gy = 27 fx、60 Gy = 30 fx（均 2.0 Gy/fx）。
 四类加量指征：①R1/R2 切缘 ②ENE+ 淋巴结 ③手术不易切净区（茎乳孔/腮腺深叶/颅底/
-翼腭窝/颏结节/上前门牙-鼻底硬腭/下颌骨未切骨）④T4/N3 临近关键结构。
+翼腭窝/颏结节/前上门牙-鼻底硬腭/下颌骨未切骨）④不手术T4/T4b 临近颅底/脑膜/眼眶/颈动脉。
 ```
 
 ---
