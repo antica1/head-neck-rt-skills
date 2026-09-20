@@ -1,7 +1,7 @@
 ---
 name: reirradiation-plan-recommend
-description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、累积BED计算。Re-irradiation — Quad-Shot, SBRT+IO, cumulative BED, SER correction."
-version: 1.3.1
+description: "头颈癌再程放疗方案推荐——患者选择/灾难风险走廊/空间剂量累积/Quad-Shot/SBRT+IO/BED计算。Re-irradiation — patient selection, catastrophic risk corridor, spatial dose accumulation, Quad-Shot, SBRT+IO."
+version: 1.4.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -59,6 +59,10 @@ metadata:
 | 12 | **脊髓硬限量**：3fx 方案 Dmax ≤22.5 Gy、<0.35cc ≤15.9 Gy；5fx 方案 Dmax ≤28 Gy、<0.35cc ≤22 Gy；紧贴脊髓时单次 ≤14-15 Gy | 骨寡转移 SBRT 累及脊柱 |
 | 13 | **骨转移靶区层级**：GTV=MRI T1/T2 融合骨病灶+骨外软组织；CTV=GTV+3-5 mm（不越骨皮质）；PTV=+3 mm | 骨寡转移 SBRT 计划设计 |
 | 14 | **BED₃ 上限警戒**：BED₃ >130 Gy 时 ORN/椎体压缩风险，倾向 30-35 Gy/5fx 而非更高单次量 | 骨寡转移 SBRT 剂量爬升时 |
+| 15 | **第三程准入先问替代**：第三程再照前必须已讨论并记录——lenvatinib 再挑战（ACC，Caspani 2025, PMID 40033633）、Ⅰ期临床、观察等待（惰性+无症状+CBS 高危） | 第三程及以上再照 |
+| 16 | **灾难风险知情同意**：CBS/脊髓病/脑干损伤/颅神经病等灾难性低频风险须逐项书面告知并记录在案，保守 α/β 假设，写明根治或姑息意图 | 任何再程放疗签知情同意时 |
+| 17 | **颈软组织萎缩 = 红灯**：MRI 示颈软组织极度萎缩提示颈动脉/颅神经累积损伤达阈值——显式风险-收益框架 mandatory，慎选再照 | 再照前影像评估 |
+| 18 | **累积剂量空间化**：有既往 DICOM → 形变配准剂量叠加（陡峭梯度区慎判）；无配准条件 → 重叠区近最大等效剂量求和作保守最坏近似；颅神经/颈动脉耐受限按 near-maximum 而非体积约束 | 累积剂量计算时 |
 
 > ⚠️ 以上铁律即使正文未逐条提及也自动适用。
 
@@ -275,7 +279,63 @@ EQD2₁₀(常规补量) = 2 Gy × fx 数（如用 2 Gy/fx）
 
 ---
 
-## 六、相关文档
+## 六、患者选择与灾难风险走廊（Green Journal GTV Expert Opinion 2026 + Lancet Oncol 共识）
+
+### 6.1 第三程及以上的决策顺序（Thariat, PMID 42603723）
+
+```
+第三程再照前，依序确认已排除：
+① 全身治疗替代：lenvatinib 再挑战（ACC 既往有效者，Caspani 2025, PMID 40033633）
+   / Ⅰ期临床入组
+② 观察等待：惰性病程 + 无症状 + 灾难性风险前两年内高发 → 3/6 个月 MRI/PET
+   动力学评估生长速度后再决策
+③ 才进入第三程方案设计
+```
+
+### 6.2 灾难性并发症走廊（catastrophic risk corridor）
+
+| 要素 | 内容 |
+|------|------|
+| 高危影像征象 | 颈软组织极度萎缩（提示颈动脉/颅神经累积损伤）、肿瘤包绕颈动脉、溃疡/瘘 |
+| 灾难性风险 | CBS（颈动脉爆裂）、脊髓病、脑干损伤、颅神经病——低频但 5 级 |
+| 强制动作 | ① 首程剂量热点映射到当前 planning CT（兴趣点级）② 知情同意逐项书面记录（保守 α/β）③ 写明根治 vs 姑息 |
+| 颅神经保护实操 | 热点规避 + 陡峭剂量梯度 + 最小化再照神经长度 |
+
+### 6.3 空间累积剂量（Cacicedo, PMID 42603722；ESTRO 共识 Appelt, PMID 41318002）
+
+```
+有既往 DICOM → 形变配准剂量叠加（刚性配准多数够用；解剖变化大用形变；
+               陡峭剂量梯度区配准不确定性最大，需 MRI 融合标志点校正）
+无配准条件   → 重叠区近最大等效剂量求和 = 保守最坏近似
+α/β 不确定性 → 双 α/β（3/10）并行计算评估区间
+OAR 限量口径 → 颅神经/颈动脉按 near-maximum（Dmax）而非体积约束
+历史 CT 重勾 OAR → 保证累积 DVH 提取一致；报告剂量网格/束流模型/算法假设
+```
+
+### 6.4 技术选择与体积原则（Cacicedo 2026）
+
+- SBRT 适合小靶（<25 cm³）；大靶用 IMRT/VMAT
+- PTV margin 3-5 mm；**不做选择性淋巴结照射**（再照场景以限毒为先）
+- VMAT/SBRT 降低 OAR 剂量但不消除风险
+- 自适应触发预登记：肿瘤退缩/体重下降/水肿 → 即使小几何偏差也放大毒性
+- 脑膜/硬膜病灶：局灶软脑膜表型 vs 弥漫颅脊髓逻辑——局灶者 SIB 推量 + 神经径路高适形 IMRT/VMAT；质子（可能碳离子）为选项；ACC 低 α/β 支持常规-轻度大分割，超分割已式微
+
+### 6.5 证据库补充（2026-09-20 新增）
+
+| 文献 | 内容 | PMID |
+|------|------|------|
+| Thariat J, et al. Radiother Oncol 2026;222:111582 | 灾难风险走廊 | 42603723 |
+| Cacicedo J, et al. Radiother Oncol 2026;222:111581 | 再照极限与安全 | 42603722 |
+| Gan GN, et al. Radiother Oncol 2026;222:111583 | 第三程案例 | 42603724 |
+| Sharma M, Paradis KC. Radiother Oncol 2026;222:111584 | 空间累积剂量评估 | 42603725 |
+| Biau J, et al. Lancet Oncol 2026（ReCOG+ESTRO+ASTRO 背书） | 国际共识 | 42372755 |
+| Appelt AL, et al. Radiother Oncol 2026;214:111313 | ESTRO 累积剂量技术共识 | 41318002 |
+| Xu AJ, et al. Clin Transl Radiat Oncol 2020 | ≥3 程系列 | 32382663 |
+| Caspani F, et al. Head Neck 2025 | lenvatinib 再挑战真实世界 | 40033633 |
+
+---
+
+## 七、相关文档
 
 | 文档 | 内容 |
 |------|------|
