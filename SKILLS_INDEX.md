@@ -75,10 +75,10 @@ head-neck-rt-skills/
 
 | 仓库名（目录） | YAML `name` | 行数 | 版本 |
 |:---|---:|---:|:---:|
-| neoadjuvant-deescalation | neoadjuvant-deescalation | 304 | 2.0.1 |
+| neoadjuvant-deescalation | neoadjuvant-deescalation | 304 | 2.0.2 |
 | ~~oral-oropharynx-postop-rt-targets~~ | ~~已删除~~ | — | — |
-| port-oral-postop | port-oral-postop | 890 | 1.6.0 |
-| port-oropharynx-postop | port-oropharynx-postop | 239 | 1.0.1 |
+| port-oral-postop | port-oral-postop | 890 | 1.6.1 |
+| port-oropharynx-postop | port-oropharynx-postop | 239 | 1.0.2 |
 | oropharynx-definitive-rt | oropharynx-definitive-rt | 334 | 1.1.1 |
 | larynx-rt-targets | larynx-rt-targets | 446 | 1.0.1 |
 | hypopharynx-rt-targets | hypopharynx-rt-targets | 436 | 1.0.1 |

@@ -1,7 +1,7 @@
 ---
 name: neoadjuvant-deescalation
 description: "Radiotherapy de-escalation after neoadjuvant chemo-immunotherapy — applies to BOTH postoperative PORT (oral cavity + oropharynx) and definitive RT (oropharynx). pCR/MPR/non-MPR stratified decision-making, surgical de-escalation modifiers, SBRT boost strategy, immune cell pool preservation, and OAR comparison across response grades."
-version: 2.0.1
+version: 2.0.2
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -146,6 +146,19 @@ metadata:
 | **B 型——多灶残留** | ≥2 个散在灶，沿侵袭前沿 | **不建议降级** |
 | **C 型——弥散残留** | 存活细胞弥散整个瘤床 | **不可降级** |
 
+### 1.4B MPR 与切缘异型增生叠加——两线并行不互抵（2026-10-12 定稿）
+
+MPR A 型 + 切缘中重度异型增生同时存在时的执行细则：
+
+| 线 | 由什么决定 | 动作 |
+|----|----------|------|
+| **范围线** | MPR 状态 | 按降范围走：术床=化疗前 GTV+5mm（不外放至1.5cm） |
+| **剂量线** | 60 Gy 不降（MPR 不降剂量） | 术床 60 Gy/30fx |
+| **加量线** | 异型增生切缘（独立指征） | 该切缘带缩野+6 Gy → 66 Gy |
+| **化疗线** | 异型增生≠CCRT指征 | **不做同期化疗**——异型增生是局部病变，加量即根治 |
+
+> 逻辑：MPR 管范围、异型增生管加量，两条线并行不互抵。异型增生是"面"上的病变，加量野本身包住它；术床其他方向的缩窄由 MPR 状态决定。唯一例外：异型增生弥漫多灶（区域癌化广）→ 加量范围按其分布走，此时范围由异型增生分布决定而非 MPR。
+
 ### 1.5 non-MPR
 
 化免耐药已证实。残余 >10% 为药物筛选的耐药克隆。**剂量 60-66 Gy 不降，范围按标准 PORT。**
@@ -156,6 +169,7 @@ metadata:
 **减分**：RVT 5-10%（-1）、B 型多灶（-2）、C 型弥散（-3）、Ki-67>30%（-2）、基底残留（-2）、LN 残留 ypN+（-2）、切缘近/阳性（-2）、下咽癌（-2）。
 
 > ≥+5→降级；0~+4→降范围不降量；<0→标准 PORT。**尚待前瞻性验证。**
+> 注：切缘中重度异型增生按"切缘近/阳性"计 −2 分；但它不阻止降范围——加量线独立于范围线运行（见 1.4B）。
 
 ### 1.7 OAR 对比
 
@@ -270,6 +284,12 @@ NACI + SBRT → pCR/MPR ↑ (目标>60-80%)
 ## 附：靶区规划摘要
 
 > 通用骨架与四类加量指征见共享模板 `_shared_targets_planning_template.md`（生成报告时按骨架输出，贴入首次病程录）。
+
+## 更新日志
+
+| 日期 | 版本 | 更新内容 |
+|------|:----:|---------|
+| 2026-10-12 | v2.0.2 | 2026-10-12 朱国培批复：新增 §1.4B MPR 与切缘异型增生两线并行细则（范围线/剂量线/加量线/化疗线，异型增生不做同期化疗）；§1.6 评分表加注异型增生按切缘近/阳性计 −2 分且不阻止降范围 |
 
 > ⚠️ **免责声明**：本方案由 AI 辅助生成，最终临床决策由经治医师负责。
 > 根治性 RT 降级（第二节）和 SBRT 增强（第三节）为前沿探索性内容——仅在临床研究背景下参考。

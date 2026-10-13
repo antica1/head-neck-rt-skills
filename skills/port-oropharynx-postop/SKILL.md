@@ -1,7 +1,7 @@
 ---
 name: port-oropharynx-postop
-description: "Self-contained oropharynx PORT module — surgical bed fusion, mandatory checklist, 4 oropharynx subsites CTV (tonsil, BOT, soft palate, pharyngeal wall), RP always required, TORS specifics, neck management, margins, PNI, dose strategy, and evidence base."
-version: 1.0.1
+description: "Self-contained oropharynx PORT module — surgical bed fusion, mandatory checklist, 4 oropharynx subsites CTV (tonsil, BOT, soft palate, pharyngeal wall), RP by pharyngeal-wall involvement, 1cm-from-midline threshold for contralateral neck, TORS specifics, neck management, margins, PNI, dose strategy, and evidence base."
+version: 1.0.2
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -19,8 +19,8 @@ metadata:
 
 | # | 铁律 | 触发条件 |
 |---|------|---------|
-| 1 | **RP双侧必照(口咽癌)** | 口咽癌一律 |
-| 2 | **中线原发→双侧颈** | 舌根/软腭/近中线咽侧壁 |
+| 1 | **RP按咽侧壁受累定**：扁桃体癌/咽侧壁癌→同侧RP必照；舌根/软腭癌累及咽侧壁→同侧RP必照；未累及咽侧壁→同侧RP带及一点（低量）、对侧不照。双侧RP避免常规照射（吞咽困难毒性） | 所有口咽癌 |
+| 2 | **距中线≤1cm或过中线→双侧颈**；>1cm→同侧II-IV+同侧RP即可 | 口咽癌 cN0 |
 | 3 | **TORS术后→术腔+5mm沿咽缩肌** | TORS术后 |
 | 4 | **p16+HPV+降阶梯可能** | p16阳性 |
 | 5 | **舌根→舌深部+会厌前间隙** | 舌根癌 |
@@ -85,8 +85,8 @@ metadata:
 
 | | 口腔癌 PORT | 口咽癌 PORT |
 |---|---|---|
-| **RP** | 仅"后门"部位需要 | **✅ 必照** |
-| **对侧颈** | 仅近中线或高危时 | 舌根/软腭→**双侧必需** |
+| **RP** | 仅"后门"部位需要 | 按咽侧壁受累分层——扁桃体/咽侧壁癌或累及咽侧壁→同侧必照；未累及→同侧带及一点、对侧不照 |
+| **对侧颈** | 仅近中线或高危时 | 距中线≤1cm或过中线→双侧；>1cm→同侧 II-IV |
 | **手术方式** | 经口/经颈/下颌骨劈开 | 多为 **TORS**（经口机器人） |
 | **皮瓣** | 前臂/腓骨/ALT | 较少需要大皮瓣 |
 | **HPV** | 多为 HPV(−) | 多为 HPV(+)→预后较好 |
@@ -109,14 +109,14 @@ metadata:
 |---|------|------|
 | B1 | **原发亚部位？** 扁桃体/舌根/软腭/咽侧壁 | |
 | B2 | **扩展方向？** 扁桃体→向上（软腭）/向下外侧（舌根）？舌根→中线/偏侧？软腭→口腔面/鼻咽面？咽侧壁→口咽/下咽？ | |
-| B3 | **RP**——口咽癌 RP **必照** ✅（与口腔癌不同） | |
+| B3 | **RP 按咽侧壁受累分层**——扁桃体/咽侧壁癌或累及咽侧壁→同侧 RP 必照；未累及→同侧带及一点、对侧不照（双侧 RP 避免常规照射） | |
 
 ### C. 颈部
 
 | # | 问题 | 决策 |
 |---|------|------|
 | C1 | **颈清扫范围？** 单侧/双侧？ | |
-| C2 | **舌根/软腭？** → 双侧 II-IV+RP 必须 | 🔴 中线结构→双侧 |
+| C2 | **舌根/软腭？** → 距中线≤1cm或过中线→双侧 II-IV；>1cm→同侧 II-IV+同侧 RP | 🔴 按距中线 1cm 阈值判双侧 |
 | C3 | **ENE？** → IV 内侧提级 + 缩野加量 | |
 | C4 | **单侧颈清 + 中线/近中线？** → 对侧通道开放→对侧预防 | |
 
@@ -126,8 +126,8 @@ metadata:
 
 | # | 检查项 | |
 |---|--------|---|
-| E1 | **RP 已列入？** 口咽癌 RP 必照 | 🔴 |
-| E2 | 舌根/软腭→双侧颈覆盖？ | 🔴 |
+| E1 | **RP 已按分层规则列入？** 累咽侧壁→同侧必照；未累→同侧带及一点、对侧不照 | 🔴 |
+| E2 | 舌根/软腭距中线≤1cm→双侧颈已覆盖？（>1cm→同侧即可） | 🔴 |
 | E3 | 靶区表逐区列出？ | |
 | E4 | 逻辑图标注所有剂量（含加量）？ | |
 
@@ -140,7 +140,7 @@ metadata:
 | 部位 | 亚部位 | 关键差异 |
 |------|--------|---------|
 | **扁桃体** | 向上（软腭）/向下外侧（舌根） | 扩展方向决定 CTV |
-| **舌根** | 中线 vs 偏侧 | 中线→双侧 II-IV+RP |
+| **舌根** | 中线 vs 偏侧 | 距中线≤1cm→双侧 II-IV；RP 按咽侧壁受累定 |
 | **软腭** | 口腔面 vs 鼻咽面 | 鼻咽面→咽鼓管开口 |
 | **咽侧壁** | 口咽侧壁 / 下咽侧壁 | 下咽→增加 VI 区 |
 
@@ -176,7 +176,7 @@ metadata:
 | 位置 | CTV 颈部 |
 |------|---------|
 | 偏侧 | 同侧 II+III+IV+RP |
-| 中线/双侧 | **双侧 II+III+IV+双侧 RP** |
+| 中线/双侧 | **双侧 II+III+IV**（距中线≤1cm 或过中线）；RP 按咽侧壁受累定——累及→同侧必照，未累及→同侧带及一点、对侧不照 |
 | 近会厌谷 | 向下至会厌谷和舌会厌皱襞 |
 
 ---
@@ -186,8 +186,8 @@ metadata:
 | 原发部位 | cN0 | pN1 | pN2+ / ENE+ |
 |---------|-----|-----|------------|
 | 扁桃体 | 同侧 II+III+IV | II-III-IV+RP | II-III-IV-V+RP ± 对侧 II-III-IV |
-| 舌根 | **双侧** II+III+IV+RP | 双侧 II-III-IV+RP | 双侧 II-III-IV-V+RP |
-| 软腭 | **双侧** II+III+IV+RP | 双侧 II-III-IV+RP | 双侧 II-III-IV-V+RP |
+| 软腭 | 距中线≤1cm→双侧 II+III+IV；>1cm→同侧。RP：未累咽侧壁→同侧带及一点、对侧不照；累咽侧壁→同侧必照 | 按距中线规则 | 按距中线规则+V区 |
+| 舌根 | 同软腭规则 | 同左 | 同左 |
 
 > 完整对侧颈预防决策见 `对侧颈预防照射决策树.md`。
 
@@ -218,8 +218,8 @@ metadata:
 
 | 病例 | 教训 |
 |------|------|
-| 软腭+咽侧壁，术后 PORT | 🔴 单侧颈清+中线跨过→对侧颈复发。验证"单侧颈清→对侧开放"规则 |
-| 舌根 HPV+，根治性 RT | ⚠️ 舌根 HPV+ 即便早期也需双侧颈覆盖 |
+| 软腭+咽侧壁，术后 PORT | 🔴 单侧颈清+中线跨过→对侧颈复发。验证"单侧颈清→对侧开放"规则（该例 RP 指征源于咽侧壁受累） |
+| 舌根 HPV+，根治性 RT | ⚠️ 舌根 HPV+ → 双侧颈覆盖仍按距中线 1cm 阈值 + 咽侧壁受累评估 |
 | 舌根 ENE+，术后 PORT | ⚠️ ENE+ 术后仍需注意原发灶床充分覆盖 |
 
 > **核心教训**：单侧颈清+口咽中线/近中线原发灶→对侧颈复发风险真实存在。
@@ -229,6 +229,14 @@ metadata:
 ## 附：靶区规划摘要
 
 > 通用骨架与四类加量指征见共享模板 `_shared_targets_planning_template.md`（生成报告时按骨架输出，贴入首次病程录）。
+
+---
+
+## 更新日志
+
+| 日期 | 版本 | 更新内容 |
+|------|:----:|---------|
+| 2026-10-12 | v1.0.2 | 2026-10-12 朱国培批复：口咽双颈按距中线 1cm 阈值；RP 按咽侧壁受累分层（累壁→同侧必照；未累壁→同侧带及一点、对侧不照；双侧 RP 避免常规照射）；删除"RP必照/双侧必照"绝对表述 |
 
 ---
 
