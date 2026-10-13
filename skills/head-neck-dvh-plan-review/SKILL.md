@@ -1,7 +1,7 @@
 ---
 name: head-neck-dvh-plan-review
 description: "One-glance DVH plan acceptability assessment for HEAD & NECK radiotherapy — priority-graded OAR constraints (ideal/acceptable tiers), complete SBRT tables (1-15fx from Timmerman 2022), violation severity grading, trade-off decision rules, and actionable dual-report generation."
-version: 1.3.1
+version: 1.3.2
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -104,12 +104,14 @@ metadata:
 | **2** | **颞叶** | ≤ 65 Gy（早期）/ ≤ 70 Gy（晚期） | ≤ 72 Gy | D0.03cc |
 | **3** | **臂丛** | ≤ 66 Gy | < 70 Gy | D0.03cc |
 | **3** | **眼球** | ≤ 35 Gy（平均） | < 50 Gy | D0.03cc |
+| **4** | **晶体（Lens）** | ≤ 5 Gy | < 10 Gy（规划目标，非生物学阈值） | D0.03cc / Dmax |
 | **4** | **对侧腮腺** | ≤ 26 Gy（平均） | < 30 Gy（至少一个腺体） | Dmean |
 | **4** | **患侧腮腺** | ≤ 30 Gy（平均） | — | Dmean |
 | **4** | **下颌骨 + TMJ** | ≤ 70 Gy | < 75 Gy | D2% |
 | **4** | **下颌骨 V60Gy** | < 30% | < 40%（牙列完整者偏严） | V60Gy |
 | **4** | **耳蜗** | ≤ 45 Gy（平均） | < 55 Gy | Dmean |
 | **4** | **声门型喉** | ≤ 35 Gy（平均） | < 50 Gy | D2%（保声病例测 Dmean） |
+| **4** | **喉（未受累·非喉原发，如口咽/舌癌保喉）** | ≤ 40 Gy（平均） | < 44 Gy（QUANTEC：V50 ≤27%） | Dmean |
 | **4** | **口腔（非PTV）** | ≤ 40 Gy（平均） | < 50 Gy | Dmean |
 | **4** | **咽缩肌** | ≤ 50 Gy（平均） | < 55 Gy | Dmean |
 | **4** | **下颌下腺** | ≤ 35 Gy（平均） | — | Dmean |
@@ -120,6 +122,9 @@ metadata:
 | **4** | **气管** | V50 < 50% | — | V50 |
 
 > **优先级含义**：1=一票否决；2=高危（尽可能达标）；3=中危（超标需记录）；4=优化目标。
+> **晶体与喉两行的来源（2026-10-13 补，PubMed 已核）**：
+> - **晶体**——Henk 1993（PMID 8478231，40 例眶内肿瘤实测）：晶体生发区 **≤5 Gy 无晶体混浊**，≥16.5 Gy 几乎全部出现视力损伤，TD50≈15 Gy；而 ICRP 可检出混浊阈值仅约 0.5 Gy（Grosinger 2026, PMID 42382431）——**10 Gy 是规划目标不是生物学阈值**，眼眶/鼻窦/鼻咽贴野病例能低则低，术后晶体受量逐年随访。
+> - **喉（未受累）**——QUANTEC（Rancati 2010, PMID 20171520）：**Dmean ≤44 Gy、V50 ≤27%** 时 1 年 ≥2 级喉水肿 <20%（44-57 Gy 组 45%、>57 Gy 组 >80%）；非受累喉整体 Dmean 宜 40-45 Gy、Dmax <63-66 Gy。喉原发肿瘤大部在 PTV 内时按声门型喉行评估，未受累侧按本行。
 
 ### 第 4 步：修正区
 
@@ -278,6 +283,17 @@ metadata:
 | AAPM TG-101. SBRT constraints. 2010 | SBRT 早期约束 |
 | UK SABR 2022. PMID:35272913 | SBRT 英国共识 |
 | H&N IMRT clinical protocol OAR priority table | 头颈 IMRT 优先级分层共识 |
+| Henk JM, Whitelocke RA, Warrington AP, Bessell EM. Radiation dose to the lens and cataract formation. *IJROBP* 1993;25(5):815-820 | **PMID 8478231** — 晶体 5 Gy 无改变 / TD50≈15 Gy |
+| Rancati T, Schwarz M, Allen AM, et al. Radiation dose-volume effects in the larynx and pharynx (QUANTEC). *IJROBP* 2010;76(3 Suppl):S64-9 | **PMID 20171520** — 喉 Dmean≤44 Gy、V50≤27% |
+| Grosinger A, Roovers A, Bergerud KMB, et al. Critical Review of Cataractogenesis and Lens Contouring in Radiation Oncology. *Adv Radiat Oncol* 2026;11(10):102100 | **PMID 42382431** — 晶体阈值与勾画规范 |
+
+---
+
+## 更新日志
+
+| 日期 | 版本 | 更新内容 |
+|------|:----:|---------|
+| 2026-10-13 | v1.3.2 | 新增软约束两行——**晶体**（≤5 Gy / <10 Gy，Henk 1993 PMID 8478231）与**喉未受累**（Dmean ≤40 / <44 Gy、V50≤27%，QUANTEC PMID 20171520）；来源经 PubMed 核实并入参考文献 |
 
 ---
 

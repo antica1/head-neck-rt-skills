@@ -91,7 +91,7 @@ head-neck-rt-skills/
 | head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 950 | 1.2.1 |
 | head-neck-sarcoma-rt-targets | head-neck-sarcoma-rt-targets | 686 | 1.1.1 |
 | reirradiation-plan-recommend | reirradiation-plan-recommend | 289 | 1.3.1 |
-| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 287 | 1.3.1 |
+| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 287 | 1.3.2 |
 
 > **注意**：2026-08 已完成目录名统一——全部 Skill 的主仓库目录名与 YAML `name` 一致（`hncup-rt-targets`、`adenoid-cystic-carcinoma-rt-targets`、`head-neck-dvh-plan-review`、`reirradiation-plan-recommend`）。旧目录名（`HNCUP-rt-targets`、`head-neck-acc-rt-targets`、`head-neck-dvh-review`、`head-neck-reirradiation`）与旧 YAML name（`cervical-cup-rt-targets`）均已废弃；GitHub 独立仓库若仍用旧名，靠 301 重定向兼容。
 
