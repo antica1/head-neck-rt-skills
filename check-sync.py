@@ -29,13 +29,21 @@ import difflib
 
 MAIN = r"D:\头颈肿瘤放疗靶区\主仓库\skills"
 REPO = r"D:\头颈肿瘤放疗靶区\主仓库"
-RUN_ROOTS = [
-    ("default",    r"C:\Users\antic\AppData\Local\hermes\skills"),
-] + [
-    (p, rf"C:\Users\antic\AppData\Local\hermes\profiles\{p}\skills")
-    for p in ("bot-academic", "bot-clinical", "bot-data", "bot-literature",
-              "bot-management", "bot-patient", "bot-slides")
-]
+PROFILES_ROOT = r"C:\Users\antic\AppData\Local\hermes\profiles"
+
+def discover_run_roots():
+    """自动发现现存 profile（.deleted 下的跳过）；default 恒检查"""
+    roots = [("default", r"C:\Users\antic\AppData\Local\hermes\skills")]
+    if os.path.isdir(PROFILES_ROOT):
+        for p in sorted(os.listdir(PROFILES_ROOT)):
+            if p.startswith("."):
+                continue
+            sk = os.path.join(PROFILES_ROOT, p, "skills")
+            if os.path.isdir(sk):
+                roots.append((p, sk))
+    return roots
+
+RUN_ROOTS = discover_run_roots()
 
 def read(p):
     try:
@@ -101,7 +109,7 @@ def main():
 
     main_skills = list_skill_dirs(MAIN)
     print("=" * 76)
-    print("  多位置一致性检查 v2：主仓库 / 8 个运行目录 / GitHub + Gitee 双远程")
+    print(f"  多位置一致性检查 v2：主仓库 / {len(RUN_ROOTS)} 个运行目录（自动发现） / GitHub + Gitee 双远程")
     print("=" * 76)
 
     errors = warnings = 0
