@@ -1,7 +1,7 @@
 ---
 name: adenoid-cystic-carcinoma-rt-targets
 description: "腺样囊性癌ACC术后放疗靶区勾画——面神经径路/颅底孔道、PNI追踪。Postoperative RT for adenoid cystic carcinoma — nerve pathway coverage, skull base foramen."
-version: 1.7.1
+version: 1.8.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -60,6 +60,7 @@ metadata:
 | 13 | **鼻腔鼻窦 ACC 独立处理**：PNI 通路为 V2+V3+翼管神经，翼腭窝为必覆盖关键结构；切缘阳性对 OS/DFS 无显著影响（跳跃性 PNI）→ 更强调 PORT；多处切缘阳性/软组织受侵 → 66 Gy | 鼻腔/鼻窦 ACC |
 | 14 | **CAP 化疗**：顺铂 50–80 mg/m² + 多柔比星 40–60 mg/m² + 环磷酰胺 400–600 mg/m²，d1，q3–4w | 快速生长、症状明显、不可切除、复发、转移性 ACC |
 | 15 | **切缘阴性≠肿瘤床安全**：手术记录未描述但肿瘤曾临近"不易切净区"（茎乳孔/腮腺深叶/颅底/翼腭窝/颏结节/前上门牙-鼻底硬腭）仍需考虑加量；四类加量指征：①R1/R2 ②ENE+ ③不易切净区 ④不手术 T4/T4b 临近颅底/脑膜/眼眶/颈动脉 | 所有术后病例的加量决策 |
+| 16 | **影像阴性不豁免径路**：翼腭窝残余（V2 主干径路）时圆孔/海绵窦影像阴性**不可**作为停照理由——跳跃性 PNI 下影像阴性 NPV 有限；照到海绵窦下缘即止（保 III/IV/V1/VI），病理回报 V2 神经内侵犯再升 Tier 1 全窦 60 Gy | 翼腭窝/上颌神经残余病例的径路终点判定 |
 
 > ⚠️ 以上铁律即使正文未逐条提及也自动适用。
 
@@ -179,6 +180,19 @@ Based on postoperative pathology, ACC falls into one of three tiers dictating ho
 | **翼腭窝增宽 / 同侧神经症状** | 圆孔内 + 海绵窦底（Tier 1 级高度） | 按近中线规则，对侧仍至少到圆孔开口 |
 
 > **解剖依据**：硬腭黏膜下双侧腭大孔的神经血管在切牙孔/腭中缝处有交通支。肿瘤近中线→可通过黏膜下神经丛扩散至对侧腭大神经→对侧翼腭窝→对侧 V2→圆孔。仅照同侧会遗漏这一扩散路径。
+
+### 1.2C Pterygopalatine Fossa Residual — Hierarchical Mapping（翼腭窝残余层级映射）
+
+> **翼腭窝残余 = 肿瘤坐在 V2 主干径路上（翼腭窝节段/上颌神经），不是「小神经分支」情形。** 此时影像上圆孔/海绵窦阴性**不豁免径路覆盖**——ACC 跳跃性 PNI 使影像阴性的阴性预测值有限，孔内镜下病灶无法被 MRI 排除。
+
+| 情形 | 径路覆盖 | 剂量 |
+|------|---------|------|
+| 翼腭窝残余 + 圆孔/海绵窦影像阴性 | 翼腭窝→圆孔（骨性管道内 3–5 mm）→**海绵窦下缘为止** | 残余灶 66 Gy；径路 54–56 Gy |
+| 后续病理回报 V2 神经内侵犯 | 升级照全海绵窦至 Meckel's cave（Tier 1） | 60 Gy |
+
+- 海绵窦本体影像阴性且未达 Tier 1 门槛时**不照全海绵窦**——照到下缘即止正是为保护窦内 III/IV/V1/VI 颅神经。
+- 若原发为鼻腔鼻窦 ACC，同路径加翼管神经径路（翼腭窝→翼管→破裂孔前缘）。
+- 粒子治疗（质子/碳离子）在此场景值得评估——颅底靶区减颞叶/视路剂量优势明确。
 
 ### 1.3 Anatomical Implementation: The Trigeminal Nerve Pathway
 
