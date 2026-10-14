@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-head-neck-rt-skills 三位置一致性检查器
-======================================
-检查三个位置的 Skill 版本与内容一致性：
-  ① 主仓库聚合目录  D:\\头颈肿瘤放疗靶区\\主仓库\\skills\\
-  ② Hermes 运行目录 C:\\Users\\antic\\AppData\\Local\\hermes\\skills\\research\\
-  ③ GitHub 远程     origin/master (通过 git)
+head-neck-rt-skills 多位置一致性检查器 v2
+==========================================
+检查发布源与全部消费位置的 Skill 版本与内容一致性：
+  ① 主仓库工作区   D:\\头颈肿瘤放疗靶区\\主仓库\\skills\\
+  ② 全部 8 个运行目录（default + bot-academic/clinical/data/literature/management/patient/slides）
+  ③ GitHub 远程    origin/master
+  ④ Gitee 镜像     gitee/master
+
+v2 修订（2026-10-14）：
+  - v1 只检查 default 一个运行目录 → 7 个 bot profile 漂移数月无人发现（ACC v1.2.0 vs v1.7.1 事故）
+  - v2 覆盖全部 profile；附属文件（README/references/*）一并比对
+  - 比对前统一换行符（CRLF/LF 假阳性根除）
+  - 远程同时查 origin 与 gitee 双镜像
 
 用法:
-  python check-sync.py            # 完整检查三位置
-  python check-sync.py --quick    # 仅检查主仓库 vs 运行目录
-  python check-sync.py --push-check  # 推送前快速检查（含未提交变更）
+  python check-sync.py            # 完整检查（工作区+8运行目录+双远程）
+  python check-sync.py --quick    # 仅工作区 vs 8 运行目录
+  python check-sync.py --push-check  # 推送前检查（工作区+运行目录+未提交变更）
 
 每次修改 Skill 后、推送前必须运行。任一 ❌ 都说明有分叉——先解决再推送。
 """
@@ -21,13 +28,19 @@ import subprocess
 import difflib
 
 MAIN = r"D:\头颈肿瘤放疗靶区\主仓库\skills"
-RUN  = r"C:\Users\antic\AppData\Local\hermes\skills"   # 顶层：含分类子目录与独立技能
 REPO = r"D:\头颈肿瘤放疗靶区\主仓库"
+RUN_ROOTS = [
+    ("default",    r"C:\Users\antic\AppData\Local\hermes\skills"),
+] + [
+    (p, rf"C:\Users\antic\AppData\Local\hermes\profiles\{p}\skills")
+    for p in ("bot-academic", "bot-clinical", "bot-data", "bot-literature",
+              "bot-management", "bot-patient", "bot-slides")
+]
 
 def read(p):
     try:
-        with open(p, encoding="utf-8") as f:
-            return f.read()
+        with open(p, encoding="utf-8", newline="") as f:
+            return f.read().replace("\r\n", "\n").replace("\r", "\n")
     except Exception:
         return None
 
@@ -39,135 +52,125 @@ def version(text):
             return line.split(":", 1)[1].strip()
     return "?"
 
-def list_skills(d):
+def list_skill_dirs(d):
     if not os.path.isdir(d):
         return []
-    return sorted(x for x in os.listdir(d) if os.path.isdir(os.path.join(d, x)))
+    return sorted(x for x in os.listdir(d)
+                  if os.path.isdir(os.path.join(d, x))
+                  and os.path.isfile(os.path.join(d, x, "SKILL.md")))
 
-def remote_skill_text(name):
-    """从 origin/master 取该 skill 的 SKILL.md 文本"""
+def find_in_run(run_root, name):
+    """运行目录搜索：顶层 + 所有分类子目录"""
+    for cand in [os.path.join(run_root, name, "SKILL.md")] + [
+            os.path.join(run_root, cat, name, "SKILL.md")
+            for cat in sorted(os.listdir(run_root))
+            if os.path.isdir(os.path.join(run_root, cat))]:
+        if os.path.exists(cand):
+            return os.path.dirname(cand)
+    return None
+
+def remote_skill_text(ref, name):
     try:
-        r = subprocess.run(
-            ["git", "show", f"origin/master:skills/{name}/SKILL.md"],
-            cwd=REPO, capture_output=True, text=True, encoding="utf-8", errors="replace",
-            timeout=30,
-        )
-        if r.returncode == 0:
-            return r.stdout
-        return None
+        r = subprocess.run(["git", "show", f"{ref}:skills/{name}/SKILL.md"],
+                           cwd=REPO, capture_output=True, text=True,
+                           encoding="utf-8", errors="replace", timeout=30)
+        return r.stdout if r.returncode == 0 else None
     except Exception:
         return None
 
-def yaml_name(text):
-    """从 SKILL.md frontmatter 提取 name 字段"""
-    if not text:
-        return None
-    for line in text.splitlines()[:15]:
-        if line.startswith("name:"):
-            return line.split(":", 1)[1].strip().strip('"\'')
-    return None
+def aux_files(skill_dir):
+    """附属文件：README.md、references/*.md 等（SKILL.md/ATTRIBUTION.md/LICENSE 之外）"""
+    out = {}
+    if not os.path.isdir(skill_dir):
+        return out
+    for item in sorted(os.listdir(skill_dir)):
+        if item in ("SKILL.md", "ATTRIBUTION.md", "LICENSE"):
+            continue
+        p = os.path.join(skill_dir, item)
+        if os.path.isfile(p):
+            out[item] = read(p)
+        elif os.path.isdir(p):
+            for f in sorted(os.listdir(p)):
+                if f.endswith(".md"):
+                    out[f"{item}/{f}"] = read(os.path.join(p, f))
+    return out
 
 def main():
     quick = "--quick" in sys.argv
     push_check = "--push-check" in sys.argv
 
-    main_skills = list_skills(MAIN)
-    run_skills = list_skills(RUN)
+    main_skills = list_skill_dirs(MAIN)
+    print("=" * 76)
+    print("  多位置一致性检查 v2：主仓库 / 8 个运行目录 / GitHub + Gitee 双远程")
+    print("=" * 76)
 
-    print("=" * 72)
-    print("  三位置一致性检查：主仓库 / 运行目录 / GitHub远程")
-    print("=" * 72)
+    errors = warnings = 0
 
-    errors = 0
-    warnings = 0
-
-    # 检查主仓库中的每个 skill（这是发布源）
     for name in main_skills:
-        m_path = os.path.join(MAIN, name, "SKILL.md")
-        tm = read(m_path)
-        # 2026-08 起目录名已统一 = YAML name。运行目录搜索顶层+所有分类子目录
-        r_path = None
-        for cand in [os.path.join(RUN, name, "SKILL.md")] + [
-                os.path.join(RUN, cat, name, "SKILL.md")
-                for cat in sorted(os.listdir(RUN))
-                if os.path.isdir(os.path.join(RUN, cat))]:
-            if os.path.exists(cand):
-                r_path = cand
-                break
-        tr = read(r_path) if r_path else None
+        tm = read(os.path.join(MAIN, name, "SKILL.md"))
+        tmaux = aux_files(os.path.join(MAIN, name))
 
-        # 主仓库 vs 运行目录
-        if tr is None:
-            print(f"  ❌ {name}: 运行目录缺失 SKILL.md（主仓库有，yaml name={yaml_name(tm)}）")
-            errors += 1
-        elif tm != tr:
-            vm, vr = version(tm), version(tr)
-            d = list(difflib.unified_diff(tm.splitlines(), tr.splitlines(), lineterm=""))
-            chg = [x for x in d if x.startswith(("+", "-")) and not x.startswith(("+++", "---"))]
-            print(f"  ❌ {name}: 主仓库v{vm} ≠ 运行目录v{vr}（差异 {len(chg)} 行）")
-            errors += 1
-
-        # 主仓库 vs 远程（除非是 --quick）
-        if not quick and not push_check:
-            trm = remote_skill_text(name)
-            if trm is None:
-                # 远程没有这个文件（可能是新 skill 未推送）
-                status = subprocess.run(["git", "status", "--porcelain", f"skills/{name}/SKILL.md"],
-                                        cwd=REPO, capture_output=True, text=True, encoding="utf-8").stdout
-                if status.strip():
-                    print(f"  ⚠ {name}: 远程无此文件且本地有未提交修改（新 skill 待推送？）")
-                    warnings += 1
-                else:
-                    print(f"  ⚠ {name}: 远程无此文件（新 skill？已提交但未推送？）")
-                    warnings += 1
-            elif tm != trm:
-                vm, vrm = version(tm), version(trm)
-                d = list(difflib.unified_diff(tm.splitlines(), trm.splitlines(), lineterm=""))
-                chg = [x for x in d if x.startswith(("+", "-")) and not x.startswith(("+++", "---"))]
-                print(f"  ❌ {name}: 主仓库v{vm} ≠ 远程v{vrm}（差异 {len(chg)} 行）—— 未推送或远程更新未拉取")
+        # ② 逐个运行目录
+        for tag, run_root in RUN_ROOTS:
+            rdir = find_in_run(run_root, name)
+            if rdir is None:
+                print(f"  ❌ {name} @ {tag}: 运行目录缺失")
                 errors += 1
-
-    # 检查运行目录独有的（主仓库完全没对应的，才警告）
-    if not quick:
-        # 收集主仓库所有 skill 的 YAML name + 目录名
-        main_names = set()
-        for name in main_skills:
-            m_path = os.path.join(MAIN, name, "SKILL.md")
-            tm = read(m_path)
-            main_names.add(name)
-            yn = yaml_name(tm)
-            if yn:
-                main_names.add(yn)
-        skip_prefixes = ("nature-", "mr-", "ars-", "academic-", "nsfc-", "grant-", "clinical-",
-                         "hospital-", "institutional-", "journal-", "conference-", "medical-",
-                         "rt-academic", "rt-department", "competitor-", "blogwatcher", "arxiv",
-                         "agnes-", "pdf-figure")
-        # Hermes 分类目录（组织结构，非技能）——不参与发布检查
-        CATEGORY_DIRS = {"apple", "autonomous-ai-agents", "clinical-literature-review", "creative",
-                         "devops", "email", "github", "head-neck-rt-methodology", "hermes-desktop-plugins",
-                         "media", "mlops", "note-taking", "productivity", "pptx-visual-qa",
-                         "promotion-defense-review", "reference-verification", "research", "smart-home",
-                         "social-media", "software-development", "web", "yuanbao"}
-        for name in run_skills:
-            if name in CATEGORY_DIRS:
-                continue  # 分类目录/顶层技能，跳过
-            if name.startswith("."):
-                continue  # Hermes 隐藏目录（.hub/.curator_backups 等）
-            if name in main_names:
-                continue  # 已有对应（目录名或 YAML name 匹配）
-            if name.startswith(skip_prefixes):
                 continue
-            print(f"  ⚠ {name}: 仅运行目录有（主仓库无）—— 是否需纳入发布？")
-            warnings += 1
+            tr = read(os.path.join(rdir, "SKILL.md"))
+            if tr is None:
+                print(f"  ❌ {name} @ {tag}: SKILL.md 读取失败")
+                errors += 1
+            elif tm != tr:
+                d = list(difflib.unified_diff(tr.splitlines(), tm.splitlines(), lineterm=""))
+                chg = sum(1 for x in d if x.startswith(("+", "-")) and not x.startswith(("+++", "---")))
+                print(f"  ❌ {name} @ {tag}: 主仓库v{version(tm)} ≠ 运行目录v{version(tr)}（差异 {chg} 行）")
+                errors += 1
+            # 附属文件双向比对
+            raux = aux_files(rdir)
+            for f, content in tmaux.items():
+                if f not in raux:
+                    print(f"  ⚠ {name} @ {tag}: 附属文件 {f} 运行目录缺失")
+                    warnings += 1
+                elif raux[f] != content:
+                    print(f"  ⚠ {name} @ {tag}: 附属文件 {f} 内容不同")
+                    warnings += 1
+            for f in raux:
+                if f not in tmaux:
+                    print(f"  ⚠ {name} @ {tag}: 附属文件 {f} 仅运行目录有（主仓库无——会否丢失？）")
+                    warnings += 1
 
-    print("-" * 72)
+        # ③④ 双远程
+        if not quick and not push_check:
+            for ref in ("origin/master", "gitee/master"):
+                trm = remote_skill_text(ref, name)
+                if trm is None:
+                    print(f"  ⚠ {name}: {ref} 无此文件（新 skill 未推送？）")
+                    warnings += 1
+                elif trm != tm:
+                    d = list(difflib.unified_diff(trm.splitlines(), tm.splitlines(), lineterm=""))
+                    chg = sum(1 for x in d if x.startswith(("+", "-")) and not x.startswith(("+++", "---")))
+                    print(f"  ❌ {name}: 主仓库v{version(tm)} ≠ {ref} v{version(trm)}（差异 {chg} 行）")
+                    errors += 1
+
+    if push_check:
+        st = subprocess.run(["git", "status", "--porcelain", "skills/"],
+                            cwd=REPO, capture_output=True, text=True,
+                            encoding="utf-8", errors="replace").stdout.strip()
+        if st:
+            print("\n  ⚠ 主仓库有未提交变更：")
+            for line in st.splitlines():
+                print(f"      {line}")
+            warnings += len(st.splitlines())
+
+    print("-" * 76)
     if errors == 0 and warnings == 0:
         print("  ✅ 全部一致——可以安全推送。")
     elif errors == 0:
         print(f"  ⚠ 无错误，但有 {warnings} 个警告（见上）。")
     else:
         print(f"  ❌ 发现 {errors} 个错误、{warnings} 个警告——先解决再推送！")
-    print("=" * 72)
+    print("=" * 76)
     sys.exit(1 if errors else 0)
 
 if __name__ == "__main__":

@@ -1,0 +1,38 @@
+# 许可 / License
+
+本作品属于 **Head & Neck Radiotherapy Target Delineation AI Skills（头颈肿瘤放疗靶区勾画 AI Skill 系列）**。
+本目录全部内容采用 **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**
+（**CC BY-NC-SA 4.0**，知识共享「署名—非商业性使用—相同方式共享」4.0 国际许可协议）授权。
+
+- 中文法律文本：https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-Hans
+- 中文摘要（通俗版）：https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-Hans
+- 英文法律文本：https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+- 来源仓库：https://github.com/antica1/head-neck-rt-skills
+
+## 您可以自由地
+
+- **共享** —— 以任何媒介或格式复制、发行本作品
+- **演绎** —— 修改、转换或以本作品为基础进行创作
+- 用于学术研究、教学与同行专业交流
+
+## 惟须遵守下列条件
+
+1. **署名（BY, Attribution）** —— 必须注明原作者、附上本许可说明、并标明是否作了改动。
+2. **非商业性使用（NC, NonCommercial）** —— **不得将本作品用于商业目的。**
+   **明确禁止**将本作品或其演绎作品用于任何**商业医学软件**的开发、销售、分发或产品集成。
+3. **相同方式共享（SA, ShareAlike）** —— 若您演绎本作品，必须以**相同的 CC BY-NC-SA 4.0**
+   许可分发您的成果。
+4. **不得增加限制** —— 不得以法律条款或技术措施限制他人依本许可所获得的权利。
+
+## 免责声明（重要）
+
+本作品是**临床实践经验的编码化整理**，供**学术研究、教学与同行交流**使用；
+**它不是医疗器械，不构成诊疗建议**。任何临床决策必须由具备执业资质的医师，
+结合具体患者的完整临床资料独立作出。作者不对使用本作品所产生的任何临床后果承担责任。
+
+本作品按「现状」提供，不附带任何明示或默示的担保。
+
+---
+*This work is licensed under CC BY-NC-SA 4.0. It is NOT a medical device and does NOT constitute
+medical advice. Commercial use — including incorporation into commercial medical software — is
+expressly prohibited.*
