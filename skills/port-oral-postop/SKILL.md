@@ -1,14 +1,14 @@
 ---
 name: port-oral-postop
 description: "Self-contained oral cavity PORT module — surgical bed fusion, mandatory checklist, 8 oral subsites CTV, transit nodes (VIII/IX), RP decisions, floor-of-mouth rule (single midline structure), flap handling, neck management, margins, PNI, dose strategy, OSF/betel-quid special management, 9-step method, and evidence base."
-version: 1.6.1
+version: 1.6.2
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, port, oral-cavity, postoperative, osf, betel-quid]
     related_skills: [neoadjuvant-deescalation, port-oropharynx-postop]
-    triggers_on: [口腔癌, 舌癌, 舌癌累及口底, 舌癌口底, 舌癌对侧颈, 对侧颈预防, 同侧颈提级, Ⅲ区阳性, DOI>10mm, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis, tongue floor of mouth, tongue FOM, 术后复发, 复发再手术, 二次手术, 挽救手术, 挽救性PORT, 颈转移复发, 寡进展, 瘤床豁免, 清扫不彻底, 未清颈, 只切原发灶, 上颈清, 肩胛舌骨肌上, 挽救手术, 多次手术, incomplete neck dissection, salvage, 下颌骨, 下颌骨鳞癌, 牙龈癌下颌骨侵犯, 下颌骨侵犯, T4a, pT4a, 下颌管, 下牙槽神经, 截骨端, 骨切缘, 节段切除, 边缘切除, 腓骨瓣, mandible, mandibulectomy, inferior alveolar nerve, mandibular canal, 靶区教学, 教学版]
+    triggers_on: [口腔癌, 舌癌, 舌癌累及口底, 舌癌口底, 舌癌对侧颈, 对侧颈预防, 同侧颈提级, Ⅲ区阳性, DOI>10mm, 口底癌, 牙龈癌, 颊癌, 颊黏膜癌, 硬腭癌, RMT, 磨牙后三角, 唇癌, oral cavity, oral tongue, buccal, 口腔术后, 口腔PORT, 颊部术后, 舌部术后, 口底照射, 口腔靶区, 口腔靶区勾画, 皮瓣放疗, 下颌骨重建放疗, 口底铁律, 槟榔, 嚼槟榔, 口腔黏膜纤维化, 黏膜下纤维化, OSF, 不典型增生, 癌前病变, 区域癌化, field cancerization, betel, oral submucous fibrosis, tongue floor of mouth, tongue FOM, 术后复发, 复发再手术, 二次手术, 挽救手术, 挽救性PORT, 颈转移复发, 寡进展, 瘤床豁免, 清扫不彻底, 未清颈, 只切原发灶, 上颈清, 肩胛舌骨肌上, 多次手术, incomplete neck dissection, salvage, 下颌骨, 下颌骨鳞癌, 牙龈癌下颌骨侵犯, 下颌骨侵犯, T4a, pT4a, 下颌管, 下牙槽神经, 截骨端, 骨切缘, 节段切除, 边缘切除, 腓骨瓣, mandible, mandibulectomy, inferior alveolar nerve, mandibular canal, 靶区教学, 教学版]
 
 ---
 

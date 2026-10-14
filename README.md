@@ -1,7 +1,7 @@
 # 头颈肿瘤放疗 AI 靶区规划系统——安装指南
 
 > 上海交通大学医学院附属第九人民医院 · 口腔颌面头颈肿瘤科放疗中心
-> **16 个放疗靶区 Skill** | GitHub 开源 | 一行命令安装 | CC BY-NC-SA 4.0
+> **18 个放疗靶区 Skill** | GitHub 开源 | 一行命令安装 | CC BY-NC-SA 4.0
 
 ---
 
@@ -40,16 +40,18 @@ Hermes 打开后，点击左下角 **⚙️ 设置** → 填入：
 hermes skills install head-neck-rt-skills
 ```
 
-或手动逐个安装（16 个独立仓库）：
+或手动逐个安装（18 个独立仓库）：
 
 ```
 hermes skills install adenoid-cystic-carcinoma-rt-targets
 hermes skills install head-neck-dvh-plan-review
 hermes skills install head-neck-lymphoma-rt-targets
+hermes skills install head-neck-rt-methodology
 hermes skills install head-neck-sarcoma-rt-targets
 hermes skills install hncup-rt-targets
 hermes skills install hypopharynx-rt-targets
 hermes skills install larynx-rt-targets
+hermes skills install merkel-cell-carcinoma-rt-targets
 hermes skills install neoadjuvant-deescalation
 hermes skills install npc-rt-target-delineation
 hermes skills install orbital-tumor-rt-targets
@@ -154,7 +156,7 @@ A: GitHub 关注 `antica1`——每次更新自动推送。Hermes 内运行 `her
 ## 获取帮助
 
 - 总入口：https://github.com/antica1/head-neck-rt-skills
-- 16 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验（shared-knowledge 为私有仓库，不公开）
+- 18 个 Skill 仓库全部开源——欢迎提建议、报告问题、贡献靶区经验（shared-knowledge 为私有仓库，不公开）
 - 授权：CC BY-NC-SA 4.0（署名-非商业-相同方式共享）
 
 **Q: 如何引用？**

@@ -1,7 +1,7 @@
 # 头颈放疗靶区 Skill 完整索引
 
 > 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.7.0 | 2026-09-13
-> 16 个公开 Skill · Claude Code & Hermes 双平台（shared-knowledge 已移至私有仓库，2026-08-11）
+> 18 个公开 Skill · Claude Code & Hermes 双平台（shared-knowledge 已移至私有仓库，2026-08-11）
 
 ---
 
@@ -36,6 +36,8 @@ head-neck-rt-skills/
     ├── reirradiation-plan-recommend/     # 再程放疗（289 行）
     ├── head-neck-lymphoma-rt-targets/  # 头颈部淋巴瘤放疗（950 行）🆕
     ├── head-neck-sarcoma-rt-targets/   # 头颈肉瘤全流程（686 行）🆕——软组织肉瘤+骨肉瘤（颌骨）、HYPORT术前大分割、NCT03539172艾坦、SBRT转移灶
+    ├── head-neck-rt-methodology/       # 总纲（v1.0.2）🆕——分期四态/侧性三层/不易切净区/SBRT补量 SER，8 个模块 skill 的 related_skills 上游
+    ├── merkel-cell-carcinoma-rt-targets/ # 皮肤默克尔细胞癌 MCC（v1.0.0）🆕——SLNB 分水岭三分、原发灶+引流区、NCCN v2.2026 剂量
 │
 └── head-neck-dvh-plan-review/        # DVH 计划审核（257 行）
 ```
@@ -135,8 +137,10 @@ head-neck-rt-skills/
 | salivary-gland-rt-targets | ✅ 15 条 | 唾液腺铁律（2026-09-13 补） |
 | reirradiation-plan-recommend | ✅ 14 条 | 再程放疗铁律（2026-09-13 补） |
 | head-neck-lymphoma-rt-targets | ✅ 12 条 | 淋巴瘤 ISRT/剂量铁律（2026-09-13 补） |
+| head-neck-rt-methodology | ✅ 方法论 4 章 | 总纲（无编号铁律表，以决策框架承载；2026-10-14 收编） |
+| merkel-cell-carcinoma-rt-targets | ✅ 10 条 | MCC SLNB 分水岭/引流区铁律（2026-10-14 收编） |
 
-**铁律清单覆盖**：**16/16 全部已有编号铁律表**（条数为 2026-09-13 实测：8–17 条/skill，含 2026-09-13 新补的 ACC / hncup / 鼻腔鼻窦 / 唾液腺 / 再程 / 淋巴瘤 6 个）。
+**铁律清单覆盖**：**17/18 已有编号铁律表**（head-neck-rt-methodology 为总纲，以决策框架替代编号铁律）（条数为 2026-09-13 实测：8–17 条/skill，含 2026-09-13 新补的 ACC / hncup / 鼻腔鼻窦 / 唾液腺 / 再程 / 淋巴瘤 6 个）。
 
 ---
 
