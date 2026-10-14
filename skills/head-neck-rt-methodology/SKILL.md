@@ -1,9 +1,14 @@
 ---
 name: head-neck-rt-methodology
 description: "头颈放疗靶区规划通用方法论——分期四态验证、侧性肿瘤对侧照射三层框架、SER增敏修正、手术不易切净区加量。Universal methodology for head-neck RT planning."
-version: 1.0.1
+version: 1.0.2
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
+metadata:
+  hermes:
+    tags: [head-neck, radiotherapy, methodology, staging, contouring]
+    triggers_on: [分期四态, cT pT ypT rT, 对侧照射, 侧性肿瘤, SER增敏, 手术不易切净区, 靶区方法论, 总纲, 通用方法论, staging prefix, contralateral target]
+    related_skills: [port-oral-postop, port-oropharynx-postop, larynx-rt-targets, hypopharynx-rt-targets, npc-rt-target-delineation, hncup-rt-targets, adenoid-cystic-carcinoma-rt-targets, orbital-tumor-rt-targets, head-neck-sarcoma-rt-targets]
 ---
 
 # 头颈放疗靶区规划——通用方法论
