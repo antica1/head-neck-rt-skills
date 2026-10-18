@@ -1,6 +1,6 @@
 # 头颈放疗靶区 Skill 完整索引
 
-> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.7.0 | 2026-09-13
+> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.7.1 | 2026-10-18
 > 18 个公开 Skill · Claude Code & Hermes 双平台（shared-knowledge 已移至私有仓库，2026-08-11）
 
 ---
@@ -77,23 +77,23 @@ head-neck-rt-skills/
 
 | 仓库名（目录） | YAML `name` | 行数 | 版本 |
 |:---|---:|---:|:---:|
-| neoadjuvant-deescalation | neoadjuvant-deescalation | 304 | 2.0.2 |
+| neoadjuvant-deescalation | neoadjuvant-deescalation | 295 | 2.0.2 |
 | ~~oral-oropharynx-postop-rt-targets~~ | ~~已删除~~ | — | — |
-| port-oral-postop | port-oral-postop | 890 | 1.6.1 |
-| port-oropharynx-postop | port-oropharynx-postop | 239 | 1.0.2 |
-| oropharynx-definitive-rt | oropharynx-definitive-rt | 334 | 1.1.1 |
-| larynx-rt-targets | larynx-rt-targets | 446 | 1.0.1 |
-| hypopharynx-rt-targets | hypopharynx-rt-targets | 436 | 1.0.1 |
-| adenoid-cystic-carcinoma-rt-targets | adenoid-cystic-carcinoma-rt-targets | 478 | 1.7.1 |
-| hncup-rt-targets | hncup-rt-targets | 541 | 1.1.1 |
-| npc-rt-target-delineation | npc-rt-target-delineation | 497 | 1.3.0 |
-| orbital-tumor-rt-targets | orbital-tumor-rt-targets | 1001 | 1.1.1 |
-| sinonasal-rt-targets | sinonasal-rt-targets | 577 | 1.5.1 |
-| salivary-gland-rt-targets | salivary-gland-rt-targets | 831 | 1.3.0 |
-| head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 950 | 1.2.1 |
-| head-neck-sarcoma-rt-targets | head-neck-sarcoma-rt-targets | 686 | 1.1.1 |
-| reirradiation-plan-recommend | reirradiation-plan-recommend | 289 | 1.3.1 |
-| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 287 | 1.3.2 |
+| port-oral-postop | port-oral-postop | 913 | 1.6.2 |
+| port-oropharynx-postop | port-oropharynx-postop | 243 | 1.0.2 |
+| oropharynx-definitive-rt | oropharynx-definitive-rt | 329 | 1.1.1 |
+| larynx-rt-targets | larynx-rt-targets | 441 | 1.0.1 |
+| hypopharynx-rt-targets | hypopharynx-rt-targets | 432 | 1.0.1 |
+| adenoid-cystic-carcinoma-rt-targets | adenoid-cystic-carcinoma-rt-targets | 494 | 1.8.1 |
+| hncup-rt-targets | hncup-rt-targets | 542 | 1.1.1 |
+| npc-rt-target-delineation | npc-rt-target-delineation | 496 | 1.3.0 |
+| orbital-tumor-rt-targets | orbital-tumor-rt-targets | 1002 | 1.1.1 |
+| sinonasal-rt-targets | sinonasal-rt-targets | 585 | 1.5.1 |
+| salivary-gland-rt-targets | salivary-gland-rt-targets | 829 | 1.3.0 |
+| head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 952 | 1.2.1 |
+| head-neck-sarcoma-rt-targets | head-neck-sarcoma-rt-targets | 682 | 1.1.1 |
+| reirradiation-plan-recommend | reirradiation-plan-recommend | 474 | 1.6.0 |
+| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 302 | 1.3.2 |
 
 > **注意**：2026-08 已完成目录名统一——全部 Skill 的主仓库目录名与 YAML `name` 一致（`hncup-rt-targets`、`adenoid-cystic-carcinoma-rt-targets`、`head-neck-dvh-plan-review`、`reirradiation-plan-recommend`）。旧目录名（`HNCUP-rt-targets`、`head-neck-acc-rt-targets`、`head-neck-dvh-review`、`head-neck-reirradiation`）与旧 YAML name（`cervical-cup-rt-targets`）均已废弃；GitHub 独立仓库若仍用旧名，靠 301 重定向兼容。
 
@@ -188,27 +188,29 @@ git clone https://github.com/antica1/head-neck-rt-skills.git
 
 ---
 
-## 八、仓库与分支对照表（2026-09-13 统一为 master）
+## 八、仓库与分支对照表（默认分支统一 master；版本列为 2026-10-18 实测）
 
 > **全部 17 个公开仓库 + 私有 `shared-knowledge` 的默认分支统一为 `master`**——2026-09-13 把原 5 个 main 仓库（淋巴瘤 / 化免降级 / 口咽根治 / 口腔 PORT / 口咽 PORT）改名完成。克隆、raw 链接、脚本一律用 `master`；`git ls-remote --heads origin` 探测分支名仅作兜底（2026-10 前建的仓库默认 master，之后新建仓库 GitHub 默认给 main，新建后记得立即改名）。
 
-| 仓库 | 类型 | 默认分支 | 版本（2026-09-13） |
+| 仓库 | 类型 | 默认分支 | 版本（2026-10-18 GitHub API 实测） |
 |------|------|:--:|:--:|
-| `head-neck-rt-skills` | 聚合主仓库（分发入口，含 SKILLS_INDEX） | master | 本文件 v2.7.0 |
-| `adenoid-cystic-carcinoma-rt-targets` | 独立仓库 | master | v1.7.1 |
-| `head-neck-dvh-plan-review` | 独立仓库 | master | v1.3.1 |
+| `head-neck-rt-skills` | 聚合主仓库（分发入口，含 SKILLS_INDEX） | master | 本文件 v2.7.1 |
+| `adenoid-cystic-carcinoma-rt-targets` | 独立仓库 | master | v1.8.1 |
+| `head-neck-dvh-plan-review` | 独立仓库 | master | v1.3.2 |
 | `head-neck-lymphoma-rt-targets` | 独立仓库 | master | v1.2.1 |
 | `head-neck-sarcoma-rt-targets` | 独立仓库 | master | v1.1.1 |
 | `hncup-rt-targets` | 独立仓库 | master | v1.1.1 |
 | `hypopharynx-rt-targets` | 独立仓库 | master | v1.0.1 |
 | `larynx-rt-targets` | 独立仓库 | master | v1.0.1 |
-| `neoadjuvant-deescalation` | 独立仓库 | master | v2.0.1 |
+| `neoadjuvant-deescalation` | 独立仓库 | master | v2.0.2 |
 | `npc-rt-target-delineation` | 独立仓库 | master | v1.3.0 |
 | `orbital-tumor-rt-targets` | 独立仓库 | master | v1.1.1 |
 | `oropharynx-definitive-rt` | 独立仓库 | master | v1.1.1 |
-| `port-oral-postop` | 独立仓库 | master | v1.6.0 |
-| `port-oropharynx-postop` | 独立仓库 | master | v1.0.1 |
-| `reirradiation-plan-recommend` | 独立仓库 | master | v1.3.1 |
+| `port-oral-postop` | 独立仓库 | master | v1.6.2 |
+| `port-oropharynx-postop` | 独立仓库 | master | v1.0.2 |
+| `reirradiation-plan-recommend` | 独立仓库 | master | v1.5.1 |
+| `head-neck-rt-methodology` | 独立仓库 | — | 尚未建仓（聚合仓 v1.0.2） |
+| `merkel-cell-carcinoma-rt-targets` | 独立仓库 | — | 尚未建仓（聚合仓 v1.0.0） |
 | `salivary-gland-rt-targets` | 独立仓库 | master | v1.3.0 |
 | `sinonasal-rt-targets` | 独立仓库 | master | v1.5.1 |
 | `shared-knowledge`（私有） | 知识库 + 4 个内部工具技能 | master | v1.13.0 |

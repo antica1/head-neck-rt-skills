@@ -1,7 +1,7 @@
 ---
 name: adenoid-cystic-carcinoma-rt-targets
 description: "腺样囊性癌ACC术后放疗靶区勾画——面神经径路/颅底孔道、PNI追踪。Postoperative RT for adenoid cystic carcinoma — nerve pathway coverage, skull base foramen."
-version: 1.8.0
+version: 1.8.1
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -458,8 +458,8 @@ Since ACC RT often extends to the skull base and cavernous sinus, special attent
 
 ## Section 6 — Key References
 
-1. Jiang W, Xiao Y, Hu H, Li J, He Y, Han N, et al. Postoperative Intensity-Modulated radiotherapy with trigeminal nerve pathway delineation for head and neck adenoid cystic carcinoma. *Radiotherapy & Oncology*. 2025;200:111174. PMID: 41027510. DOI: 10.1016/j.radonc.2025.111174.
-2. 朱国培, 等. 头颈部腺样囊性癌术后放疗靶区勾画研究. *中华放射肿瘤学杂志*. 2025;34(1):49-56.
+1. Jiang W, Xiao Y, Hu H, Li J, He Y, Han N, et al. Postoperative Intensity-Modulated radiotherapy with trigeminal nerve pathway delineation for head and neck adenoid cystic carcinoma. *Radiotherapy & Oncology*. 2025;213:111174. PMID: 41027510. DOI: 10.1016/j.radonc.2025.111174.
+2. 肖英, 蒋雯, 窦圣金, 叶露露, 刘胜文, 朱国培. 头颈部腺样囊性癌术后放疗的靶区优化及初步疗效. *中华放射肿瘤学杂志*. 2025;34(1):49-56.
 3. ICRU Report 83: Prescribing, Recording, and Reporting Photon-Beam Intensity-Modulated Radiation Therapy (IMRT). 2010.
 4. Gregoire V, et al. Delineation of the neck node levels for head and neck tumors. *Radiother Oncol*. 2014;110(1):172-181.
 5. Lee NY, et al. OAR dose constraints for head and neck RT. *Int J Radiat Oncol Biol Phys*. 2018.
