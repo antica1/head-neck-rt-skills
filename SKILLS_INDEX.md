@@ -192,6 +192,8 @@ git clone https://github.com/antica1/head-neck-rt-skills.git
 
 > **全部 17 个公开仓库 + 私有 `shared-knowledge` 的默认分支统一为 `master`**——2026-09-13 把原 5 个 main 仓库（淋巴瘤 / 化免降级 / 口咽根治 / 口腔 PORT / 口咽 PORT）改名完成。克隆、raw 链接、脚本一律用 `master`；`git ls-remote --heads origin` 探测分支名仅作兜底（2026-10 前建的仓库默认 master，之后新建仓库 GitHub 默认给 main，新建后记得立即改名）。
 
+> **计数口径（2026-10-18）**：`head-neck-rt-methodology`（v1.0.2）与 `merkel-cell-carcinoma-rt-targets`（v1.0.0）于 2026-10-14 收编入聚合主仓库，**目前未单独建独立仓库**——公开仓库计数仍为 17（16 个独立仓库 + 1 个聚合仓库）；若日后补齐这两个独立仓库，计数改为 19。
+
 | 仓库 | 类型 | 默认分支 | 版本（2026-10-18 GitHub API 实测） |
 |------|------|:--:|:--:|
 | `head-neck-rt-skills` | 聚合主仓库（分发入口，含 SKILLS_INDEX） | master | 本文件 v2.7.1 |
@@ -208,7 +210,7 @@ git clone https://github.com/antica1/head-neck-rt-skills.git
 | `oropharynx-definitive-rt` | 独立仓库 | master | v1.1.1 |
 | `port-oral-postop` | 独立仓库 | master | v1.6.2 |
 | `port-oropharynx-postop` | 独立仓库 | master | v1.0.2 |
-| `reirradiation-plan-recommend` | 独立仓库 | master | v1.5.1 |
+| `reirradiation-plan-recommend` | 独立仓库 | master | v1.6.0 |
 | `head-neck-rt-methodology` | 独立仓库 | — | 尚未建仓（聚合仓 v1.0.2） |
 | `merkel-cell-carcinoma-rt-targets` | 独立仓库 | — | 尚未建仓（聚合仓 v1.0.0） |
 | `salivary-gland-rt-targets` | 独立仓库 | master | v1.3.0 |
