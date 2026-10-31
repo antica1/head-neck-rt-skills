@@ -1,6 +1,6 @@
 # 头颈放疗靶区 Skill 完整索引
 
-> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.7.1 | 2026-10-18
+> 上海九院放疗中心 · 朱国培 | GitHub: antica1 | v2.7.2 | 2026-10-31
 > 18 个公开 Skill · Claude Code & Hermes 双平台（shared-knowledge 已移至私有仓库，2026-08-11）
 
 ---
@@ -15,7 +15,7 @@ head-neck-rt-skills/
 ├── SKILLS_INDEX.md                  # 本文件——完整索引
 └── skills/
     │
-    ├── neoadjuvant-deescalation/    # 化免新辅助降级（244 行）——被 11 个 Skill 引用
+    ├── neoadjuvant-deescalation/    # 化免新辅助降级（310 行）——被 11 个 Skill 引用
     │
     ├── oral-oropharynx-postop-rt-targets/  # ❌ 已删除（2026-08-14）——拆分为下方两个独立模块
     ├── port-oral-postop/                   # 口腔 PORT 自包含模块（890 行）——含口底铁律
@@ -77,7 +77,7 @@ head-neck-rt-skills/
 
 | 仓库名（目录） | YAML `name` | 行数 | 版本 |
 |:---|---:|---:|:---:|
-| neoadjuvant-deescalation | neoadjuvant-deescalation | 295 | 2.0.2 |
+| neoadjuvant-deescalation | neoadjuvant-deescalation | 310 | 2.0.3 |
 | ~~oral-oropharynx-postop-rt-targets~~ | ~~已删除~~ | — | — |
 | port-oral-postop | port-oral-postop | 913 | 1.6.2 |
 | port-oropharynx-postop | port-oropharynx-postop | 243 | 1.0.2 |
@@ -196,7 +196,7 @@ git clone https://github.com/antica1/head-neck-rt-skills.git
 
 | 仓库 | 类型 | 默认分支 | 版本（2026-10-18 GitHub API 实测） |
 |------|------|:--:|:--:|
-| `head-neck-rt-skills` | 聚合主仓库（分发入口，含 SKILLS_INDEX） | master | 本文件 v2.7.1 |
+| `head-neck-rt-skills` | 聚合主仓库（分发入口，含 SKILLS_INDEX） | master | 本文件 v2.7.2 |
 | `adenoid-cystic-carcinoma-rt-targets` | 独立仓库 | master | v1.8.1 |
 | `head-neck-dvh-plan-review` | 独立仓库 | master | v1.3.2 |
 | `head-neck-lymphoma-rt-targets` | 独立仓库 | master | v1.2.1 |
@@ -204,7 +204,7 @@ git clone https://github.com/antica1/head-neck-rt-skills.git
 | `hncup-rt-targets` | 独立仓库 | master | v1.1.1 |
 | `hypopharynx-rt-targets` | 独立仓库 | master | v1.0.1 |
 | `larynx-rt-targets` | 独立仓库 | master | v1.0.1 |
-| `neoadjuvant-deescalation` | 独立仓库 | master | v2.0.2 |
+| `neoadjuvant-deescalation` | 独立仓库 | master | v2.0.3 |
 | `npc-rt-target-delineation` | 独立仓库 | master | v1.3.0 |
 | `orbital-tumor-rt-targets` | 独立仓库 | master | v1.1.1 |
 | `oropharynx-definitive-rt` | 独立仓库 | master | v1.1.1 |
