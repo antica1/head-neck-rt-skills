@@ -1,7 +1,7 @@
 ---
 name: head-neck-dvh-plan-review
 description: "One-glance DVH plan acceptability assessment for HEAD & NECK radiotherapy — priority-graded OAR constraints (ideal/acceptable tiers), complete SBRT tables (1-15fx from Timmerman 2022), violation severity grading, trade-off decision rules, and actionable dual-report generation."
-version: 1.3.2
+version: 1.3.3
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -122,9 +122,10 @@ metadata:
 | **4** | **气管** | V50 < 50% | — | V50 |
 
 > **优先级含义**：1=一票否决；2=高危（尽可能达标）；3=中危（超标需记录）；4=优化目标。
-> **晶体与喉两行的来源（2026-10-13 补，PubMed 已核）**：
+> **晶体、喉、腮腺各行的来源与口径（PubMed 已核）**：
 > - **晶体**——Henk 1993（PMID 8478231，40 例眶内肿瘤实测）：晶体生发区 **≤5 Gy 无晶体混浊**，≥16.5 Gy 几乎全部出现视力损伤，TD50≈15 Gy；而 ICRP 可检出混浊阈值仅约 0.5 Gy（Grosinger 2026, PMID 42382431）——**10 Gy 是规划目标不是生物学阈值**，眼眶/鼻窦/鼻咽贴野病例能低则低，术后晶体受量逐年随访。
 > - **喉（未受累）**——QUANTEC（Rancati 2010, PMID 20171520）：**Dmean ≤44 Gy、V50 ≤27%** 时 1 年 ≥2 级喉水肿 <20%（44-57 Gy 组 45%、>57 Gy 组 >80%）；非受累喉整体 Dmean 宜 40-45 Gy、Dmax <63-66 Gy。喉原发肿瘤大部在 PTV 内时按声门型喉行评估，未受累侧按本行。
+> - **腮腺两行（2026-11-02 补）**——26/30 Gy 是**院内 IMRT 协议规划目标**，**不是 QUANTEC 数值**，两套口径须分开标注来源。QUANTEC 唾液腺篇（Deasy 2010, PMID 20171519, IJROBP 76(3 Suppl):S58-63）的正式规则是**成对腺体**：至少一侧腮腺 Dmean <20 Gy，或双侧均 <25 Gy（重度长期口干=唾液功能<基线 25%，通常可避免）。单侧阈值不能替代成对规则；代码化工具（pymedphys PR #2033）须实现成对判定并与院内目标并行报告。
 
 ### 第 4 步：修正区
 
@@ -259,7 +260,7 @@ metadata:
 | 脊髓 ≤45 Gy | 大鼠/豚鼠模型外推人类 | ⚠️ |
 | 脑干 ≤54 Gy | 动物模型 + 回顾性病例 | ⚠️ |
 | 视神经 ≤55 Gy | QUANTEC 回顾性 | ⚠️ |
-| 腮腺 Dmean ≤26 Gy | **多个 IMRT 临床系列** | ✅ |
+| 腮腺 Dmean ≤26 Gy（院内目标） | **多个 IMRT 临床系列**；QUANTEC 另有成对腺体规则（单侧<20 或双侧<25 Gy，PMID 20171519） | ✅ |
 | 下颌骨 Dmax ≤70 Gy | 临床回顾（混杂因素多） | ⚠️ |
 | 晶状体 ≤6-10 Gy | **良好剂量-效应曲线** | ✅ |
 | 声门喉 Dmean ≤35 Gy | 临床系列（保声病例） | ✅ |
@@ -286,6 +287,7 @@ metadata:
 | Henk JM, Whitelocke RA, Warrington AP, Bessell EM. Radiation dose to the lens and cataract formation. *IJROBP* 1993;25(5):815-820 | **PMID 8478231** — 晶体 5 Gy 无改变 / TD50≈15 Gy |
 | Rancati T, Schwarz M, Allen AM, et al. Radiation dose-volume effects in the larynx and pharynx (QUANTEC). *IJROBP* 2010;76(3 Suppl):S64-9 | **PMID 20171520** — 喉 Dmean≤44 Gy、V50≤27% |
 | Grosinger A, Roovers A, Bergerud KMB, et al. Critical Review of Cataractogenesis and Lens Contouring in Radiation Oncology. *Adv Radiat Oncol* 2026;11(10):102100 | **PMID 42382431** — 晶体阈值与勾画规范 |
+| Deasy JO, et al. Radiation dose-volume effects on salivary gland function (QUANTEC). *IJROBP* 2010;76(3 Suppl):S58-63 | **PMID 20171519** — 腮腺成对腺体规则：单侧 Dmean<20 Gy 或双侧<25 Gy |
 
 ---
 
@@ -293,6 +295,7 @@ metadata:
 
 | 日期 | 版本 | 更新内容 |
 |------|:----:|---------|
+| 2026-11-02 | v1.3.3 | 腮腺约束口径澄清——26/30 Gy 标注为院内 IMRT 协议目标（非 QUANTEC），补 QUANTEC 成对腺体规则（单侧<20 Gy 或双侧<25 Gy，Deasy 2010 PMID 20171519）；源于 pymedphys PR #2033 评审 |
 | 2026-10-13 | v1.3.2 | 新增软约束两行——**晶体**（≤5 Gy / <10 Gy，Henk 1993 PMID 8478231）与**喉未受累**（Dmean ≤40 / <44 Gy、V50≤27%，QUANTEC PMID 20171520）；来源经 PubMed 核实并入参考文献 |
 
 ---

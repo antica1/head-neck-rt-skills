@@ -39,7 +39,7 @@ head-neck-rt-skills/
     ├── head-neck-rt-methodology/       # 总纲（v1.0.2）🆕——分期四态/侧性三层/不易切净区/SBRT补量 SER，8 个模块 skill 的 related_skills 上游
     ├── merkel-cell-carcinoma-rt-targets/ # 皮肤默克尔细胞癌 MCC（v1.0.0）🆕——SLNB 分水岭三分、原发灶+引流区、NCCN v2.2026 剂量
 │
-└── head-neck-dvh-plan-review/        # DVH 计划审核（257 行）
+└── head-neck-dvh-plan-review/        # DVH 计划审核（305 行）
 ```
 
 ---
@@ -93,7 +93,7 @@ head-neck-rt-skills/
 | head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 952 | 1.2.1 |
 | head-neck-sarcoma-rt-targets | head-neck-sarcoma-rt-targets | 682 | 1.1.1 |
 | reirradiation-plan-recommend | reirradiation-plan-recommend | 474 | 1.6.0 |
-| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 302 | 1.3.2 |
+| head-neck-dvh-plan-review | head-neck-dvh-plan-review | 305 | 1.3.3 |
 
 > **注意**：2026-08 已完成目录名统一——全部 Skill 的主仓库目录名与 YAML `name` 一致（`hncup-rt-targets`、`adenoid-cystic-carcinoma-rt-targets`、`head-neck-dvh-plan-review`、`reirradiation-plan-recommend`）。旧目录名（`HNCUP-rt-targets`、`head-neck-acc-rt-targets`、`head-neck-dvh-review`、`head-neck-reirradiation`）与旧 YAML name（`cervical-cup-rt-targets`）均已废弃；GitHub 独立仓库若仍用旧名，靠 301 重定向兼容。
 
@@ -198,7 +198,7 @@ git clone https://github.com/antica1/head-neck-rt-skills.git
 |------|------|:--:|:--:|
 | `head-neck-rt-skills` | 聚合主仓库（分发入口，含 SKILLS_INDEX） | master | 本文件 v2.7.2 |
 | `adenoid-cystic-carcinoma-rt-targets` | 独立仓库 | master | v1.8.1 |
-| `head-neck-dvh-plan-review` | 独立仓库 | master | v1.3.2 |
+| `head-neck-dvh-plan-review` | 独立仓库 | master | v1.3.3 |
 | `head-neck-lymphoma-rt-targets` | 独立仓库 | master | v1.2.1 |
 | `head-neck-sarcoma-rt-targets` | 独立仓库 | master | v1.1.1 |
 | `hncup-rt-targets` | 独立仓库 | master | v1.1.1 |
