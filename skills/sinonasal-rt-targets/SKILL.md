@@ -1,7 +1,7 @@
 ---
 name: sinonasal-rt-targets
 description: "鼻腔鼻窦癌放疗靶区勾画——上颌窦/筛窦/鼻腔亚部位CTV、视路保护、诱导化疗后放疗、SNUC/嗅神经母细胞瘤特殊类型。Sinonasal carcinoma RT — maxillary/ethmoid/nasal CTV, optic pathway sparing, post-induction RT, SNUC/esthesioneuroblastoma."
-version: 1.5.1
+version: 1.5.2
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
 metadata:
@@ -60,7 +60,7 @@ metadata:
 | 8 | **SNUC 即使 cN0 也必须照同侧 ⅠB+Ⅱ+Ⅲ+RP**——隐匿转移率 30-40% | SNUC 任何 T 分期、cN0 |
 | 9 | **诱导化疗后 CR/PR → 按化疗后体积勾画 GTV（不按化疗前）**；SD/PD → 按化疗前体积（Amit 2019 JCO）；SNUC 化疗有效 → 根治性 CRT，无效 → 直接手术 | SNUC/晚期 SCC 诱导化疗后放疗 |
 | 10 | **嗅神经母细胞瘤 CTV 上界必须包含筛板全层+嗅球+前颅底硬膜**——起源处，影像不明确也要照；颅内扩展 → 额叶硬膜外 5-10 mm；Kadish C → 仅同侧 ⅠB+Ⅱ | 嗅神经母细胞瘤靶区勾画 |
-| 11 | **黏膜黑色素瘤大分割**：30 Gy/5 fx 或 36-39 Gy/8-10 fx（参照 RTOG 0536）；pN0 不做 ENI，pN+ → 同侧 ⅠB+Ⅱ+Ⅲ | 鼻腔鼻窦黏膜黑色素瘤 |
+| 11 | **黏膜黑色素瘤剂量**：高危瘤床常规分割 60-66 Gy/30-33 fx，肉眼残留 70 Gy；中分割 3-4 Gy/fx 局控更好；30 Gy/5 fx 超大分割仅限远离 CNS 的口腔原发（MDACC）；原引"RTOG 0536"经查 NRG 官网 404 不存在，属错引已删（PMID 39409922 综述）；pN0 不做 ENI，pN+ → 同侧 ⅠB+Ⅱ+Ⅲ | 鼻腔鼻窦黏膜黑色素瘤 |
 | 12 | **七窍相通**：CTV 不止于窦口，须含相邻引流通道黏膜——上颌窦癌 → 中鼻道+后鼻孔黏膜；筛窦癌 → 嗅裂+蝶筛隐窝 | 所有鼻腔鼻窦癌 CTV 边界确定时 |
 | 13 | **三明治治疗（术前 RT→手术→术后 RT）已弃用**：新辅助需求 → 用药（诱导化疗/化免），不用术前 RT | 考虑术前放疗时 |
 | 14 | **未分化/高级别形态 → 常规 IHC 四联筛查**（SMARCA4/SMARCB1/NUT/INSM1）；INI1/SMARCA4 缺失型 RT 是唯一可靠局部治疗——PORT 必做（INI1 型 60-66 Gy，R1 → 66 Gy、R2 → 70 Gy；SMARCA4 型根治性 70 Gy）；INI1 缺失型 ENI 同侧 ⅠB+Ⅱ+Ⅲ；同步顺铂不作默认标准，个体化讨论 | 鼻腔鼻窦未分化癌/高级别癌病理评估 |
@@ -327,7 +327,7 @@ N+ 患者颈部范围：
 | 指征 | 可考虑方案 |
 |------|----------|
 | 晚期/大肿块 | 超分割（1.2 Gy bid 至 74-80 Gy） |
-| 黑色素瘤 | 大分割（30-36 Gy / 5-8 fx） |
+| 黑色素瘤 | 见铁律 11 / 8.3：瘤床 60-66 Gy 常规分割为主；中分割 3-4 Gy/fx 可 MDT 讨论；30 Gy/5 fx 仅限远离 CNS 的口腔原发 |
 
 ### 7.5 诱导化疗后放疗
 
@@ -366,8 +366,10 @@ N+ 患者颈部范围：
 | 特殊性 | 处理 |
 |--------|------|
 | **放射抵抗** | 常规分割效果差 |
-| **剂量方案** | 🔥 **大分割**——30 Gy/5 fx 或 36-39 Gy/8-10 fx（参照 RTOG 0536 黏膜黑色素瘤方案） |
+| **剂量方案** | 🔥 高危瘤床 **60-66 Gy/30-33 fx 常规分割**（肉眼残留 70 Gy）；中分割 3-4 Gy/fx 局控更好可 MDT 讨论；30 Gy/5 fx 仅限远离 CNS 结构的口腔原发（MDACC 经验，33 项研究综述 PMID 39409922）——鼻咽/鼻窦近脑干视路者禁用超大分割。~~RTOG 0536~~ 为错引（NRG 官网无此协议，2026-11 已订正） |
 | **颈部** | pN0→不做 ENI。pN+→同侧 ⅠB+Ⅱ+Ⅲ |
+
+> 全身治疗（免疫辅助/靶向）、分子检测（KIT/BRAF/NRAS）与分期随访的证据速查见 `references/mucosal-melanoma-evidence.md`（RT Skill 之外，基于 REFCOR 2026 与已核实文献）。
 
 ### 8.4 神经内分泌癌
 

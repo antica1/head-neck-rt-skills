@@ -88,7 +88,7 @@ head-neck-rt-skills/
 | hncup-rt-targets | hncup-rt-targets | 542 | 1.1.1 |
 | npc-rt-target-delineation | npc-rt-target-delineation | 496 | 1.3.0 |
 | orbital-tumor-rt-targets | orbital-tumor-rt-targets | 1002 | 1.1.1 |
-| sinonasal-rt-targets | sinonasal-rt-targets | 585 | 1.5.1 |
+| sinonasal-rt-targets | sinonasal-rt-targets | 587 | 1.5.2 |
 | salivary-gland-rt-targets | salivary-gland-rt-targets | 829 | 1.3.0 |
 | head-neck-lymphoma-rt-targets | head-neck-lymphoma-rt-targets | 952 | 1.2.1 |
 | head-neck-sarcoma-rt-targets | head-neck-sarcoma-rt-targets | 682 | 1.1.1 |
